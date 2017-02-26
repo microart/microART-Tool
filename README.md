@@ -1,6 +1,6 @@
-﻿Ambiente
+﻿Environment
 
-Sistema Operativo Macchina Host
+Operativ System Host Machine
 
 Linux Kubuntu 16.04
 
@@ -52,11 +52,13 @@ NPM version:
 
 Java version:
     openjdk 1.8.0_121
-Guida
+
+==GUIDE
 
 Docker
 
-Installazione Docker run:
+Docker Instalation:
+
     sudo apt-get update
     sudo apt-get install curl linux-image-extra-$(uname -r) linux-image-extra-virtual
     sudo apt-get install apt-transport-https ca-certificates
@@ -97,10 +99,9 @@ Docker-Machine
     chmod +x /tmp/docker-machine &&
     sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
     docker-machine version
-
-Queste due operazioni non sono fondamentali da eseguire nel caso in cui non dovesse funzionare il case study
-//$ docker-machine create --driver virtualbox default
-//$ eval "$(docker-machine env default)"
+These two operations are not foundamental, execute these operation if a the end of the guide it doesn't'
+    docker-machine create --driver virtualbox default
+    eval "$(docker-machine env default)"
 
 Docker-compose
 
@@ -153,9 +154,8 @@ Run it.
 
 The Application is in a Github. Clone the repository and copy inside the Eclipse workspace
 
-    git clone https://github.com/kansor/Univaq-Thesis-GM.git
-    cd Univaq-Thesis-GM/ArchitectureImpactAnalysis/
-    cp ArchitectureRecovery ~/EclipseWorkspace
+    git clone https://github.com/microart/microART-Tool.git
+    cd microART
 
 Inside Eclipse go in the Project Explorer.
     Right-Click
