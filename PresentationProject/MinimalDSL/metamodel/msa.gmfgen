@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgen:GenEditorGenerator xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel" copyrightText="">
+  <diagram visualID="1000" editPartClassName="ProductEditPart" itemSemanticEditPolicyClassName="ProductItemSemanticEditPolicy" canonicalEditPolicyClassName="ProductCanonicalEditPolicy" iconProviderPriority="Low" validationProviderPriority="Low" validationEnabled="true" validationDecorators="true" liveValidationUIFeedback="true">
+    <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+    <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="ProductEditHelper"/>
+    <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
+    <containsShortcutsTo>MicroservicesArchitecture</containsShortcutsTo>
+    <shortcutsProvidedFor>MicroservicesArchitecture</shortcutsProvidedFor>
+    <domainDiagramElement href="msa.genmodel#//MicroservicesArchitecture/Product"/>
+    <childNodes visualID="3001" editPartClassName="InterfaceEditPart" itemSemanticEditPolicyClassName="InterfaceItemSemanticEditPolicy" canonicalEditPolicyClassName="InterfaceCanonicalEditPolicy" graphicalNodeEditPolicyClassName="InterfaceGraphicalNodeEditPolicy" createCommandClassName="InterfaceCreateCommand" containers="//@diagram/@compartments.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="InterfaceEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="InterfaceFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InterfaceFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureInterfaceLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InterfaceFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureInterfaceLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureInterfaceLabelFigure.setText(&quot;Interface&quot;);&#xA;&#xA;this.add(fFigureInterfaceLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureInterfaceLabelFigure() {&#xA;&#x9;&#x9;return fFigureInterfaceLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 102, 153, 255);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="msa.genmodel#//MicroservicesArchitecture/Interface"/>
+        <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/MicroService/expose"/>
+        <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/MicroService/expose"/>
+      </modelFacet>
+      <labels visualID="5004" editPartClassName="InterfaceEndPointEditPart" itemSemanticEditPolicyClassName="InterfaceEndPointItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureInterfaceLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="msa.genmodel#//MicroservicesArchitecture/Interface/endPoint"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <childNodes visualID="3002" editPartClassName="Interface2EditPart" itemSemanticEditPolicyClassName="Interface2ItemSemanticEditPolicy" canonicalEditPolicyClassName="Interface2CanonicalEditPolicy" graphicalNodeEditPolicyClassName="Interface2GraphicalNodeEditPolicy" createCommandClassName="Interface2CreateCommand" containers="//@diagram/@compartments.1">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:SpecializationType" metamodelType="//@diagram/@childNodes.0/@elementType"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="InterfaceFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class InterfaceFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureInterfaceLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public InterfaceFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureInterfaceLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureInterfaceLabelFigure.setText(&quot;Interface&quot;);&#xA;&#xA;this.add(fFigureInterfaceLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureInterfaceLabelFigure() {&#xA;&#x9;&#x9;return fFigureInterfaceLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 102, 153, 255);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+      </viewmap>
+      <modelFacet>
+        <metaClass href="msa.genmodel#//MicroservicesArchitecture/Interface"/>
+        <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/MicroService/require"/>
+        <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/MicroService/require"/>
+      </modelFacet>
+      <labels visualID="5005" editPartClassName="InterfaceEndPoint2EditPart" itemSemanticEditPolicyClassName="InterfaceEndPoint2ItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureInterfaceLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="msa.genmodel#//MicroservicesArchitecture/Interface/endPoint"/>
+        </modelFacet>
+      </labels>
+    </childNodes>
+    <topLevelNodes visualID="2001" editPartClassName="MicroServiceEditPart" itemSemanticEditPolicyClassName="MicroServiceItemSemanticEditPolicy" canonicalEditPolicyClassName="MicroServiceCanonicalEditPolicy" compartments="//@diagram/@compartments.0 //@diagram/@compartments.1" graphicalNodeEditPolicyClassName="MicroServiceGraphicalNodeEditPolicy" createCommandClassName="MicroServiceCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="MicroServiceEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="MicroServiceFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class MicroServiceFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureMicroServiceLabelFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fMicroServiceExposeCompartmentFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fMicroServiceRequireCompartmentFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public MicroServiceFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureMicroServiceLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureMicroServiceLabelFigure.setText(&quot;MicroService&quot;);&#xA;fFigureMicroServiceLabelFigure.setMaximumSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(10000)&#xA;, getMapMode().DPtoLP(50)&#xA;));&#xA;&#xA;this.add(fFigureMicroServiceLabelFigure);&#xA;&#xA;&#xA;&#xA;fMicroServiceExposeCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fMicroServiceExposeCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fMicroServiceExposeCompartmentFigure);&#xA;&#xA;&#xA;&#xA;fMicroServiceRequireCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fMicroServiceRequireCompartmentFigure.setOutline(false);&#xA;&#xA;this.add(fMicroServiceRequireCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureMicroServiceLabelFigure() {&#xA;&#x9;&#x9;return fFigureMicroServiceLabelFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getMicroServiceExposeCompartmentFigure() {&#xA;&#x9;&#x9;return fMicroServiceExposeCompartmentFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getMicroServiceRequireCompartmentFigure() {&#xA;&#x9;&#x9;return fMicroServiceRequireCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 102, 255, 127);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedBackground="true"/>
+      </viewmap>
+      <behaviour xsi:type="gmfgen:OpenDiagramBehaviour"/>
+      <modelFacet>
+        <metaClass href="msa.genmodel#//MicroservicesArchitecture/MicroService"/>
+        <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/composedBy"/>
+        <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/composedBy"/>
+      </modelFacet>
+      <labels visualID="5001" editPartClassName="MicroServiceNameEditPart" itemSemanticEditPolicyClassName="MicroServiceNameItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureMicroServiceLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="msa.genmodel#//MicroservicesArchitecture/Element/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <topLevelNodes visualID="2002" editPartClassName="DeveloperEditPart" itemSemanticEditPolicyClassName="DeveloperItemSemanticEditPolicy" canonicalEditPolicyClassName="DeveloperCanonicalEditPolicy" graphicalNodeEditPolicyClassName="DeveloperGraphicalNodeEditPolicy" createCommandClassName="DeveloperCreateCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="DeveloperEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="DeveloperFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DeveloperFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeveloperLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DeveloperFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(8)&#xA;, getMapMode().DPtoLP(8)&#xA;));&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDeveloperLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureDeveloperLabelFigure.setText(&quot;Developer&quot;);&#xA;&#xA;this.add(fFigureDeveloperLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeveloperLabelFigure() {&#xA;&#x9;&#x9;return fFigureDeveloperLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass href="msa.genmodel#//MicroservicesArchitecture/Developer"/>
+        <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/developers"/>
+        <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/developers"/>
+      </modelFacet>
+      <labels visualID="5002" editPartClassName="DeveloperNameEditPart" itemSemanticEditPolicyClassName="DeveloperNameItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDeveloperLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="msa.genmodel#//MicroservicesArchitecture/Element/name"/>
+        </modelFacet>
+      </labels>
+    </topLevelNodes>
+    <links visualID="4008" editPartClassName="LinkEditPart" itemSemanticEditPolicyClassName="LinkItemSemanticEditPolicy" createCommandClassName="LinkCreateCommand" reorientCommandClassName="LinkReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="LinkEditHelper"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="LinkFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class LinkFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public LinkFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setSourceDecoration(createSourceDecoration());&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createSourceDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolygonDecoration df = new org.eclipse.draw2d.PolygonDecoration();&#xA;df.setFill(true);&#xA;org.eclipse.draw2d.geometry.PointList pl = new org.eclipse.draw2d.geometry.PointList();&#xA;pl.addPoint(getMapMode().DPtoLP(-1)&#xA;, getMapMode().DPtoLP(1)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(0)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-1)&#xA;, getMapMode().DPtoLP(-1)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-2)&#xA;, getMapMode().DPtoLP(0)&#xA;);&#xA;pl.addPoint(getMapMode().DPtoLP(-1)&#xA;, getMapMode().DPtoLP(1)&#xA;);&#xA;df.setTemplate(pl);&#xA;df.setScale(getMapMode().DPtoLP(7)&#xA;, getMapMode().DPtoLP(3)&#xA;);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 204, 204, 102);&#xA;&#xA;">
+        <attributes xsi:type="gmfgen:StyleAttributes" fixedForeground="true"/>
+      </viewmap>
+      <modelFacet xsi:type="gmfgen:TypeLinkModelFacet">
+        <metaClass href="msa.genmodel#//MicroservicesArchitecture/Link"/>
+        <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/links"/>
+        <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/links"/>
+        <sourceMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Link/source"/>
+        <targetMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Link/target"/>
+      </modelFacet>
+      <labels visualID="6008" editPartClassName="LinkNameEditPart" itemSemanticEditPolicyClassName="LinkNameItemSemanticEditPolicy">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:InnerClassViewmap" className="LinkLabelFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class LinkLabelFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public LinkLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;Link&quot;);&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
+          <metaFeatures href="msa.genmodel#//MicroservicesArchitecture/Element/name"/>
+        </modelFacet>
+      </labels>
+    </links>
+    <links visualID="4007" editPartClassName="TeamWorkOnEditPart" itemSemanticEditPolicyClassName="TeamWorkOnItemSemanticEditPolicy" createCommandClassName="TeamWorkOnCreateCommand" reorientCommandClassName="TeamWorkOnReorientCommand">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+      <elementType xsi:type="gmfgen:SpecializationType"/>
+      <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TeamWorkOnFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TeamWorkOnFigure extends org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx {&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TeamWorkOnFigure() {&#xA;&#x9;&#x9;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolylineDecoration df = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet xsi:type="gmfgen:FeatureLinkModelFacet">
+        <metaFeature href="msa.genmodel#//MicroservicesArchitecture/Team/workOn"/>
+      </modelFacet>
+      <labels visualID="6007" editPartClassName="WrappingLabelEditPart" itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy" readOnly="true">
+        <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap xsi:type="gmfgen:FigureViewmap" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel">
+          <attributes xsi:type="gmfgen:LabelOffsetAttributes" y="40"/>
+        </viewmap>
+        <modelFacet xsi:type="gmfgen:DesignLabelModelFacet" parser="//@labelParsers/@implementations.1"/>
+      </labels>
+    </links>
+    <compartments visualID="7001" editPartClassName="MicroServiceMicroServiceExposeCompartmentEditPart" itemSemanticEditPolicyClassName="MicroServiceMicroServiceExposeCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MicroServiceMicroServiceExposeCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.0" title="MicroServiceExposeCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getMicroServiceExposeCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <compartments visualID="7002" editPartClassName="MicroServiceMicroServiceRequireCompartmentEditPart" itemSemanticEditPolicyClassName="MicroServiceMicroServiceRequireCompartmentItemSemanticEditPolicy" canonicalEditPolicyClassName="MicroServiceMicroServiceRequireCompartmentCanonicalEditPolicy" childNodes="//@diagram/@childNodes.1" title="MicroServiceRequireCompartment" needsTitle="false" node="//@diagram/@topLevelNodes.0">
+      <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getMicroServiceRequireCompartmentFigure" figureQualifiedClassName="org.eclipse.draw2d.RectangleFigure"/>
+    </compartments>
+    <palette>
+      <groups title="Objects" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Developer" description="Create new Developer" genNodes="//@diagram/@topLevelNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="Interface" description="Create new Interface" genNodes="//@diagram/@childNodes.0 //@diagram/@childNodes.1"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="MicroService" description="Create new MicroService" genNodes="//@diagram/@topLevelNodes.0"/>
+      </groups>
+      <groups title="Connections" collapse="true">
+        <entries xsi:type="gmfgen:ToolEntry" title="Link" description="Create new Link" genLinks="//@diagram/@links.0"/>
+        <entries xsi:type="gmfgen:ToolEntry" title="WorkOn" description="Create new WorkOn" genLinks="//@diagram/@links.1"/>
+      </groups>
+    </palette>
+    <preferencePages xsi:type="gmfgen:GenStandardPreferencePage" iD="MinimalDSL.diagram.general" name="MicroservicesArchitecture Diagram">
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MinimalDSL.diagram.appearance" name="Appearance" kind="Appearance"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MinimalDSL.diagram.connections" name="Connections" kind="Connections"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MinimalDSL.diagram.printing" name="Printing" kind="Printing"/>
+      <children xsi:type="gmfgen:GenStandardPreferencePage" iD="MinimalDSL.diagram.rulersAndGrid" name="Rulers And Grid" kind="RulersAndGrid"/>
+    </preferencePages>
+  </diagram>
+  <plugin printingEnabled="true">
+    <requiredPlugins>org.eclipse.gmf.tooling.runtime</requiredPlugins>
+    <requiredPlugins>org.eclipse.draw2d</requiredPlugins>
+    <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
+  </plugin>
+  <editor/>
+  <navigator>
+    <childReferences child="//@diagram"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.0"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@childNodes.1"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.0"/>
+    <childReferences parent="//@diagram" child="//@diagram/@topLevelNodes.1"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.0" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.1" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.0" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.0" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.0" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.0" child="//@diagram/@childNodes.1" referenceType="in_source" groupName="source" groupIcon="icons/linkSourceNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@childNodes.1" child="//@diagram/@links.0" referenceType="out_target" groupName="outgoing links" groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram" child="//@diagram/@links.1" groupName="links" groupIcon="icons/linksNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@links.1" child="//@diagram/@topLevelNodes.0" referenceType="out_target" groupName="target" groupIcon="icons/linkTargetNavigatorGroup.gif"/>
+    <childReferences parent="//@diagram/@topLevelNodes.0" child="//@diagram/@links.1" referenceType="in_source" groupName="incoming links" groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
+  </navigator>
+  <diagramUpdater/>
+  <propertySheet>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="appearance"/>
+    <tabs xsi:type="gmfgen:GenStandardPropertyTab" iD="diagram"/>
+    <tabs xsi:type="gmfgen:GenCustomPropertyTab" iD="domain" label="Core">
+      <filter xsi:type="gmfgen:TypeTabFilter">
+        <types>org.eclipse.gmf.runtime.notation.View</types>
+        <types>org.eclipse.gef.EditPart</types>
+        <generatedTypes>abstractNavigatorItem</generatedTypes>
+      </filter>
+    </tabs>
+  </propertySheet>
+  <domainGenModel href="msa.genmodel#/"/>
+  <labelParsers extensibleViaService="true">
+    <implementations xsi:type="gmfgen:PredefinedParser" uses="//@diagram/@childNodes.0/@labels.0/@modelFacet //@diagram/@childNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@links.0/@labels.0/@modelFacet"/>
+    <implementations xsi:type="gmfgen:ExternalParser" uses="//@diagram/@links.1/@labels.0/@modelFacet"/>
+  </labelParsers>
+  <contextMenus context="//@diagram">
+    <items xsi:type="gmfgen:LoadResourceAction"/>
+  </contextMenus>
+</gmfgen:GenEditorGenerator>

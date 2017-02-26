@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_A8MfQPfWEeaUUsK6P6xAXA" type="MicroservicesArchitecture" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_BfZ6APfWEeaUUsK6P6xAXA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfZ6BvfWEeaUUsK6P6xAXA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfahEPfWEeaUUsK6P6xAXA" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfahEffWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfahEvfWEeaUUsK6P6xAXA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfahE_fWEeaUUsK6P6xAXA" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfahFPfWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfahFffWEeaUUsK6P6xAXA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BfZ6AffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BfZ6AvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BfZ6A_fWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_BfZ6BPfWEeaUUsK6P6xAXA"/>
+    <element xmi:type="msa:MicroService" href="acmerair.microservicesarchitecture#//@composedBy.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfZ6BffWEeaUUsK6P6xAXA"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BfahFvfWEeaUUsK6P6xAXA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfahHPfWEeaUUsK6P6xAXA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfahHffWEeaUUsK6P6xAXA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_BgQOkPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgQOlffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgQOkffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgQOkvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgQOk_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgQOlPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgQ1oPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgQ1pffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgQ1offWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgQ1ovfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgQ1o_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgQ1pPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgQ1pvfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgQ1q_fWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgQ1p_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgQ1qPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgQ1qffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@expose.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgQ1qvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgQ1rPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgQ1sffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgQ1rffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgQ1rvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgQ1r_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@expose.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgQ1sPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgQ1svfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgQ1t_fWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgQ1s_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgQ1tPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgQ1tffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@expose.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgQ1tvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgQ1uPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgRcsPfWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgQ1uffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgQ1uvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgQ1u_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@expose.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgQ1vPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfahHvfWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfahH_fWEeaUUsK6P6xAXA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfahIPfWEeaUUsK6P6xAXA" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_BgW8QPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgXjUPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgW8QffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgW8QvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgW8Q_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgW8RPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgXjUffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgXjVvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgXjUvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgXjU_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgXjVPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgXjVffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgXjV_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgXjXPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgXjWPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgXjWffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgXjWvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgXjW_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgXjXffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgXjYvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgXjXvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgXjX_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgXjYPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgXjYffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYKYPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYKZffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYKYffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYKYvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYKY_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYKZPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYKZvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYKa_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYKZ_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYKaPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYKaffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYKavfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYKbPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYKcffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYKbffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYKbvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYKb_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYKcPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYKcvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYKd_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYKc_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYKdPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYKdffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.7"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYKdvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYKePfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYxcPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYKeffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYKevfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYKe_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.8"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYKfPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYxcffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYxdvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYxcvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYxc_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYxdPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.9"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYxdffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYxd_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYxfPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYxePfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYxeffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYxevfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.10"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYxe_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYxfffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYxgvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYxfvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYxf_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYxgPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.11"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYxgffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgYxg_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgYxiPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgYxhPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgYxhffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgYxhvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.12"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgYxh_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgZYgPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgZYhffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgZYgffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgZYgvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgZYg_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.13"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgZYhPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgZYhvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgZYi_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgZYh_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgZYiPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgZYiffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.14"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgZYivfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgZYjPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgZYkffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgZYjffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgZYjvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgZYj_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.15"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgZYkPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgZYkvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgZYl_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgZYk_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgZYlPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgZYlffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.16"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgZYlvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgZYmPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgZ_kPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgZYmffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgZYmvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgZYm_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.1/@require.17"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgZYnPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfahIffWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfahIvfWEeaUUsK6P6xAXA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BfahF_fWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BfahGPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BfahGffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_BfahGvfWEeaUUsK6P6xAXA"/>
+    <element xmi:type="msa:MicroService" href="acmerair.microservicesarchitecture#//@composedBy.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfahG_fWEeaUUsK6P6xAXA" x="261"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BfahI_fWEeaUUsK6P6xAXA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfbIIPfWEeaUUsK6P6xAXA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfbIIffWEeaUUsK6P6xAXA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_Bgp3MPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bgp3NffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bgp3MffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_Bgp3MvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_Bgp3M_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bgp3NPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Bgp3NvfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bgp3O_fWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bgp3N_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_Bgp3OPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_Bgp3OffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bgp3OvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Bgp3PPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bgp3QffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bgp3PffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_Bgp3PvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_Bgp3P_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@expose.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bgp3QPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Bgp3QvfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgqeQPfWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bgp3Q_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_Bgp3RPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_Bgp3RffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@expose.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bgp3RvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgqeQffWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgqeRvfWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgqeQvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgqeQ_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgqeRPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@expose.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgqeRffWEeaUUsK6P6xAXA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfbIIvfWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfbII_fWEeaUUsK6P6xAXA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfbIJPfWEeaUUsK6P6xAXA" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_Bgv90PfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bgwk4PfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bgv90ffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_Bgv90vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_Bgv90_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bgv91PfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_Bgwk4ffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_Bgwk5vfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_Bgwk4vfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_Bgwk4_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_Bgwk5PfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bgwk5ffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxL8PfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxL9ffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxL8ffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxL8vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxL8_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxL9PfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxL9vfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxL-_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxL9_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxL-PfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxL-ffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxL-vfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxL_PfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxMAffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxL_ffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxL_vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxL__fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxMAPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxMAvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxzAPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxMA_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxMBPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxMBffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxMBvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxzAffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxzBvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxzAvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxzA_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxzBPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxzBffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxzB_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxzDPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxzCPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxzCffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxzCvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.7"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxzC_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgxzDffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgxzEvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgxzDvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgxzD_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgxzEPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.8"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgxzEffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgyaEPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgyaFffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgyaEffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgyaEvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgyaE_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.9"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgyaFPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgyaFvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgyaG_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgyaF_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgyaGPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgyaGffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.10"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgyaGvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgyaHPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgyaIffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgyaHffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgyaHvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgyaH_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.11"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgyaIPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgyaIvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgyaJ_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgyaI_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgyaJPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgyaJffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.12"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgyaJvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgyaKPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgzBJPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgzBIPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgzBIffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgzBIvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.13"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgzBI_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgzBJffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgzBKvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgzBJvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgzBJ_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgzBKPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.14"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgzBKffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgzBK_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgzBMPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgzBLPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgzBLffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgzBLvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.15"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgzBL_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BgzBMffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BgzoMPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BgzBMvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BgzBM_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BgzBNPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.2/@require.16"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BgzBNffWEeaUUsK6P6xAXA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfbIJffWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfbIJvfWEeaUUsK6P6xAXA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BfahJPfWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BfahJffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BfahJvfWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_BfahJ_fWEeaUUsK6P6xAXA"/>
+    <element xmi:type="msa:MicroService" href="acmerair.microservicesarchitecture#//@composedBy.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfahKPfWEeaUUsK6P6xAXA" x="557"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BfbIJ_fWEeaUUsK6P6xAXA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfbILffWEeaUUsK6P6xAXA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfbILvfWEeaUUsK6P6xAXA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_BhBDkPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhBDlffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhBDkffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhBDkvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhBDk_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhBDlPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhBqoPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhBqpffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhBqoffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhBqovfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhBqo_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhBqpPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhBqpvfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhBqq_fWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhBqp_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhBqqPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhBqqffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@expose.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhBqqvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhBqrPfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhBqsffWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhBqrffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhBqrvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhBqr_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@expose.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhBqsPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhBqsvfWEeaUUsK6P6xAXA" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhBqt_fWEeaUUsK6P6xAXA" type="5004"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhBqs_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhBqtPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhBqtffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@expose.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhBqtvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfbIL_fWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfbIMPfWEeaUUsK6P6xAXA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfbvMPfWEeaUUsK6P6xAXA" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_BhHxQPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhHxRffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhHxQffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhHxQvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhHxQ_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhHxRPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhHxRvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhHxS_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhHxR_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhHxSPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhHxSffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhHxSvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhHxTPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhHxUffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhHxTffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhHxTvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhHxT_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhHxUPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhHxUvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhHxV_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhHxU_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhHxVPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhHxVffWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhHxVvfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhHxWPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYUPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhHxWffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhHxWvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhHxW_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhHxXPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhIYUffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYVvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhIYUvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhIYU_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhIYVPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhIYVffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhIYV_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYXPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhIYWPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhIYWffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhIYWvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhIYW_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhIYXffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYYvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhIYXvfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhIYX_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhIYYPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.7"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhIYYffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhIYY_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYaPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhIYZPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhIYZffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhIYZvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.8"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhIYZ_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhIYaffWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYbvfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhIYavfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhIYa_fWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhIYbPfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.9"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhIYbffWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhIYb_fWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhIYdPfWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhIYcPfWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhIYcffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhIYcvfWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.10"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhIYc_fWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhI_YPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhI_ZffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhI_YffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhI_YvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhI_Y_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.11"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhI_ZPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhI_ZvfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhI_a_fWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhI_Z_fWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhI_aPfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhI_affWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.12"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhI_avfWEeaUUsK6P6xAXA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_BhI_bPfWEeaUUsK6P6xAXA" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_BhI_cffWEeaUUsK6P6xAXA" type="5005"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_BhI_bffWEeaUUsK6P6xAXA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_BhI_bvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_BhI_b_fWEeaUUsK6P6xAXA"/>
+        <element xmi:type="msa:Interface" href="acmerair.microservicesarchitecture#//@composedBy.3/@require.13"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BhI_cPfWEeaUUsK6P6xAXA"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfbvMffWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfbvMvfWEeaUUsK6P6xAXA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BfbIKPfWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BfbIKffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BfbIKvfWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_BfbIK_fWEeaUUsK6P6xAXA"/>
+    <element xmi:type="msa:MicroService" href="acmerair.microservicesarchitecture#//@composedBy.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfbILPfWEeaUUsK6P6xAXA" x="857"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BfbvM_fWEeaUUsK6P6xAXA" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfbvOffWEeaUUsK6P6xAXA" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfbvOvfWEeaUUsK6P6xAXA" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfbvO_fWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfbvPPfWEeaUUsK6P6xAXA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_BfbvPffWEeaUUsK6P6xAXA" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_BfbvPvfWEeaUUsK6P6xAXA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_BfbvP_fWEeaUUsK6P6xAXA"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_BfbvNPfWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BfbvNffWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_BfbvNvfWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_BfbvN_fWEeaUUsK6P6xAXA"/>
+    <element xmi:type="msa:MicroService" href="acmerair.microservicesarchitecture#//@composedBy.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfbvOPfWEeaUUsK6P6xAXA" x="1157"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BfbvQPfWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfbvQvfWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfbvQffWEeaUUsK6P6xAXA" x="1436"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BfbvQ_fWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfcWQPfWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfbvRPfWEeaUUsK6P6xAXA" x="1553"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BfcWQffWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfcWQ_fWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfcWQvfWEeaUUsK6P6xAXA" x="1670"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BfcWRPfWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfcWRvfWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfcWRffWEeaUUsK6P6xAXA" x="1807"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BfcWR_fWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BfcWSffWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfcWSPfWEeaUUsK6P6xAXA" x="1966"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_BfcWSvfWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bfc9UPfWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BfcWS_fWEeaUUsK6P6xAXA" x="2125"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Bfc9UffWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bfc9U_fWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bfc9UvfWEeaUUsK6P6xAXA" x="2242"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Bfc9VPfWEeaUUsK6P6xAXA" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bfc9VvfWEeaUUsK6P6xAXA" type="5002"/>
+    <element xmi:type="msa:Developer" href="acmerair.microservicesarchitecture#//@developers.7"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Bfc9VffWEeaUUsK6P6xAXA" x="2380"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_A8MfQffWEeaUUsK6P6xAXA"/>
+  <element xmi:type="msa:Product" href="acmerair.microservicesarchitecture#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_Bh4mQPfWEeaUUsK6P6xAXA" type="4008" source="_BgXjXffWEeaUUsK6P6xAXA" target="_BhBqpvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bh5NUPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bh5NUffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Bh4mQffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bh4mQvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bh4mQ_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 20]$[0, -20, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiRn0PfWEeaUUsK6P6xAXA" type="4008" source="_BhHxWPfWEeaUUsK6P6xAXA" target="_BgQ1rPfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiRn1PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiRn1ffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiRn0ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiRn0vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiRn0_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 20]$[0, -20, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiS18PfWEeaUUsK6P6xAXA" type="4008" source="_BhIYUffWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiS19PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiS19ffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiS18ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiS18vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiS18_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 20]$[0, -20, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiUrIPfWEeaUUsK6P6xAXA" type="4008" source="_BgYKZvfWEeaUUsK6P6xAXA" target="_BhBqsvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiUrJPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiUrJffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiUrIffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiUrIvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiUrI_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 20]$[0, -20, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiV5QPfWEeaUUsK6P6xAXA" type="4008" source="_BhIYXffWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiV5RPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiV5RffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiV5QffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiV5QvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiV5Q_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 100]$[0, -100, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiXHYPfWEeaUUsK6P6xAXA" type="4008" source="_BgYKbPfWEeaUUsK6P6xAXA" target="_BhBqsvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiXHZPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiXucPfWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiXHYffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiXHYvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiXHY_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 60]$[0, -60, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiY8kPfWEeaUUsK6P6xAXA" type="4008" source="_BgxL9vfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiY8lPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiY8lffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiY8kffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiY8kvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.6"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiY8k_fWEeaUUsK6P6xAXA" points="[0, 20, 0, -20]$[0, 20, 0, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiaKsPfWEeaUUsK6P6xAXA" type="4008" source="_BgYKcvfWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiaKtPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiaKtffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiaKsffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiaKsvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.7"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiaKs_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 140]$[0, -140, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BibY0PfWEeaUUsK6P6xAXA" type="4008" source="_BgxMAvfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BibY1PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BibY1ffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BibY0ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BibY0vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.8"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BibY0_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 20]$[0, -20, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Bicm8PfWEeaUUsK6P6xAXA" type="4008" source="_BgYKePfWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bicm9PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bicm9ffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Bicm8ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bicm8vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.9"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bicm8_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 180]$[0, -180, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Bid1EPfWEeaUUsK6P6xAXA" type="4008" source="_BgxzB_fWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bid1FPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bid1FffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Bid1EffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bid1EvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.10"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bid1E_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 100]$[0, -100, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BifDMPfWEeaUUsK6P6xAXA" type="4008" source="_BgYxcffWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BifDNPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BifqQPfWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BifDMffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BifDMvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.11"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BifDM_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 220]$[0, -220, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BigRUPfWEeaUUsK6P6xAXA" type="4008" source="_BgyaEPfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Big4YPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Big4YffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BigRUffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BigRUvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.12"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BigRU_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 180]$[0, -180, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiiGgPfWEeaUUsK6P6xAXA" type="4008" source="_BgYxd_fWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiiGhPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiiGhffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiiGgffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiiGgvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.13"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiiGg_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 260]$[0, -260, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BijUoPfWEeaUUsK6P6xAXA" type="4008" source="_BgyaHPfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BijUpPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BijUpffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BijUoffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BijUovfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.14"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BijUo_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 260]$[0, -260, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Bij7sPfWEeaUUsK6P6xAXA" type="4008" source="_BgYxfffWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BikiwPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BikiwffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Bij7sffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bij7svfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.15"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bij7s_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 300]$[0, -300, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BilJ0PfWEeaUUsK6P6xAXA" type="4008" source="_BgyaKPfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bilw4PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bilw4ffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BilJ0ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BilJ0vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.16"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BilJ0_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 340]$[0, -340, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BimX8PfWEeaUUsK6P6xAXA" type="4008" source="_BgYxg_fWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BimX9PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bim_APfWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BimX8ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BimX8vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.17"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BimX8_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 340]$[0, -340, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BinmEPfWEeaUUsK6P6xAXA" type="4008" source="_BhIYaffWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BinmFPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BioNIPfWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BinmEffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BinmEvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.18"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BinmE_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 180]$[0, -180, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Bio0MPfWEeaUUsK6P6xAXA" type="4008" source="_BgZYgPfWEeaUUsK6P6xAXA" target="_BhBqsvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bio0NPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bio0NffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Bio0MffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bio0MvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.19"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bio0M_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 340]$[0, -340, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiqCUPfWEeaUUsK6P6xAXA" type="4008" source="_BgzBK_fWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiqCVPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiqpYPfWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiqCUffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiqCUvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.20"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiqCU_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 420]$[0, -420, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Bir3gPfWEeaUUsK6P6xAXA" type="4008" source="_BgZYhvfWEeaUUsK6P6xAXA" target="_Bgp3QvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bir3hPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bir3hffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Bir3gffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Bir3gvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.21"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bir3g_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 420]$[0, -420, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BitFoPfWEeaUUsK6P6xAXA" type="4008" source="_BhI_YPfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BitFpPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BitFpffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BitFoffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BitFovfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.22"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BitFo_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 260]$[0, -260, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BitssPfWEeaUUsK6P6xAXA" type="4008" source="_BgZYjPfWEeaUUsK6P6xAXA" target="_BhBqsvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiuTwPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiuTwffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BitssffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BitssvfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.23"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Bitss_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 420]$[0, -420, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Biu60PfWEeaUUsK6P6xAXA" type="4008" source="_BhI_ZvfWEeaUUsK6P6xAXA" target="_BgQ1svfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Bivh4PfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Bivh4ffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_Biu60ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Biu60vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.24"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Biu60_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 300]$[0, -300, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BiwI8PfWEeaUUsK6P6xAXA" type="4008" source="_BgZYkvfWEeaUUsK6P6xAXA" target="_BhBqsvfWEeaUUsK6P6xAXA">
+    <children xmi:type="notation:DecorationNode" xmi:id="_BiwwAPfWEeaUUsK6P6xAXA" type="6008">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_BiwwAffWEeaUUsK6P6xAXA" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_BiwI8ffWEeaUUsK6P6xAXA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_BiwI8vfWEeaUUsK6P6xAXA" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="acmerair.microservicesarchitecture#//@links.25"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BiwI8_fWEeaUUsK6P6xAXA" points="[0, -20, 0, 460]$[0, -460, 0, 20]"/>
+  </edges>
+</notation:Diagram>

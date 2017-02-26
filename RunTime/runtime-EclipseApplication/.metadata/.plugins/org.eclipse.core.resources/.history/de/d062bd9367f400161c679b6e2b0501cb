@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" name="dsl" version="11.1.1.201610211630">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedJavaExtensions qualifiedClassName="architecture.recovery.dsl.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

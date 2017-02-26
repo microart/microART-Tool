@@ -1,0 +1,78 @@
+@namespace(uri="http://it.univaq.thesis.msa.arch", prefix="msa")
+package MicroservicesArchitecture;
+
+abstract class Element {
+  attr String name = "";
+}
+
+@gmf.diagram
+class Product extends Element {
+  val MicroService[+]#compose composedBy;
+  val Cluster[*]#divide dividedIn;
+  val Team[+]#workFor teams;
+  val Link[*]#Dependency links;
+  val Developer[*]#worksFor developers;
+}
+
+@gmf.node(label="name", border.style="solid", label.icon="false", figure="rectangle", color="178,255,102")
+class MicroService extends Element {
+  ref Product#composedBy compose;
+  ref Cluster#contains belongTo;
+  @gmf.compartment(collapsible="true", layout="list")
+  val Interface[*]#exposedBy expose;
+  attr String host;
+  ref Team#workOn owned;
+  @gmf.compartment(collapsible="true", layout="list")
+  val Interface[*]#requiredBy require;
+  attr serviceType type;
+  id attr Boolean isFunctional = "true";
+}
+
+class Cluster extends Element {
+  ref MicroService[*]#belongTo contains;
+  ref Product#dividedIn divide;
+  attr String context;
+}
+
+@gmf.node(label="name", border.style="dot", label.icon="false", figure="rounded")
+class Developer extends Element {
+  attr String email;
+  attr String username;
+  ref Product#developers worksFor;
+}
+
+@gmf.node(color="104,199,246", label="endPoint", border.style="dash", label.icon="false", figure="rectangle")
+class Interface extends Element {
+  ref MicroService#expose exposedBy;
+  attr String endPoint;
+  attr int port;
+  ref MicroService#require requiredBy;
+}
+
+@gmf.link(color="255,0,0", label.icon="false", source="source", target="target", source.decoration="filledrhomb", target.decoration="arrow")
+class Link extends Element {
+  ref Interface source;
+  ref Interface target;
+  ref Product#links Dependency;
+}
+
+class Team extends Element {
+  ref Developer[*] composedBy;
+  ref MicroService[*]#owned workOn;
+  ref Product#teams workFor;
+}
+
+enum serviceType {
+  generalFuncion = 0;
+  Authentication = 1;
+  serviceDiscovery = 2;
+  LoadBalancer = 3;
+  HealthCheck = 4;
+  Monitor = 5;
+  APIGateways = 6;
+  Security = 7;
+  Messaging = 8;
+  Logging = 9;
+  Resilience = 10;
+}
+

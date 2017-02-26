@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_qrtW0Pd0EeaTDpufaBM2yQ" type="MicroservicesArchitecture" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_rgZjIPd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgcmcPd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgeboPd0EeaTDpufaBM2yQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgfCsPd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgfCsfd0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgfCsvd0EeaTDpufaBM2yQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgfCs_d0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgfCtPd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rgZjIfd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rgZjIvd0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rgZjI_d0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rgZjJPd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgZjJfd0EeaTDpufaBM2yQ"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rgfCtfd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgfpwPd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgfpwfd0EeaTDpufaBM2yQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgfpwvd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgfpw_d0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgfpxPd0EeaTDpufaBM2yQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgfpxfd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgfpxvd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rgfCtvd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rgfCt_d0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rgfCuPd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rgfCufd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgfCuvd0EeaTDpufaBM2yQ" x="131"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rggQ0Pd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rggQ1vd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rggQ1_d0EeaTDpufaBM2yQ" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_oHtTkPd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oHt6oPd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oHtTkfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oHtTkvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oHtTk_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oHtTlPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oHt6ofd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oHuhtPd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oHuhsPd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oHuhsfd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oHuhsvd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oHuhs_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oHuhtfd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oHuhuvd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oHuhtvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oHuht_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oHuhuPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@expose.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oHuhufd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oHuhu_d1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oHuhwPd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oHuhvPd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oHuhvfd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oHuhvvd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@expose.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oHuhv_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oHuhwfd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oHvIwPd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oHuhwvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oHuhw_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oHuhxPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@expose.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oHuhxfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oHvIwfd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oHvIxvd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oHvIwvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oHvIw_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oHvIxPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@expose.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oHvIxfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rggQ2Pd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rggQ2fd0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rggQ2vd0EeaTDpufaBM2yQ" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_oICDsPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oICqwPd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oICDsfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oICDsvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oICDs_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oICDtPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oICqwfd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oICqxvd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oICqwvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oICqw_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oICqxPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.2/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oICqxfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rggQ2_d0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rggQ3Pd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rggQ0fd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rggQ0vd0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rggQ0_d0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rggQ1Pd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rggQ1fd0EeaTDpufaBM2yQ" x="276"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rggQ3fd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgg34Pd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgg34fd0EeaTDpufaBM2yQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgg34vd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgg34_d0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgg35Pd0EeaTDpufaBM2yQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgg35fd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgg35vd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rggQ3vd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rggQ3_d0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rggQ4Pd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rggQ4fd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rggQ4vd0EeaTDpufaBM2yQ" x="525"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rgg35_d0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rghe8Pd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rghe8fd0EeaTDpufaBM2yQ" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rghe8vd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rghe8_d0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rghe9Pd0EeaTDpufaBM2yQ" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rghe9fd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rghe9vd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rgg36Pd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rgg36fd0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rgg36vd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rgg36_d0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgg37Pd0EeaTDpufaBM2yQ" x="684" y="96"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rghe9_d0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rghe_fd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgiGAPd0EeaTDpufaBM2yQ" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_oIJYcPd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIJYdfd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIJYcfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIJYcvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIJYc_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.5/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIJYdPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIJYdvd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIJYe_d1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIJYd_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIJYePd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIJYefd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.5/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIJYevd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgiGAfd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgiGAvd0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgiGA_d0EeaTDpufaBM2yQ" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_oINC0Pd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oINp4Pd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oINC0fd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oINC0vd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oINC0_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.5/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oINC1Pd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oINp4fd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oINp5vd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oINp4vd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oINp4_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oINp5Pd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.5/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oINp5fd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oINp5_d1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oINp7Pd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oINp6Pd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oINp6fd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oINp6vd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.5/@require.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oINp6_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oINp7fd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oINp8vd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oINp7vd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oINp7_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oINp8Pd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.5/@require.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oINp8fd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgiGBPd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgiGBfd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rghe-Pd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rghe-fd0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rghe-vd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rghe-_d0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rghe_Pd0EeaTDpufaBM2yQ" x="1152" y="300"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rgiGBvd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgiGDPd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgiGDfd0EeaTDpufaBM2yQ" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_oITJcPd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oITwgPd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oITJcfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oITJcvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oITJc_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oITJdPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oITwgfd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oITwhvd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oITwgvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oITwg_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oITwhPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oITwhfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oITwh_d1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oITwjPd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oITwiPd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oITwifd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oITwivd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@expose.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oITwi_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgiGDvd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgiGD_d0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgiGEPd0EeaTDpufaBM2yQ" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_oIYpAPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZQEPd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIYpAfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIYpAvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIYpA_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIYpBPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZQEfd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZQFvd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZQEvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZQE_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZQFPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZQFfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZQF_d1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZQHPd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZQGPd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZQGfd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZQGvd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZQG_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZQHfd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZQIvd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZQHvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZQH_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZQIPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZQIfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZ3IPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZ3Jfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZ3Ifd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZ3Ivd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZ3I_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZ3JPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZ3Jvd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZ3K_d1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZ3J_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZ3KPd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZ3Kfd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZ3Kvd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZ3LPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIZ3Mfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZ3Lfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZ3Lvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZ3L_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZ3MPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIZ3Mvd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIaeMPd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIZ3M_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIZ3NPd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIZ3Nfd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.7"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIZ3Nvd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIaeMfd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIaeNvd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIaeMvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIaeM_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIaeNPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.8"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIaeNfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIaeN_d1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIaePPd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIaeOPd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIaeOfd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIaeOvd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.9"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIaeO_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIaePfd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIaeQvd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIaePvd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIaeP_d1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIaeQPd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.10"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIaeQfd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIaeQ_d1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIbFQPd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIaeRPd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIaeRfd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIaeRvd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.6/@require.11"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIaeR_d1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgiGEfd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgiGEvd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rgiGB_d0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rgiGCPd0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rgiGCfd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rgiGCvd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgiGC_d0EeaTDpufaBM2yQ" x="-96" y="432"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rgitEPd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgitFvd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgitF_d0EeaTDpufaBM2yQ" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_oIpuwPd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIpuxfd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIpuwfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIpuwvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIpuw_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIpuxPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIpuxvd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIpuy_d1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIpux_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIpuyPd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIpuyfd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@expose.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIpuyvd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgitGPd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgitGfd0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgitGvd0EeaTDpufaBM2yQ" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_oIuAMPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIuANfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIuAMfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIuAMvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIuAM_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIuANPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIuANvd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIuAO_d1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIuAN_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIuAOPd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIuAOfd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIuAOvd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIuAPPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIuAQfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIuAPfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIuAPvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIuAP_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIuAQPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIunQPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIunRfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIunQfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIunQvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIunQ_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIunRPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIunRvd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIunS_d1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIunR_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIunSPd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIunSfd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIunSvd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIunTPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIunUfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIunTfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIunTvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIunT_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.5"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIunUPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_oIunUvd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oIunV_d1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oIunU_d1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oIunVPd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oIunVfd1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.7/@require.6"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oIunVvd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgitG_d0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgitHPd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rgitEfd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rgitEvd0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rgitE_d0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rgitFPd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.7"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgitFfd0EeaTDpufaBM2yQ" x="804" y="576"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_rgitHfd0EeaTDpufaBM2yQ" type="2001">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgjUIPd0EeaTDpufaBM2yQ" type="5003"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgjUIfd0EeaTDpufaBM2yQ" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_oI3xMPd1Eea7sYpf3nsHYw" type="3001">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oI3xNfd1Eea7sYpf3nsHYw" type="5001"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oI3xMfd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oI3xMvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oI3xM_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.8/@expose.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oI3xNPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgjUIvd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgjUI_d0EeaTDpufaBM2yQ"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rgjUJPd0EeaTDpufaBM2yQ" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_oI4_UPd1Eea7sYpf3nsHYw" type="3002">
+        <children xmi:type="notation:DecorationNode" xmi:id="_oI4_Vfd1Eea7sYpf3nsHYw" type="5002"/>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_oI4_Ufd1Eea7sYpf3nsHYw"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_oI4_Uvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_oI4_U_d1Eea7sYpf3nsHYw"/>
+        <element xmi:type="msa:Interface" href="My.microservicesarchitecture#//@composedBy.8/@require.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oI4_VPd1Eea7sYpf3nsHYw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rgjUJfd0EeaTDpufaBM2yQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rgjUJvd0EeaTDpufaBM2yQ"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_rgitHvd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_rgitH_d0EeaTDpufaBM2yQ" fontName="Noto Sans"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_rgitIPd0EeaTDpufaBM2yQ"/>
+    <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_rgitIfd0EeaTDpufaBM2yQ"/>
+    <element xmi:type="msa:MicroService" href="My.microservicesarchitecture#//@composedBy.8"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgitIvd0EeaTDpufaBM2yQ" x="2280" y="240"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rglwYPd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgmXcPd0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rglwYfd0EeaTDpufaBM2yQ" x="2369"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgmXcfd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgm-gPd0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgmXcvd0EeaTDpufaBM2yQ" x="2486"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgm-gfd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgm-g_d0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgm-gvd0EeaTDpufaBM2yQ" x="2603"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgm-hPd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgnlkPd0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgm-hfd0EeaTDpufaBM2yQ" x="2740"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgnlkfd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgnlk_d0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgnlkvd0EeaTDpufaBM2yQ" x="2899"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgnllPd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgoMoPd0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgnllfd0EeaTDpufaBM2yQ" x="3058"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgoMofd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgoMo_d0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgoMovd0EeaTDpufaBM2yQ" x="3175"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_rgoMpPd0EeaTDpufaBM2yQ" type="2002" fontName="Noto Sans">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rgozsPd0EeaTDpufaBM2yQ" type="5004"/>
+    <element xmi:type="msa:Developer" href="My.microservicesarchitecture#//@developers.7"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rgoMpfd0EeaTDpufaBM2yQ" x="3313"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_qrtW0fd0EeaTDpufaBM2yQ"/>
+  <element xmi:type="msa:Product" href="My.microservicesarchitecture#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_oJ8IMPd1Eea7sYpf3nsHYw" type="4001" source="_oINC0Pd1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oJ8INPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oJ8INfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oJ8IMfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oJ8IMvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.0"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oJ8IM_d1Eea7sYpf3nsHYw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oJ99YPd1Eea7sYpf3nsHYw" type="4001" source="_oIuAMPd1Eea7sYpf3nsHYw" target="_oIJYdvd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oJ99ZPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oJ99Zfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oJ99Yfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oJ99Yvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.1"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oJ99Y_d1Eea7sYpf3nsHYw" points="[0, 20, 0, -20]$[0, 20, 0, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKC14Pd1Eea7sYpf3nsHYw" type="4001" source="_oINp5_d1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKC15Pd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKC15fd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKC14fd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKC14vd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.2"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKC14_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 60]$[0, -60, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKErEPd1Eea7sYpf3nsHYw" type="4001" source="_oIuANvd1Eea7sYpf3nsHYw" target="_oIJYdvd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKErFPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKErFfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKErEfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKErEvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.3"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKErE_d1Eea7sYpf3nsHYw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKN1APd1Eea7sYpf3nsHYw" type="4001" source="_oIYpAPd1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKN1BPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKOcEPd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKN1Afd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKN1Avd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.4"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKN1A_d1Eea7sYpf3nsHYw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKPqMPd1Eea7sYpf3nsHYw" type="4001" source="_oIuAPPd1Eea7sYpf3nsHYw" target="_oITwgfd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKPqNPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKPqNfd1Eea7sYpf3nsHYw" x="8" y="72"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKPqMfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKPqMvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.5"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKPqM_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 20]$[0, -20, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKWX4Pd1Eea7sYpf3nsHYw" type="4001" source="_oIZQF_d1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKWX5Pd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKWX5fd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKWX4fd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKWX4vd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.6"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKWX4_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 60]$[0, -60, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKYNEPd1Eea7sYpf3nsHYw" type="4001" source="_oIunQPd1Eea7sYpf3nsHYw" target="_oITwgfd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKYNFPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKYNFfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKYNEfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKYNEvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.7"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKYNE_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 60]$[0, -60, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKcegPd1Eea7sYpf3nsHYw" type="4001" source="_oIZ3IPd1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKdFkPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKdFkfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKcegfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKcegvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.8"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKceg_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 140]$[0, -140, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKeTsPd1Eea7sYpf3nsHYw" type="4001" source="_oIunRvd1Eea7sYpf3nsHYw" target="_oITwgfd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKeTtPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKeTtfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKeTsfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKeTsvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.9"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKeTs_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 100]$[0, -100, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKjzQPd1Eea7sYpf3nsHYw" type="4001" source="_oIZ3LPd1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKjzRPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKjzRfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKjzQfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKjzQvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.10"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKjzQ_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 220]$[0, -220, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKlBYPd1Eea7sYpf3nsHYw" type="4001" source="_oIunTPd1Eea7sYpf3nsHYw" target="_oITwgfd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKlBZPd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKlBZfd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKlBYfd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKlBYvd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.11"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKlBY_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 140]$[0, -140, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKpS0Pd1Eea7sYpf3nsHYw" type="4001" source="_oIaeMfd1Eea7sYpf3nsHYw" target="_oIpuwPd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKpS1Pd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKpS1fd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKpS0fd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKpS0vd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.12"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKpS0_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 300]$[0, -300, 0, 20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oKqg8Pd1Eea7sYpf3nsHYw" type="4001" source="_oIunUvd1Eea7sYpf3nsHYw" target="_oITwgfd1Eea7sYpf3nsHYw">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oKqg9Pd1Eea7sYpf3nsHYw" type="6001">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_oKqg9fd1Eea7sYpf3nsHYw" y="40"/>
+    </children>
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_oKqg8fd1Eea7sYpf3nsHYw"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oKqg8vd1Eea7sYpf3nsHYw" fontName="Noto Sans"/>
+    <element xmi:type="msa:Link" href="My.microservicesarchitecture#//@links.13"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oKqg8_d1Eea7sYpf3nsHYw" points="[0, -20, 0, 180]$[0, -180, 0, 20]"/>
+  </edges>
+</notation:Diagram>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MicroservicesArchitecture" nsURI="http://it.univaq.thesis.msa.arch"
+    nsPrefix="msa">
+  <eClassifiers xsi:type="ecore:EClass" name="Element" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Product" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composedBy" lowerBound="1"
+        upperBound="-1" eType="#//MicroService" containment="true" eOpposite="#//MicroService/compose"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dividedIn" upperBound="-1"
+        eType="#//Cluster" containment="true" eOpposite="#//Cluster/divide"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="teams" lowerBound="1" upperBound="-1"
+        eType="#//Team" containment="true" eOpposite="#//Team/workFor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true" eOpposite="#//Link/Dependency"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="developers" upperBound="-1"
+        eType="#//Developer" containment="true" eOpposite="#//Developer/worksFor"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MicroService" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compose" eType="#//Product"
+        eOpposite="#//Product/composedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="belongTo" eType="#//Cluster"
+        eOpposite="#//Cluster/contains"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expose" upperBound="-1"
+        eType="#//Interface" containment="true" eOpposite="#//Interface/exposedBy"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="host" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owned" eType="#//Team"
+        eOpposite="#//Team/workOn"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isInfrastructural" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="require" upperBound="-1"
+        eType="#//Interface" containment="true" eOpposite="#//Interface/requiredBy"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Cluster" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
+        eType="#//MicroService" eOpposite="#//MicroService/belongTo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="divide" eType="#//Product"
+        eOpposite="#//Product/dividedIn"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Developer" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="worksFor" eType="#//Product"
+        eOpposite="#//Product/developers"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exposedBy" eType="#//MicroService"
+        eOpposite="#//MicroService/expose"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="endPoint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="port" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredBy" eType="#//MicroService"
+        eOpposite="#//MicroService/require"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Dependency" eType="#//Product"
+        eOpposite="#//Product/links"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Team" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composedBy" upperBound="-1"
+        eType="#//Developer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workOn" upperBound="-1"
+        eType="#//MicroService" eOpposite="#//MicroService/owned"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workFor" eType="#//Product"
+        eOpposite="#//Product/teams"/>
+  </eClassifiers>
+</ecore:EPackage>

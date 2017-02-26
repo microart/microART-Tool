@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_3XmmYPePEeatIIruKwv2uA" type="MicroservicesArchitecture" measurementUnit="Pixel">
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_3XmmYfePEeatIIruKwv2uA"/>
+  <element xmi:type="msa:Product" href="acmerair.microservicesarchitecture#/"/>
+</notation:Diagram>

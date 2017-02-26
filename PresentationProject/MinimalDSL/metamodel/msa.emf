@@ -1,0 +1,61 @@
+@namespace(uri="http://it.univaq.thesis.msa.arch", prefix="msa")
+@gmf
+package MicroservicesArchitecture;
+
+abstract class Element {
+  attr String name = "";
+}
+@gmf.diagram
+class Product extends Element {
+  val MicroService[+]#compose composedBy;
+  val Cluster[*]#divide dividedIn;
+  val Team[+]#workFor teams;
+  val Link[*]#Dependency links;
+  val Developer[*]#worksFor developers;
+}
+@gmf.node(label = "name",  color="102,255,127", border.style="solid", label.icon = "false", figure = "rectangle"  )
+class MicroService extends Element {
+  ref Product#composedBy compose;
+  ref Cluster#contains belongTo;
+  @gmf.compartment(target.decoration="arrow", style="dash", layout="list", incoming = "false")
+  val Interface[*]#exposedBy expose;
+  attr String host;
+  ref Team#workOn owned;
+  attr boolean isInfrastructural;
+  @gmf.compartment(target.decoration="arrow", style="dash", layout="list", incoming = "false")
+  val Interface[*]#requiredBy require;
+}
+
+class Cluster extends Element {
+  ref MicroService[*]#belongTo contains;
+  ref Product#dividedIn divide;
+  attr String context;
+}
+@gmf.node(label = "name", border.style="dot", label.icon = "false", figure = "rounded" )
+class Developer extends Element {
+  attr String email;
+  attr String username;
+  ref Product#developers worksFor;
+}
+@gmf.node(label = "endPoint", border.style="solid", color="102,153,255", label.icon = "false", figure = "ellipse")
+class Interface extends Element {
+  ref MicroService#expose exposedBy;
+  attr String endPoint;
+  attr int port;	
+  ref MicroService#require requiredBy;
+}
+@gmf.link(label = "name", width="3", source="source", target.decoration="arrow", source.decoration="filledrhomb",target="target", label.icon = "false", color="204,204,102")
+class Link extends Element {
+  ref Interface source;
+  ref Interface target;
+  ref Product#links Dependency;
+}
+
+class Team extends Element {
+  
+  ref Developer[*] composedBy;
+    @gmf.link(target.decoration="arrow",layout="list",  style="dot")
+  ref MicroService[*]#owned workOn;
+  ref Product#teams workFor;
+}
+

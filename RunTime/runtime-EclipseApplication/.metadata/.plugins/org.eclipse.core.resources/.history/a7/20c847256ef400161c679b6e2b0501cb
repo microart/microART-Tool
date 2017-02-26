@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="dsl" version="11.1.1.201610211630">
+  <ownedViewpoints name="MSA" modelFileExtension="microservicesarchitecture">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Product" domainClass="MicroservicesArchitecture.Product" enablePopupBars="true">
+      <metamodel href="http://it.univaq.thesis.msa.arch#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="MicroServiceNode" domainClass="MicroservicesArchitecture.MicroService">
+          <style xsi:type="style:BundledImageDescription" labelSize="5" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Interface" domainClass="MicroservicesArchitecture.Interface">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="5" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings sourceMapping="//@ownedViewpoints[name='MSA']/@ownedRepresentations[name='Product']/@defaultLayer/@nodeMappings[name='MicroServiceNode']" targetMapping="//@ownedViewpoints[name='MSA']/@ownedRepresentations[name='Product']/@defaultLayer/@nodeMappings[name='Interface']" domainClass="MicroservicesArchitecture.Link" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="Product" domainClass="MicroservicesArchitecture.Product">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="5" showIcon="false">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

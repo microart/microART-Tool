@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ShowViewDialog">
+		<item value="331" key="DIALOG_WIDTH"/>
+		<item value="1|Noto Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="org.eclipse.ui.views.PropertySheet" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="422" key="DIALOG_HEIGHT"/>
+		<item value="795" key="DIALOG_X_ORIGIN"/>
+		<item value="221" key="DIALOG_Y_ORIGIN"/>
+		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="General"/>
+		</list>
+	</section>
+</section>

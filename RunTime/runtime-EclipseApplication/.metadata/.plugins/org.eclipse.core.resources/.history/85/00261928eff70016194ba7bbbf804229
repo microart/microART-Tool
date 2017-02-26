@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msa:Product xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch">
+  <composedBy name="session_db" host="172.18.0.2"/>
+  <composedBy name="booking_db" host="172.18.0.5"/>
+  <composedBy name="customer_db" host="172.18.0.4"/>
+  <composedBy name="flight_db" host="172.18.0.3"/>
+  <composedBy name="main_service_node1" host="172.18.0.6">
+    <expose name="Request From: nginx" endPoint="/acmeair/index.html"/>
+    <expose name="Request From: nginx" endPoint="/acmeair/flights.html"/>
+    <expose name="Request From: nginx" endPoint="/acmeair/customerprofile.html"/>
+    <expose name="Request From: nginx" endPoint="/acmeair/checkin.html"/>
+  </composedBy>
+  <composedBy name="auth_service_node1" host="172.18.0.10">
+    <expose name="Request From: nginx" endPoint="/acmeair-as/rest"/>
+    <expose name="Request From: nginx" endPoint="Ack"/>
+    <expose name="Request From: nginx" endPoint="/acmeair-as/rest/api/login/authcheck"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+  </composedBy>
+  <composedBy name="booking_service_node1" host="172.18.0.7">
+    <expose name="Request From: nginx" endPoint="/acmeair-bs/rest/api/bookings/byuser"/>
+    <expose name="Request From: nginx" endPoint="Ack"/>
+    <expose name="Request From: nginx" endPoint="/acmeair-bs/rest/api/bookings"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+  </composedBy>
+  <composedBy name="customer_service_node1" host="172.18.0.9">
+    <expose name="Request From: nginx" endPoint="/acmeair-cs/rest/api/customer"/>
+    <expose name="Request From: nginx" endPoint="/acmeair-cs/rest/api/customer/byid"/>
+    <expose name="Request From: nginx" endPoint="Ack"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+  </composedBy>
+  <composedBy name="flight_service_node1" host="172.18.0.8">
+    <expose name="Request From: nginx" endPoint="/acmeair-fs/rest/api/flights"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+  </composedBy>
+  <composedBy name="nginx" host="172.18.0.11">
+    <expose name="Request From: Client-User" endPoint="/main/acmeair/index.html"/>
+    <expose name="Request From: Client-User" endPoint="/main/acmeair/flights.html"/>
+    <expose name="Request From: Client-User" endPoint="/flight/acmeair-fs/rest/api/flights"/>
+    <expose name="Request From: booking_service_node1" endPoint="Ack"/>
+    <expose name="Request From: Client-User" endPoint="/auth/acmeair-as/rest/api"/>
+    <expose name="Request From: auth_service_node1" endPoint="/customer/acmeair-cs/rest/api/customer"/>
+    <expose name="Request From: Client-User" endPoint="/main/acmeair/customerprofile.html"/>
+    <expose name="Request From: Client-User" endPoint="/customer/acmeair-cs/rest/api/custome"/>
+    <expose name="Request From: booking_service_node1" endPoint="/auth/acmeair-as/rest/api/logi"/>
+    <expose name="Request From: Client-User" endPoint="/main/acmeair/checkin.html"/>
+    <expose name="Request From: Client-User" endPoint="/booking/acmeair-bs/rest/api/booking"/>
+    <expose name="Request From: Client-User" endPoint="/booking/acmeair-bs/rest/api/bookings"/>
+    <require name="Needs: main_service_node1 @Addr: 172.18.0.6" endPoint="/main_service_node1/"/>
+    <require name="Needs: main_service_node1 @Addr: 172.18.0.6" endPoint="/main_service_node1/"/>
+    <require name="Needs: flight_service_node1 @Addr: 172.18.0.8" endPoint="/flight_service_node1/"/>
+    <require name="Needs: Client-User @Addr: 172.18.0.1" endPoint="/Client-User/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: main_service_node1 @Addr: 172.18.0.6" endPoint="/main_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: Client-User @Addr: 172.18.0.1" endPoint="/Client-User/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: Client-User @Addr: 172.18.0.1" endPoint="/Client-User/"/>
+    <require name="Needs: main_service_node1 @Addr: 172.18.0.6" endPoint="/main_service_node1/"/>
+    <require name="Needs: main_service_node1 @Addr: 172.18.0.6" endPoint="/main_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: Client-User @Addr: 172.18.0.1" endPoint="/Client-User/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: Client-User @Addr: 172.18.0.1" endPoint="/Client-User/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.10" endPoint="/auth_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: Client-User @Addr: 172.18.0.1" endPoint="/Client-User/"/>
+  </composedBy>
+  <composedBy name="Client-User" host="172.18.0.1">
+    <expose name="Request From: nginx" endPoint="Ack"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+    <require name="Needs: nginx @Addr: 172.18.0.11" endPoint="/nginx/"/>
+  </composedBy>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.0" target="//@composedBy.9/@expose.0"/>
+  <links name="From: nginx To: main_service_node1" source="//@composedBy.9/@require.0" target="//@composedBy.4/@expose.0"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.1" target="//@composedBy.9/@expose.1"/>
+  <links name="From: nginx To: main_service_node1" source="//@composedBy.9/@require.1" target="//@composedBy.4/@expose.1"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.2" target="//@composedBy.9/@expose.2"/>
+  <links name="From: nginx To: flight_service_node1" source="//@composedBy.9/@require.2" target="//@composedBy.8/@expose.0"/>
+  <links name="From: flight_service_node1 To: nginx" source="//@composedBy.8/@require.0" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: Client-User" source="//@composedBy.9/@require.3" target="//@composedBy.10/@expose.0"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.3" target="//@composedBy.9/@expose.4"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.4" target="//@composedBy.5/@expose.0"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.0" target="//@composedBy.9/@expose.5"/>
+  <links name="From: nginx To: customer_service_node1" source="//@composedBy.9/@require.5" target="//@composedBy.7/@expose.0"/>
+  <links name="From: customer_service_node1 To: nginx" source="//@composedBy.7/@require.0" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.6" target="//@composedBy.5/@expose.1"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.1" target="//@composedBy.9/@expose.3"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.4" target="//@composedBy.9/@expose.6"/>
+  <links name="From: nginx To: main_service_node1" source="//@composedBy.9/@require.7" target="//@composedBy.4/@expose.2"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.5" target="//@composedBy.9/@expose.7"/>
+  <links name="From: nginx To: customer_service_node1" source="//@composedBy.9/@require.8" target="//@composedBy.7/@expose.1"/>
+  <links name="From: customer_service_node1 To: nginx" source="//@composedBy.7/@require.1" target="//@composedBy.9/@expose.8"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.9" target="//@composedBy.5/@expose.2"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.2" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: customer_service_node1" source="//@composedBy.9/@require.10" target="//@composedBy.7/@expose.2"/>
+  <links name="From: customer_service_node1 To: nginx" source="//@composedBy.7/@require.2" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: Client-User" source="//@composedBy.9/@require.11" target="//@composedBy.10/@expose.0"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.6" target="//@composedBy.9/@expose.7"/>
+  <links name="From: nginx To: customer_service_node1" source="//@composedBy.9/@require.12" target="//@composedBy.7/@expose.1"/>
+  <links name="From: customer_service_node1 To: nginx" source="//@composedBy.7/@require.3" target="//@composedBy.9/@expose.8"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.13" target="//@composedBy.5/@expose.2"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.3" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: customer_service_node1" source="//@composedBy.9/@require.14" target="//@composedBy.7/@expose.2"/>
+  <links name="From: customer_service_node1 To: nginx" source="//@composedBy.7/@require.4" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: Client-User" source="//@composedBy.9/@require.15" target="//@composedBy.10/@expose.0"/>
+  <links name="From: nginx To: main_service_node1" source="//@composedBy.9/@require.16" target="//@composedBy.4/@expose.1"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.7" target="//@composedBy.9/@expose.9"/>
+  <links name="From: nginx To: main_service_node1" source="//@composedBy.9/@require.17" target="//@composedBy.4/@expose.3"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.8" target="//@composedBy.9/@expose.10"/>
+  <links name="From: nginx To: booking_service_node1" source="//@composedBy.9/@require.18" target="//@composedBy.6/@expose.0"/>
+  <links name="From: booking_service_node1 To: nginx" source="//@composedBy.6/@require.0" target="//@composedBy.9/@expose.8"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.19" target="//@composedBy.5/@expose.2"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.4" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: booking_service_node1" source="//@composedBy.9/@require.20" target="//@composedBy.6/@expose.1"/>
+  <links name="From: booking_service_node1 To: nginx" source="//@composedBy.6/@require.1" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: Client-User" source="//@composedBy.9/@require.21" target="//@composedBy.10/@expose.0"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.9" target="//@composedBy.9/@expose.11"/>
+  <links name="From: nginx To: booking_service_node1" source="//@composedBy.9/@require.22" target="//@composedBy.6/@expose.2"/>
+  <links name="From: booking_service_node1 To: nginx" source="//@composedBy.6/@require.2" target="//@composedBy.9/@expose.8"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.23" target="//@composedBy.5/@expose.2"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.5" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: booking_service_node1" source="//@composedBy.9/@require.24" target="//@composedBy.6/@expose.1"/>
+  <links name="From: booking_service_node1 To: nginx" source="//@composedBy.6/@require.3" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: Client-User" source="//@composedBy.9/@require.25" target="//@composedBy.10/@expose.0"/>
+  <links name="From: Client-User To: nginx" source="//@composedBy.10/@require.10" target="//@composedBy.9/@expose.10"/>
+  <links name="From: nginx To: booking_service_node1" source="//@composedBy.9/@require.26" target="//@composedBy.6/@expose.0"/>
+  <links name="From: booking_service_node1 To: nginx" source="//@composedBy.6/@require.4" target="//@composedBy.9/@expose.8"/>
+  <links name="From: nginx To: auth_service_node1" source="//@composedBy.9/@require.27" target="//@composedBy.5/@expose.2"/>
+  <links name="From: auth_service_node1 To: nginx" source="//@composedBy.5/@require.6" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: booking_service_node1" source="//@composedBy.9/@require.28" target="//@composedBy.6/@expose.1"/>
+  <links name="From: booking_service_node1 To: nginx" source="//@composedBy.6/@require.5" target="//@composedBy.9/@expose.3"/>
+  <links name="From: nginx To: Client-User" source="//@composedBy.9/@require.29" target="//@composedBy.10/@expose.0"/>
+  <developers name="Yang Lei" email="genially@gmail.com"/>
+  <developers name="Yang Lei" email="yanglei@Yangs-2015-MacBook-Pro.local"/>
+  <developers name="mossuchida" email="muchida@ca.ibm.com"/>
+  <developers name="Kevin Schneider" email="kjschnei001@gmail.com"/>
+  <developers name="Kevin Schneider" email="kjschnei@us.ibm.com"/>
+  <developers name="Yang Lei" email="yanglei@us.ibm.com"/>
+  <developers name="Shahir Daya" email="sdaya@ca.ibm.com"/>
+  <developers name="dougrt" email="juggler001@gmail.com"/>
+</msa:Product>

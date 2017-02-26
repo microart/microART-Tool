@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;it.univaq.recovery.diagram/My.microservicesarchitecture&apos; to &apos;ModelWithNoClient.microservicesarchitecture&apos;" description="Rename resource &apos;My.microservicesarchitecture&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="My.microservicesarchitecture" name="ModelWithNoClient.microservicesarchitecture" stamp="1487603810139" updateReferences="true"/>
+</session>

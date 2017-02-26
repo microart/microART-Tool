@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="dsl" version="11.1.1.201610211630">
+  <ownedViewpoints name="MSA" modelFileExtension="microservicesarchitecture">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Product" domainClass="MicroservicesArchitecture.Product" enablePopupBars="true">
+      <metamodel href="http://it.univaq.thesis.msa.arch#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="MicroServiceNode" domainClass="MicroservicesArchitecture.MicroService">
+          <style xsi:type="style:BundledImageDescription" showIcon="false" labelPosition="node" resizeKind="NSEW" shape="ring">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings/>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

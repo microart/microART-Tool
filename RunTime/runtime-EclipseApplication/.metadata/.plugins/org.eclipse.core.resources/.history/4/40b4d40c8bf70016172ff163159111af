@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ASCII"?>
+<msa:Product xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch">
+  <composedBy name="session_db" host="172.18.0.4">
+    <expose name="Request By customer_service_node1" endPoint="/acmeair/index.html"/>
+    <require name="Require: customer_service_node1" endPoint="REQUIRE: 172.18.0.11"/>
+  </composedBy>
+  <composedBy name="booking_db" host="172.18.0.6"/>
+  <composedBy name="customer_db" host="172.18.0.3"/>
+  <composedBy name="flight_db" host="172.18.0.5"/>
+  <composedBy name="main_service_node1" host="172.18.0.7">
+    <expose name="Request By customer_service_node1" endPoint="/acmeair-as/rest/api/login/authcheck"/>
+    <require name="Require: customer_service_node1" endPoint="REQUIRE: 172.18.0.11"/>
+  </composedBy>
+  <composedBy name="auth_service_node1" host="172.18.0.8">
+    <expose name="Request By customer_service_node1" endPoint="/acmeair-cs/rest/api/customer/byid"/>
+    <require name="Require: customer_service_node1" endPoint="REQUIRE: 172.18.0.11"/>
+  </composedBy>
+  <composedBy name="booking_service_node1" host="172.18.0.10">
+    <expose name="Request By customer_service_node1" endPoint="/acmeair-bs/rest/api/bookings"/>
+    <require name="Require: customer_service_node1" endPoint="REQUIRE: 172.18.0.11"/>
+  </composedBy>
+  <composedBy name="customer_service_node1" host="172.18.0.11">
+    <expose name="Request By Client-User" endPoint="/main/acmeair/index.html"/>
+    <expose name="Request By booking_service_node1" endPoint="/auth/acmeair-as/rest/api/logi"/>
+    <expose name="Request By session_db" endPoint="200 Ok"/>
+    <require name="Require: session_db" endPoint="REQUIRE: 172.18.0.4"/>
+    <require name="Require: auth_service_node1" endPoint="REQUIRE: 172.18.0.8"/>
+    <require name="Require: main_service_node1" endPoint="REQUIRE: 172.18.0.7"/>
+    <require name="Require: Client-User" endPoint="REQUIRE: 172.18.0.1"/>
+    <require name="Require: flight_service_node1" endPoint="REQUIRE: 172.18.0.9"/>
+    <require name="Require: booking_service_node1" endPoint="REQUIRE: 172.18.0.10"/>
+  </composedBy>
+  <composedBy name="flight_service_node1" host="172.18.0.9">
+    <expose name="Request By customer_service_node1" endPoint="/acmeair-fs/rest/api/flights"/>
+    <require name="Require: customer_service_node1" endPoint="REQUIRE: 172.18.0.11"/>
+  </composedBy>
+  <composedBy name="nginx" host="172.18.0.2"/>
+  <composedBy name="Client-User" host="172.18.0.1">
+    <expose name="Request By customer_service_node1" endPoint="200 Ok"/>
+    <require name="Require: customer_service_node1" endPoint="REQUIRE: 172.18.0.11"/>
+  </composedBy>
+  <links name="Client-User REQUIRE customer_service_node1" source="//@composedBy.10/@require.0" target="//@composedBy.7/@expose.0"/>
+  <links name="customer_service_node1 REQUIRE session_db" source="//@composedBy.7/@require.0" target="//@composedBy.0/@expose.0"/>
+  <links name="customer_service_node1 REQUIRE auth_service_node1" source="//@composedBy.7/@require.1" target="//@composedBy.5/@expose.0"/>
+  <links name="auth_service_node1 REQUIRE customer_service_node1" source="//@composedBy.5/@require.0" target="//@composedBy.7/@expose.1"/>
+  <links name="customer_service_node1 REQUIRE main_service_node1" source="//@composedBy.7/@require.2" target="//@composedBy.4/@expose.0"/>
+  <links name="main_service_node1 REQUIRE customer_service_node1" source="//@composedBy.4/@require.0" target="//@composedBy.7/@expose.2"/>
+  <links name="customer_service_node1 REQUIRE Client-User" source="//@composedBy.7/@require.3" target="//@composedBy.10/@expose.0"/>
+  <links name="customer_service_node1 REQUIRE flight_service_node1" source="//@composedBy.7/@require.4" target="//@composedBy.8/@expose.0"/>
+  <links name="flight_service_node1 REQUIRE customer_service_node1" source="//@composedBy.8/@require.0" target="//@composedBy.7/@expose.2"/>
+  <links name="customer_service_node1 REQUIRE booking_service_node1" source="//@composedBy.7/@require.5" target="//@composedBy.6/@expose.0"/>
+  <links name="booking_service_node1 REQUIRE customer_service_node1" source="//@composedBy.6/@require.0" target="//@composedBy.7/@expose.1"/>
+  <links name="session_db REQUIRE customer_service_node1" source="//@composedBy.0/@require.0" target="//@composedBy.7/@expose.2"/>
+  <developers name="Yang Lei" email="genially@gmail.com"/>
+  <developers name="Yang Lei" email="yanglei@Yangs-2015-MacBook-Pro.local"/>
+  <developers name="mossuchida" email="muchida@ca.ibm.com"/>
+  <developers name="Kevin Schneider" email="kjschnei001@gmail.com"/>
+  <developers name="Kevin Schneider" email="kjschnei@us.ibm.com"/>
+  <developers name="Yang Lei" email="yanglei@us.ibm.com"/>
+  <developers name="Shahir Daya" email="sdaya@ca.ibm.com"/>
+  <developers name="dougrt" email="juggler001@gmail.com"/>
+</msa:Product>
