@@ -1,12 +1,9 @@
 ﻿Environment
 
-Operativ System Host Machine
-
-Linux Kubuntu 16.04
-
-Linux kernel version 4.4.0-31-generic
-
-Docker Client/ Server
+    Operative System Host Machine
+    Linux Kubuntu 16.04
+    Linux kernel version 4.4.0-31-generic
+    Docker Client/ Server
 
 Client:
         Version:      1.13.0
@@ -99,7 +96,9 @@ Docker-Machine
     chmod +x /tmp/docker-machine &&
     sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
     docker-machine version
-These two operations are not foundamental, execute these operation if a the end of the guide it doesn't'
+    
+These two operations are not foundamental, execute these operation if a the end of the guide it doesn't
+
     docker-machine create --driver virtualbox default
     eval "$(docker-machine env default)"
 
@@ -114,8 +113,10 @@ To check
 
 AcmeAIR
 
-Our Case study will be AcmeAir a Node.js implementation of the Acme Air Sample Application. With datastore support of MongoDB, Cloudant, Cassandra. 
+Our Case study will be AcmeAir a Node.js implementation of the Acme Air Sample Application. 
+With datastore support of MongoDB, Cloudant, Cassandra. 
 With runtime support of  Docker in order to have a  Micro-Services Architecture to Analyze
+
 Building and Start
     git clone https://github.com/wasperf/acmeair-nodejs.git
     cd acmeair-nodejs
