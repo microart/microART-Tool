@@ -6,20 +6,20 @@
     Docker Client/ Server
 
 Client:
-        Version:      1.13.0
-        API version:  1.25
-        Go version:   go1.7.3
-        Git commit:   49bf474
-        Built:        Tue Jan 17 09:58:26 2017
-        OS/Arch:      linux/amd64
+    Version:      1.13.0
+    API version:  1.25
+    Go version:   go1.7.3
+    Git commit:   49bf474
+    Built:        Tue Jan 17 09:58:26 2017
+    OS/Arch:      linux/amd64
 Server:
-        Version:      1.13.0
-        API version:  1.25 (minimum version 1.12)
-        Go version:   go1.7.3
-        Git commit:   49bf474
-        Built:        Tue Jan 17 09:58:26 2017
-        OS/Arch:      linux/amd64
-        Experimental: false
+    Version:      1.13.0
+    API version:  1.25 (minimum version 1.12)
+    Go version:   go1.7.3
+    Git commit:   49bf474
+    Built:        Tue Jan 17 09:58:26 2017
+    OS/Arch:      linux/amd64
+    Experimental: false
 
 Docker Machine : 
     docker-machine version 0.9.0, build 15fd4c7
