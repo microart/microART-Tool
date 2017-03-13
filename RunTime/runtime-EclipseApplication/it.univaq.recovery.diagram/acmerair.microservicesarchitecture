@@ -1,87 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <msa:Product xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch">
-  <composedBy name="main_service_node1" host="172.18.0.6">
+  <composedBy name="session_db" host="172.18.0.6" owned="//@teams.0"/>
+  <composedBy name="booking_db" host="172.18.0.3" owned="//@teams.1"/>
+  <composedBy name="customer_db" host="172.18.0.2" owned="//@teams.2"/>
+  <composedBy name="flight_db" host="172.18.0.5" owned="//@teams.3"/>
+  <composedBy name="main_service_node1" host="172.18.0.4" owned="//@teams.4">
+    <expose name="Request From: Client-User" endPoint="/acmeair/"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair/config.html"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair/rest/api/config"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair/loader.html"/>
     <expose name="Request From: Client-User" endPoint="/acmeair/index.html"/>
-    <expose name="Request From: Client-User" endPoint="/acmeair/checkin.html"/>
     <expose name="Request From: Client-User" endPoint="/acmeair/flights.html"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair/checkin.html"/>
     <expose name="Request From: Client-User" endPoint="/acmeair/customerprofile.html"/>
     <expose name="Request From: Client-User" endPoint="/acmeair/support.html"/>
     <expose name="Request From: Client-User" endPoint="/acmeair/rest"/>
-    <expose name="Request From: Client-User" endPoint="/acmeair/config.html"/>
-    <expose name="Request From: nginx" endPoint="/acmeair/rest/api/config"/>
   </composedBy>
-  <composedBy name="auth_service_node1" host="172.18.0.7">
+  <composedBy name="auth_service_node1" host="172.18.0.8" owned="//@teams.5">
+    <expose name="Request From: Client-User" endPoint="/acmeair-as/rest/api/login/config"/>
+    <expose name="Request From: nginx" endPoint="/acmeair-as/rest/api/login/loader"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair-as/rest/api/login"/>
     <expose name="Request From: Client-User" endPoint="/acmeair-as/rest"/>
     <expose name="Request From: customer_service_node1" endPoint="Ack"/>
     <expose name="Request From: customer_service_node1" endPoint="/acmeair-as/rest/api/login/authcheck"/>
-    <expose name="Request From: nginx" endPoint="/acmeair-as/rest/api/login/config"/>
     <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
-    <require name="Needs: booking_service_node1 @Addr: 172.18.0.10" endPoint="/booking_service_node1/"/>
-    <require name="Needs: booking_service_node1 @Addr: 172.18.0.10" endPoint="/booking_service_node1/"/>
-    <require name="Needs: booking_service_node1 @Addr: 172.18.0.10" endPoint="/booking_service_node1/"/>
-    <require name="Needs: booking_service_node1 @Addr: 172.18.0.10" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: booking_service_node1 @Addr: 172.18.0.7" endPoint="/booking_service_node1/"/>
+    <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
     <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
     <require name="Needs: customer_service_node1 @Addr: 172.18.0.9" endPoint="/customer_service_node1/"/>
   </composedBy>
-  <composedBy name="booking_service_node1" host="172.18.0.10">
-    <expose name="Request From: Client-User" endPoint="/acmeair-bs/rest/api/bookings/byuser"/>
+  <composedBy name="booking_service_node1" host="172.18.0.7" owned="//@teams.6">
+    <expose name="Request From: nginx" endPoint="/acmeair-bs/rest/api/bookings/config"/>
+    <expose name="Request From: nginx" endPoint="/acmeair-bs/rest/api/bookings/loader"/>
     <expose name="Request From: Client-User" endPoint="/acmeair-bs/rest/api/bookings"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair-bs/rest/api/bookings/byuser"/>
     <expose name="Request From: auth_service_node1" endPoint="Ack"/>
-    <expose name="Request From: Client-User" endPoint="/acmeair-bs/rest/api/bookings/config"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
   </composedBy>
-  <composedBy name="customer_service_node1" host="172.18.0.9">
+  <composedBy name="customer_service_node1" host="172.18.0.9" owned="//@teams.7">
+    <expose name="Request From: nginx" endPoint="/acmeair-cs/rest/api/customer/config"/>
+    <expose name="Request From: Client-User" endPoint="/acmeair-cs/rest/api/customer/loader"/>
     <expose name="Request From: auth_service_node1" endPoint="/acmeair-cs/rest/api/customer"/>
     <expose name="Request From: Client-User" endPoint="/acmeair-cs/rest/api/customer/byid"/>
     <expose name="Request From: auth_service_node1" endPoint="Ack"/>
-    <expose name="Request From: Client-User" endPoint="/acmeair-cs/rest/api/customer/config"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
-    <require name="Needs: auth_service_node1 @Addr: 172.18.0.7" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
+    <require name="Needs: auth_service_node1 @Addr: 172.18.0.8" endPoint="/auth_service_node1/"/>
   </composedBy>
-  <composedBy name="flight_service_node1" host="172.18.0.8">
+  <composedBy name="flight_service_node1" host="172.18.0.10" owned="//@teams.8">
+    <expose name="Request From: nginx" endPoint="/acmeair-fs/rest/api/flights/config"/>
+    <expose name="Request From: nginx" endPoint="/acmeair-fs/rest/api/flights/loader"/>
     <expose name="Request From: Client-User" endPoint="/acmeair-fs/rest/api/flights"/>
-    <expose name="Request From: Client-User" endPoint="/acmeair-fs/rest/api/flights/config"/>
   </composedBy>
-  <composedBy name="customer_db">
-    <expose name="getCustomer" endPoint="/customer_cs/"/>
-    <expose name="getCustomer" endPoint="/customer_cs/"/>
-    <expose name="getCustomer" endPoint="/customer_cs/"/>
-    <expose name="getCustomer" endPoint="/customer_cs/"/>
-    <expose name="getCustomer" endPoint="/customer_cs/"/>
-  </composedBy>
-  <composedBy name="session_db"/>
-  <composedBy name="flight_db">
-    <expose name="find_flight"/>
-    <expose name="find_flight"/>
-    <expose name="find_flight"/>
-    <expose name="find_flight"/>
-    <expose name="find_flight"/>
-  </composedBy>
-  <composedBy name="booking_db">
-    <expose name="cancel_prenotation"/>
-    <expose name="cancel_prenotation"/>
-    <expose name="cancel_prenotation"/>
-    <expose name="cancel_prenotation"/>
-    <expose name="cancel_prenotation"/>
-  </composedBy>
-  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.1/@require.0" target="//@composedBy.3/@expose.0"/>
-  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.3/@require.0" target="//@composedBy.1/@expose.1"/>
-  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.2/@require.0" target="//@composedBy.1/@expose.2"/>
-  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.1/@require.1" target="//@composedBy.2/@expose.2"/>
-  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.2/@require.1" target="//@composedBy.1/@expose.2"/>
-  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.1/@require.2" target="//@composedBy.2/@expose.2"/>
-  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.2/@require.2" target="//@composedBy.1/@expose.2"/>
-  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.1/@require.3" target="//@composedBy.2/@expose.2"/>
-  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.2/@require.3" target="//@composedBy.1/@expose.2"/>
-  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.1/@require.4" target="//@composedBy.2/@expose.2"/>
-  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.3/@require.1" target="//@composedBy.1/@expose.2"/>
-  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.1/@require.5" target="//@composedBy.3/@expose.2"/>
-  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.3/@require.2" target="//@composedBy.1/@expose.2"/>
-  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.1/@require.6" target="//@composedBy.3/@expose.2"/>
+  <teams name="Team of session_db" workOn="//@composedBy.0"/>
+  <teams name="Team of booking_db" workOn="//@composedBy.1"/>
+  <teams name="Team of customer_db" workOn="//@composedBy.2"/>
+  <teams name="Team of flight_db" workOn="//@composedBy.3"/>
+  <teams name="Team of main_service_node1" composedBy="//@developers.3 //@developers.7 //@developers.6" workOn="//@composedBy.4"/>
+  <teams name="Team of auth_service_node1" composedBy="//@developers.5 //@developers.1" workOn="//@composedBy.5"/>
+  <teams name="Team of booking_service_node1" composedBy="//@developers.0" workOn="//@composedBy.6"/>
+  <teams name="Team of customer_service_node1" composedBy="//@developers.4 //@developers.3" workOn="//@composedBy.7"/>
+  <teams name="Team of flight_service_node1" composedBy="//@developers.2" workOn="//@composedBy.8"/>
+  <teams name="Team of nginx"/>
+  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.5/@require.0" target="//@composedBy.7/@expose.2"/>
+  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.7/@require.0" target="//@composedBy.5/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.0" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.1" target="//@composedBy.6/@expose.4"/>
+  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.7/@require.1" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.5/@require.2" target="//@composedBy.7/@expose.4"/>
+  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.7/@require.2" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.5/@require.3" target="//@composedBy.7/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.1" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.4" target="//@composedBy.6/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.2" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.5" target="//@composedBy.6/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.3" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.6" target="//@composedBy.6/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.4" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.7" target="//@composedBy.6/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.5" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.8" target="//@composedBy.6/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.6" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.9" target="//@composedBy.6/@expose.4"/>
+  <links name="From: booking_service_node1 To: auth_service_node1" source="//@composedBy.6/@require.7" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: booking_service_node1" source="//@composedBy.5/@require.10" target="//@composedBy.6/@expose.4"/>
+  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.7/@require.3" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.5/@require.11" target="//@composedBy.7/@expose.4"/>
+  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.7/@require.4" target="//@composedBy.5/@expose.5"/>
+  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.5/@require.12" target="//@composedBy.7/@expose.4"/>
+  <links name="From: auth_service_node1 To: customer_service_node1" source="//@composedBy.5/@require.13" target="//@composedBy.7/@expose.2"/>
+  <links name="From: customer_service_node1 To: auth_service_node1" source="//@composedBy.7/@require.5" target="//@composedBy.5/@expose.4"/>
   <developers name="Yang Lei" email="genially@gmail.com"/>
   <developers name="Yang Lei" email="yanglei@Yangs-2015-MacBook-Pro.local"/>
   <developers name="mossuchida" email="muchida@ca.ibm.com"/>

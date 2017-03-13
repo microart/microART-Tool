@@ -51,8 +51,7 @@ public class MicroServiceItemProvider extends ElementItemProvider {
 			addBelongToPropertyDescriptor(object);
 			addHostPropertyDescriptor(object);
 			addOwnedPropertyDescriptor(object);
-			addTypePropertyDescriptor(object);
-			addIsFunctionalPropertyDescriptor(object);
+			addIsInfrastructuralPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -124,45 +123,23 @@ public class MicroServiceItemProvider extends ElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Type feature.
+	 * This adds a property descriptor for the Is Infrastructural feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addTypePropertyDescriptor(Object object) {
+	protected void addIsInfrastructuralPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_MicroService_type_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MicroService_type_feature", "_UI_MicroService_type"),
-				 MicroservicesArchitecturePackage.Literals.MICRO_SERVICE__TYPE,
+				 getString("_UI_MicroService_isInfrastructural_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_MicroService_isInfrastructural_feature", "_UI_MicroService_type"),
+				 MicroservicesArchitecturePackage.Literals.MICRO_SERVICE__IS_INFRASTRUCTURAL,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Is Functional feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsFunctionalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MicroService_isFunctional_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MicroService_isFunctional_feature", "_UI_MicroService_type"),
-				 MicroservicesArchitecturePackage.Literals.MICRO_SERVICE__IS_FUNCTIONAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
@@ -237,8 +214,7 @@ public class MicroServiceItemProvider extends ElementItemProvider {
 
 		switch (notification.getFeatureID(MicroService.class)) {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__HOST:
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
+			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_INFRASTRUCTURAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__EXPOSE:

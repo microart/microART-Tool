@@ -3,22 +3,9 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/MinimalDSL/src" modelPluginID="MinimalDSL"
     modelName="MicroservicesArchitecture" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="6.0" copyrightFields="false">
-  <foreignModel>msa.emf</foreignModel>
+  <foreignModel>msa.ecore</foreignModel>
   <genPackages prefix="MicroservicesArchitecture" disposableProviderFactory="true"
       ecorePackage="msa.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="msa.ecore#//serviceType">
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/generalFuncion"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Authentication"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/serviceDiscovery"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/LoadBalancer"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/HealthCheck"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Monitor"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/APIGateways"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Security"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Messaging"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Logging"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Resilience"/>
-    </genEnums>
     <genClasses image="false" ecoreClass="msa.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//Element/name"/>
     </genClasses>
@@ -35,9 +22,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msa.ecore#//MicroService/expose"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//MicroService/host"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference msa.ecore#//MicroService/owned"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//MicroService/isInfrastructural"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msa.ecore#//MicroService/require"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//MicroService/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//MicroService/isFunctional"/>
     </genClasses>
     <genClasses ecoreClass="msa.ecore#//Cluster">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference msa.ecore#//Cluster/contains"/>

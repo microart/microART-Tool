@@ -18,7 +18,7 @@ package MicroservicesArchitecture;
  * </ul>
  *
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getLink()
- * @model annotation="gmf.link color='255,0,0' label.icon='false' source='source' target='target' source.decoration='filledrhomb' target.decoration='arrow'"
+ * @model
  * @generated
  */
 public interface Link extends Element {

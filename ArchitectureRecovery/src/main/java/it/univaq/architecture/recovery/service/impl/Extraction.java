@@ -67,7 +67,7 @@ public class Extraction {
 		cleanInterfaceAndLinks(prd);
 		readLogWithServiceDiscovery(prd, filteredLog, ClientIP, serviceDiscovery);
 		cleanDependency(prd);
-		cleanDatabase(prd);
+//		cleanDatabase(prd);
 		MicroService client = getMicroservice(prd, ClientIP);
 		MicroService sd = getMicroservice(prd, ServiceDiscovery);
 		eraseDependency(client, prd);

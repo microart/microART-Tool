@@ -1,8 +1,13 @@
 package it.univaq.architecture.recovery.service.impl;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -20,6 +25,10 @@ import org.junit.Test;
 import org.springframework.stereotype.Service;
 
 import MicroservicesArchitecture.Developer;
+import MicroservicesArchitecture.MicroService;
+import MicroservicesArchitecture.Product;
+import it.univaq.architecture.recovery.model.GitCommitCustom;
+import it.univaq.architecture.recovery.model.MicroserviceArch;
 import it.univaq.architecture.recovery.service.RepositoryManager;
 
 @Service
@@ -111,8 +120,100 @@ public class GitHubManager implements RepositoryManager {
 
 	}
 
+	public List<GitCommitCustom> assignDevToTeam(Product products) throws IOException, InterruptedException {
+		Process p;
+		String s = null;
+		String[] logs = new String[100000];
+		String command = "git log --numstat";
+		// System.out.println(command);
+		p = Runtime.getRuntime().exec(command, new String[0], new File(localPath));
+		BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		int i = 0;
+		List<GitCommitCustom> commits = new ArrayList<GitCommitCustom>();
+		while ((s = br.readLine()) != null) {
+			// System.out.println(i + " => " + s);
+			if (s.equals("") || s.equals(" ")) {
+				continue;
+			} else {
+				logs[i] = s;
+				i++;
+			}
+
+		}
+		// System.out.println("I is equal to " +i);
+		i--;
+		String[] fittedArray = new String[i];
+		fittedArray = Arrays.copyOf(logs, i);
+		// System.out.println("I is equal to " +i);
+		p.waitFor();
+		p.destroy();
+		extractCommitInfos(fittedArray, commits, products);
+		return commits;
+	}
+
+	private void extractCommitInfos(String[] logs, List<GitCommitCustom> commits, Product products) {
+
+		for (int i = 0; i < logs.length; i++) {
+			GitCommitCustom customsCommit = new GitCommitCustom();
+			if (logs[i].contains("commit")) {
+				// System.out.println("commit: " + logs[i]);
+				customsCommit.setCommitId(logs[i].substring(7).toString().trim());
+				i++;
+			}
+			if (logs[i].contains("Author")) {
+				// System.out.println("Author: " + logs[i]);
+				customsCommit.setAuthor(logs[i].substring(8, logs[i].indexOf("<")).toString().trim());
+				customsCommit.setEmail(logs[i].substring(logs[i].indexOf("<") + 1, logs[i].indexOf(">")));
+				i++;
+			}
+			if (logs[i].contains("Date:")) {
+				// System.out.println("Date: " + logs[i]);
+				customsCommit.setDate(logs[i].substring(5).toString().trim());
+				i++;
+			}
+			// while (logs[i].isEmpty())
+			// i++;
+			// System.out.println(logs[i]);
+			customsCommit.setMessage(logs[i]);
+			while (i < logs.length && !logs[i].contains("commit")) {
+				String temp = logs[i];
+				if (temp.equals(null)) {
+					// System.out.println(" nullo");
+				} else {
+					// System.out.println(temp);
+					customsCommit.addFiles(temp.trim());
+					i++;
+				}
+			}
+
+			// System.out.println("\n");
+			commits.add(customsCommit);
+			if (i < logs.length && logs[i].contains("commit")) {
+				i--;
+			}
+
+		}
+
+		Iterator<GitCommitCustom> it = commits.iterator();
+		while (it.hasNext()) {
+			GitCommitCustom customCommit = (GitCommitCustom) it.next();
+
+			System.out.println("\n Analysis of Commits");
+			System.out.println("Commit: " + customCommit.getCommitId() + " \n Autore: " + customCommit.getAuthor()
+					+ " \n Email : " + customCommit.getEmail() + " \n Data  : " + customCommit.getDate()
+					+ " \n Mess  : " + customCommit.getMessage() + " \n");
+			Iterator<String> filepathname = customCommit.getFiles().iterator();
+			System.out.println("\n Filenamed Changed\n");
+			while (filepathname.hasNext()) {
+				String string = (String) filepathname.next();
+				System.out.println(string);
+			}
+
+		}
+	}
+
 	private boolean exist(EList<Developer> devs, Developer dev) {
-		
+
 		Iterator<Developer> it = devs.iterator();
 		while (it.hasNext()) {
 			Developer temp = (Developer) it.next();
@@ -154,6 +255,74 @@ public class GitHubManager implements RepositoryManager {
 
 	public void setGit(Git git) {
 		this.git = git;
+	}
+
+	public void crossedCheckCommitsDevs(MicroserviceArch microServicesArch, Product product,
+			List<GitCommitCustom> commits) {
+
+		Iterator<MicroService> services = product.getComposedBy().iterator();
+
+		while (services.hasNext()) {
+
+			MicroService microService = (MicroService) services.next();
+			Iterator<GitCommitCustom> customCommits = commits.iterator();
+			while (customCommits.hasNext()) {
+
+				GitCommitCustom gitCommitCustom = (GitCommitCustom) customCommits.next();
+				Developer tempDev = getDevFromCommit(gitCommitCustom, product.getDevelopers());
+				if (product.getDevelopers().contains(tempDev)) {
+					getDevForService(gitCommitCustom, microService, tempDev);
+				}
+				
+			}
+		}
+
+//		Iterator<Developer> devs = product.getDevelopers().iterator();
+//		Iterator<Team> teams = product.getTeams().iterator();
+
+	}
+
+	private void getDevForService(GitCommitCustom gitCommitCustom, MicroService microService, Developer tempDev) {
+
+		List<String> paths = gitCommitCustom.getFiles();
+		Iterator<String> it = paths.iterator();
+		EList<Developer> eList = new BasicEList<Developer>();
+		while (it.hasNext()) {
+
+			String string = (String) it.next();
+			String compareString = null;
+			if (microService.getName().indexOf("_") == -1) {
+				compareString = microService.getName();
+			} else {
+				compareString = microService.getName().substring(0, microService.getName().indexOf("_"));
+			}
+			if (string.contains(compareString)) {
+				eList.add(tempDev);
+			}
+		}
+		if (eList.size() > 0) {
+			microService.getOwned().getComposedBy().clear();
+			microService.getOwned().getComposedBy().addAll(eList);
+		}
+
+	}
+
+	private Developer getDevFromCommit(GitCommitCustom gitCommitCustom, EList<Developer> eList) {
+		Iterator<Developer> it = eList.iterator();
+		while (it.hasNext()) {
+			Developer developer = (Developer) it.next();
+			if (gitCommitCustom.getEmail() != null) {
+				if (developer.getEmail().contains(gitCommitCustom.getEmail())) {
+					return developer;
+				}
+			}
+
+		}
+		Developer tempDev = factory.createDeveloper();
+		tempDev.setEmail(gitCommitCustom.getEmail());
+		tempDev.setName(gitCommitCustom.getAuthor());
+		// tempDev.setUsername(gitCommitCustom.get);
+		return tempDev;
 	}
 
 }

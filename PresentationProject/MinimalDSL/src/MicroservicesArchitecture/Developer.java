@@ -18,7 +18,7 @@ package MicroservicesArchitecture;
  * </ul>
  *
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getDeveloper()
- * @model annotation="gmf.node label='name' border.style='dot' label.icon='false' figure='rounded'"
+ * @model
  * @generated
  */
 public interface Developer extends Element {

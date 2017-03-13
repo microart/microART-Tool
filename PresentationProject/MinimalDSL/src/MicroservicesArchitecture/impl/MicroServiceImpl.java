@@ -8,7 +8,7 @@ import MicroservicesArchitecture.MicroService;
 import MicroservicesArchitecture.MicroservicesArchitecturePackage;
 import MicroservicesArchitecture.Product;
 import MicroservicesArchitecture.Team;
-import MicroservicesArchitecture.serviceType;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,9 +38,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getExpose <em>Expose</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getHost <em>Host</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getOwned <em>Owned</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#isIsInfrastructural <em>Is Infrastructural</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getRequire <em>Require</em>}</li>
- *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getType <em>Type</em>}</li>
- *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getIsFunctional <em>Is Functional</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,6 +96,26 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 	protected Team owned;
 
 	/**
+	 * The default value of the '{@link #isIsInfrastructural() <em>Is Infrastructural</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsInfrastructural()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_INFRASTRUCTURAL_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsInfrastructural() <em>Is Infrastructural</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsInfrastructural()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isInfrastructural = IS_INFRASTRUCTURAL_EDEFAULT;
+
+	/**
 	 * The cached value of the '{@link #getRequire() <em>Require</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -105,46 +124,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 	 * @ordered
 	 */
 	protected EList<Interface> require;
-
-	/**
-	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final serviceType TYPE_EDEFAULT = serviceType.GENERAL_FUNCION;
-
-	/**
-	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getType()
-	 * @generated
-	 * @ordered
-	 */
-	protected serviceType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIsFunctional() <em>Is Functional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsFunctional()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Boolean IS_FUNCTIONAL_EDEFAULT = Boolean.TRUE;
-
-	/**
-	 * The cached value of the '{@link #getIsFunctional() <em>Is Functional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsFunctional()
-	 * @generated
-	 * @ordered
-	 */
-	protected Boolean isFunctional = IS_FUNCTIONAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -364,53 +343,32 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsInfrastructural() {
+		return isInfrastructural;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsInfrastructural(boolean newIsInfrastructural) {
+		boolean oldIsInfrastructural = isInfrastructural;
+		isInfrastructural = newIsInfrastructural;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MicroservicesArchitecturePackage.MICRO_SERVICE__IS_INFRASTRUCTURAL, oldIsInfrastructural, isInfrastructural));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Interface> getRequire() {
 		if (require == null) {
 			require = new EObjectContainmentWithInverseEList<Interface>(Interface.class, this, MicroservicesArchitecturePackage.MICRO_SERVICE__REQUIRE, MicroservicesArchitecturePackage.INTERFACE__REQUIRED_BY);
 		}
 		return require;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public serviceType getType() {
-		return type;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setType(serviceType newType) {
-		serviceType oldType = type;
-		type = newType == null ? TYPE_EDEFAULT : newType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE, oldType, type));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Boolean getIsFunctional() {
-		return isFunctional;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsFunctional(Boolean newIsFunctional) {
-		Boolean oldIsFunctional = isFunctional;
-		isFunctional = newIsFunctional;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL, oldIsFunctional, isFunctional));
 	}
 
 	/**
@@ -498,12 +456,10 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__OWNED:
 				if (resolve) return getOwned();
 				return basicGetOwned();
+			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_INFRASTRUCTURAL:
+				return isIsInfrastructural();
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__REQUIRE:
 				return getRequire();
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
-				return getType();
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				return getIsFunctional();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -533,15 +489,12 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__OWNED:
 				setOwned((Team)newValue);
 				return;
+			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_INFRASTRUCTURAL:
+				setIsInfrastructural((Boolean)newValue);
+				return;
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__REQUIRE:
 				getRequire().clear();
 				getRequire().addAll((Collection<? extends Interface>)newValue);
-				return;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
-				setType((serviceType)newValue);
-				return;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				setIsFunctional((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -570,14 +523,11 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__OWNED:
 				setOwned((Team)null);
 				return;
+			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_INFRASTRUCTURAL:
+				setIsInfrastructural(IS_INFRASTRUCTURAL_EDEFAULT);
+				return;
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__REQUIRE:
 				getRequire().clear();
-				return;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
-				setType(TYPE_EDEFAULT);
-				return;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				setIsFunctional(IS_FUNCTIONAL_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -601,12 +551,10 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 				return HOST_EDEFAULT == null ? host != null : !HOST_EDEFAULT.equals(host);
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__OWNED:
 				return owned != null;
+			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_INFRASTRUCTURAL:
+				return isInfrastructural != IS_INFRASTRUCTURAL_EDEFAULT;
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__REQUIRE:
 				return require != null && !require.isEmpty();
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
-				return type != TYPE_EDEFAULT;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				return IS_FUNCTIONAL_EDEFAULT == null ? isFunctional != null : !IS_FUNCTIONAL_EDEFAULT.equals(isFunctional);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -623,10 +571,8 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (host: ");
 		result.append(host);
-		result.append(", type: ");
-		result.append(type);
-		result.append(", isFunctional: ");
-		result.append(isFunctional);
+		result.append(", isInfrastructural: ");
+		result.append(isInfrastructural);
 		result.append(')');
 		return result.toString();
 	}
