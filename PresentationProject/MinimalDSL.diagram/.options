@@ -1,0 +1,7 @@
+# Tracing options for the MinimalDSL.diagram plug-in
+
+# Common issues
+MinimalDSL.diagram/debug=false
+
+# Visual IDs
+MinimalDSL.diagram/debug/visualID=false

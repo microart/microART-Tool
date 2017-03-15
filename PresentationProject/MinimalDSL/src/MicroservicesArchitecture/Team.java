@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getTeam()
- * @model
+ * @model annotation="gmf.node border.width='3' border.color='66,133,244' label='name' label.placement='internal' border.style='solid' label.icon='false' figure='ellipse' size='150,70'"
  * @generated
  */
 public interface Team extends Element {
@@ -34,7 +34,7 @@ public interface Team extends Element {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composed By</em>' reference list.
 	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getTeam_ComposedBy()
-	 * @model
+	 * @model annotation="gmf.link color='66,133,244' target.decoration='none' style='dash'"
 	 * @generated
 	 */
 	EList<Developer> getComposedBy();

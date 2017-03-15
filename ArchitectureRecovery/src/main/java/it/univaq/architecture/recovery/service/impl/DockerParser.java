@@ -264,15 +264,12 @@ public class DockerParser implements Parser {
 
 		Scanner in = new Scanner(expose).useDelimiter("[^0-9]+");
 		List<Integer> ports = new ArrayList<Integer>();
+		
 		while (in.hasNext()) {
 			ports.add(new Integer(in.nextInt()));
 		}
-
+		
 		return ports;
-	}
-
-	private void servicesCreation() {
-
 	}
 
 }

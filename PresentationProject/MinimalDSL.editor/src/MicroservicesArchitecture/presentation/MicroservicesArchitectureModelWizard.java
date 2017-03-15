@@ -72,7 +72,6 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 import MicroservicesArchitecture.MicroservicesArchitectureFactory;
 import MicroservicesArchitecture.MicroservicesArchitecturePackage;
 import MicroservicesArchitecture.provider.MicroservicesArchitectureEditPlugin;
-import MicroservicesArchitecture.provider.MsaEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;

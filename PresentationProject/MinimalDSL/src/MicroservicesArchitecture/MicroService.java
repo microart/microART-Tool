@@ -18,12 +18,13 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link MicroservicesArchitecture.MicroService#getExpose <em>Expose</em>}</li>
  *   <li>{@link MicroservicesArchitecture.MicroService#getHost <em>Host</em>}</li>
  *   <li>{@link MicroservicesArchitecture.MicroService#getOwned <em>Owned</em>}</li>
- *   <li>{@link MicroservicesArchitecture.MicroService#isIsInfrastructural <em>Is Infrastructural</em>}</li>
  *   <li>{@link MicroservicesArchitecture.MicroService#getRequire <em>Require</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.MicroService#getType <em>Type</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.MicroService#getIsFunctional <em>Is Functional</em>}</li>
  * </ul>
  *
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService()
- * @model
+ * @model annotation="gmf.node label='name' border.style='solid' label.pattern='    {0}' label.icon='false' figure='rectangle' border.color='0,153,153' border.width='4'"
  * @generated
  */
 public interface MicroService extends Element {
@@ -97,6 +98,7 @@ public interface MicroService extends Element {
 	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_Expose()
 	 * @see MicroservicesArchitecture.Interface#getExposedBy
 	 * @model opposite="exposedBy" containment="true"
+	 *        annotation="gmf.compartment collapsible='true' layout='list'"
 	 * @generated
 	 */
 	EList<Interface> getExpose();
@@ -141,6 +143,7 @@ public interface MicroService extends Element {
 	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_Owned()
 	 * @see MicroservicesArchitecture.Team#getWorkOn
 	 * @model opposite="workOn"
+	 *        annotation="gmf.link target.decoration='arrow' style='dash'"
 	 * @generated
 	 */
 	Team getOwned();
@@ -156,32 +159,6 @@ public interface MicroService extends Element {
 	void setOwned(Team value);
 
 	/**
-	 * Returns the value of the '<em><b>Is Infrastructural</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Infrastructural</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Infrastructural</em>' attribute.
-	 * @see #setIsInfrastructural(boolean)
-	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_IsInfrastructural()
-	 * @model
-	 * @generated
-	 */
-	boolean isIsInfrastructural();
-
-	/**
-	 * Sets the value of the '{@link MicroservicesArchitecture.MicroService#isIsInfrastructural <em>Is Infrastructural</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Infrastructural</em>' attribute.
-	 * @see #isIsInfrastructural()
-	 * @generated
-	 */
-	void setIsInfrastructural(boolean value);
-
-	/**
 	 * Returns the value of the '<em><b>Require</b></em>' containment reference list.
 	 * The list contents are of type {@link MicroservicesArchitecture.Interface}.
 	 * It is bidirectional and its opposite is '{@link MicroservicesArchitecture.Interface#getRequiredBy <em>Required By</em>}'.
@@ -195,8 +172,65 @@ public interface MicroService extends Element {
 	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_Require()
 	 * @see MicroservicesArchitecture.Interface#getRequiredBy
 	 * @model opposite="requiredBy" containment="true"
+	 *        annotation="gmf.compartment collapsible='true' layout='list'"
 	 * @generated
 	 */
 	EList<Interface> getRequire();
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * The literals are from the enumeration {@link MicroservicesArchitecture.serviceType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see MicroservicesArchitecture.serviceType
+	 * @see #setType(serviceType)
+	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_Type()
+	 * @model
+	 * @generated
+	 */
+	serviceType getType();
+
+	/**
+	 * Sets the value of the '{@link MicroservicesArchitecture.MicroService#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see MicroservicesArchitecture.serviceType
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(serviceType value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Functional</b></em>' attribute.
+	 * The default value is <code>"true"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Functional</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Functional</em>' attribute.
+	 * @see #setIsFunctional(Boolean)
+	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_IsFunctional()
+	 * @model default="true" id="true"
+	 * @generated
+	 */
+	Boolean getIsFunctional();
+
+	/**
+	 * Sets the value of the '{@link MicroservicesArchitecture.MicroService#getIsFunctional <em>Is Functional</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Functional</em>' attribute.
+	 * @see #getIsFunctional()
+	 * @generated
+	 */
+	void setIsFunctional(Boolean value);
 
 } // MicroService

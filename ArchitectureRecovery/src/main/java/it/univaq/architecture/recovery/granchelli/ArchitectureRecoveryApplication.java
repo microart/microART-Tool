@@ -38,22 +38,23 @@ public class ArchitectureRecoveryApplication {
 	public static MSALoaderImpl factory = new MSALoaderImpl();
 	public static TcpDumpLoggerImpl tcpDumpLoggerImpl = new TcpDumpLoggerImpl();
 	static String logFileName = System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
-			+ File.separator + "log_23feb.txt";
+			+ File.separator + "log_24feb.txt";
 	public Extraction extractor = new Extraction(logFileName);
 
 	public static void main(String[] args)
 			throws IOException, InvalidRemoteException, TransportException, GitAPIException, InterruptedException {
 		SpringApplication.run(ArchitectureRecoveryApplication.class, args);
-
+		
 		// this.repoManager.setLocalPath("/home/grankellowsky/Tesi/Codice/prova2");
 		// this.repoManager.setRemotePath("https://github.com/yanglei99/acmeair-nodejs.git");
 		// System.out.println("INSTANZIAZIONE MANAGER GITHUB");
 		
 		logger.info("STATIC ANALYSIS -  READY");
-		logger.info("Cloning GIT REPO: https://github.com/acmeair/acmeair-nodejs.git");
-		
+		logger.info("Cloning GIT REPO: https://github.com/wasperf/acmeair-nodejs.git");
+		String repositoryGitHub = promptEnterGitHub("Insert github repository");
+		String repositoryLocal = promptEnterLocalRepo("Insert local reposity to clone the git hub repo");
 		GitHubManager test = new GitHubManager("/home/grankellowsky/Tesi/Codice/prova3",
-				"https://github.com/yanglei99/acmeair-nodejs.git");
+				"https://github.com/wasperf/acmeair-nodejs.git");
 		test.init();
 		
 		logger.info("Wait the end of the Git Repo Download");
@@ -175,13 +176,27 @@ public class ArchitectureRecoveryApplication {
 		logger.info("Press \"ENTER\" if you finished your modifications.(Don't Forget to Save and Close)");
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-
+		scanner.close();
 	}
 
 	private static void promptEnterKey(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-
+		scanner.close();
+	}
+	private static String promptEnterGitHub(String message) {
+		logger.info(message);
+		Scanner scanner = new Scanner(System.in);
+		String repo = scanner.nextLine();
+		scanner.close();
+		return repo;
+	}
+	private static String promptEnterLocalRepo(String message) {
+		logger.info(message);
+		Scanner scanner = new Scanner(System.in);
+		String repo = scanner.nextLine();
+		scanner.close();
+		return repo;
 	}
 }

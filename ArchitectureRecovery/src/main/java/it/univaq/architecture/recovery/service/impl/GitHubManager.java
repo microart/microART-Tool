@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Scanner;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
@@ -148,8 +152,10 @@ public class GitHubManager implements RepositoryManager {
 		p.waitFor();
 		p.destroy();
 		extractCommitInfos(fittedArray, commits, products);
+//		collapseDeveloper(products);
 		return commits;
 	}
+
 
 	private void extractCommitInfos(String[] logs, List<GitCommitCustom> commits, Product products) {
 
@@ -173,20 +179,31 @@ public class GitHubManager implements RepositoryManager {
 			}
 			// while (logs[i].isEmpty())
 			// i++;
-			// System.out.println(logs[i]);
-			customsCommit.setMessage(logs[i]);
+			 System.out.println(logs[i] + "Char at 0 : " + logs[i].charAt(0));
+			 while (!Character.isDigit(logs[i].charAt(0))) {
+				if (customsCommit.getMessage() != null) {
+					customsCommit.setMessage(customsCommit.getMessage().concat(logs[i]));
+				}else{
+					customsCommit.setMessage(logs[i]);
+				}
+				
+				i++;
+
+			}
 			while (i < logs.length && !logs[i].contains("commit")) {
 				String temp = logs[i];
 				if (temp.equals(null)) {
 					// System.out.println(" nullo");
 				} else {
 					// System.out.println(temp);
-					customsCommit.addFiles(temp.trim());
+					String extractedFilePathName = extractioFilePathName(temp);
+					customsCommit.addFiles(extractedFilePathName);
 					i++;
 				}
 			}
 
 			// System.out.println("\n");
+
 			commits.add(customsCommit);
 			if (i < logs.length && logs[i].contains("commit")) {
 				i--;
@@ -194,21 +211,53 @@ public class GitHubManager implements RepositoryManager {
 
 		}
 
-		Iterator<GitCommitCustom> it = commits.iterator();
-		while (it.hasNext()) {
-			GitCommitCustom customCommit = (GitCommitCustom) it.next();
+//		Iterator<GitCommitCustom> it = commits.iterator();
+//		while (it.hasNext()) {
+//			GitCommitCustom customCommit = (GitCommitCustom) it.next();
+//
+//			System.out.println("\n Analysis of Commits");
+//			System.out.println("Commit: " + customCommit.getCommitId() + " \n Autore: " + customCommit.getAuthor()
+//					+ " \n Email : " + customCommit.getEmail() + " \n Data  : " + customCommit.getDate()
+//					+ " \n Mess  : " + customCommit.getMessage() + " \n");
+//			Iterator<String> filepathname = customCommit.getFiles().iterator();
+//			System.out.println("\n Filenamed Changed\n");
+//			while (filepathname.hasNext()) {
+//				String string = (String) filepathname.next();
+//				System.out.println(string);
+//			}
+//
+//		}
+	}
 
-			System.out.println("\n Analysis of Commits");
-			System.out.println("Commit: " + customCommit.getCommitId() + " \n Autore: " + customCommit.getAuthor()
-					+ " \n Email : " + customCommit.getEmail() + " \n Data  : " + customCommit.getDate()
-					+ " \n Mess  : " + customCommit.getMessage() + " \n");
-			Iterator<String> filepathname = customCommit.getFiles().iterator();
-			System.out.println("\n Filenamed Changed\n");
-			while (filepathname.hasNext()) {
-				String string = (String) filepathname.next();
-				System.out.println(string);
+	private String extractioFilePathName(String temp) {
+		// TODO Auto-generated method stub
+		int size = temp.length();
+		for (int i = 0; i < size; i++) {
+			if (Character.isLetter(temp.charAt(i))) {
+				String result = temp.substring(i);
+				System.out.println("Extracted Path : " + result);
+				return result;
 			}
+		}
+		return ".";
+	}
 
+	public static boolean check(String input) {
+		// ^[0-9]*\s[a-z]*$
+		// "\\d+\\s*\\d+ +.*"
+		String regex = "\\d+";
+		Pattern pattern = Pattern.compile(regex);
+		Scanner in = new Scanner(regex).useDelimiter("\\d+\\s*\\d+ +.*");
+		Matcher matcher = pattern.matcher(input);
+		System.out.println("Input: " + input);
+		MatchResult match = in.match();
+		System.out.println("Group: " + match.group());
+		if (matcher.matches()){
+			System.out.println("match");
+			return true;
+		}else{
+			System.out.println("does not match");
+			return false;
 		}
 	}
 
@@ -217,7 +266,7 @@ public class GitHubManager implements RepositoryManager {
 		Iterator<Developer> it = devs.iterator();
 		while (it.hasNext()) {
 			Developer temp = (Developer) it.next();
-			if (temp.getEmail().equals(dev.getEmail())) {
+			if (temp.getName().equals(dev.getName())) {
 				return true;
 			}
 
@@ -273,12 +322,12 @@ public class GitHubManager implements RepositoryManager {
 				if (product.getDevelopers().contains(tempDev)) {
 					getDevForService(gitCommitCustom, microService, tempDev);
 				}
-				
+
 			}
 		}
 
-//		Iterator<Developer> devs = product.getDevelopers().iterator();
-//		Iterator<Team> teams = product.getTeams().iterator();
+		// Iterator<Developer> devs = product.getDevelopers().iterator();
+		// Iterator<Team> teams = product.getTeams().iterator();
 
 	}
 

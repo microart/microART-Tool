@@ -4,6 +4,7 @@ package MicroservicesArchitecture;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -14,7 +15,6 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
- *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -222,22 +222,31 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	int MICRO_SERVICE__OWNED = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
-	 * The feature id for the '<em><b>Is Infrastructural</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICRO_SERVICE__IS_INFRASTRUCTURAL = ELEMENT_FEATURE_COUNT + 5;
-
-	/**
 	 * The feature id for the '<em><b>Require</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MICRO_SERVICE__REQUIRE = ELEMENT_FEATURE_COUNT + 6;
+	int MICRO_SERVICE__REQUIRE = ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SERVICE__TYPE = ELEMENT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Is Functional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SERVICE__IS_FUNCTIONAL = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Micro Service</em>' class.
@@ -246,7 +255,7 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MICRO_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 7;
+	int MICRO_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The meta object id for the '{@link MicroservicesArchitecture.impl.ClusterImpl <em>Cluster</em>}' class.
@@ -533,6 +542,17 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	int TEAM_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The meta object id for the '{@link MicroservicesArchitecture.serviceType <em>service Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MicroservicesArchitecture.serviceType
+	 * @see MicroservicesArchitecture.impl.MicroservicesArchitecturePackageImpl#getserviceType()
+	 * @generated
+	 */
+	int SERVICE_TYPE = 8;
+
+
+	/**
 	 * Returns the meta object for class '{@link MicroservicesArchitecture.Element <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -684,17 +704,6 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	EReference getMicroService_Owned();
 
 	/**
-	 * Returns the meta object for the attribute '{@link MicroservicesArchitecture.MicroService#isIsInfrastructural <em>Is Infrastructural</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Infrastructural</em>'.
-	 * @see MicroservicesArchitecture.MicroService#isIsInfrastructural()
-	 * @see #getMicroService()
-	 * @generated
-	 */
-	EAttribute getMicroService_IsInfrastructural();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link MicroservicesArchitecture.MicroService#getRequire <em>Require</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,6 +713,28 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMicroService_Require();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MicroservicesArchitecture.MicroService#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see MicroservicesArchitecture.MicroService#getType()
+	 * @see #getMicroService()
+	 * @generated
+	 */
+	EAttribute getMicroService_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MicroservicesArchitecture.MicroService#getIsFunctional <em>Is Functional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Functional</em>'.
+	 * @see MicroservicesArchitecture.MicroService#getIsFunctional()
+	 * @see #getMicroService()
+	 * @generated
+	 */
+	EAttribute getMicroService_IsFunctional();
 
 	/**
 	 * Returns the meta object for class '{@link MicroservicesArchitecture.Cluster <em>Cluster</em>}'.
@@ -932,6 +963,16 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	EReference getTeam_WorkFor();
 
 	/**
+	 * Returns the meta object for enum '{@link MicroservicesArchitecture.serviceType <em>service Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>service Type</em>'.
+	 * @see MicroservicesArchitecture.serviceType
+	 * @generated
+	 */
+	EEnum getserviceType();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -946,7 +987,6 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
-	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -1073,20 +1113,28 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 		EReference MICRO_SERVICE__OWNED = eINSTANCE.getMicroService_Owned();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Infrastructural</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MICRO_SERVICE__IS_INFRASTRUCTURAL = eINSTANCE.getMicroService_IsInfrastructural();
-
-		/**
 		 * The meta object literal for the '<em><b>Require</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference MICRO_SERVICE__REQUIRE = eINSTANCE.getMicroService_Require();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MICRO_SERVICE__TYPE = eINSTANCE.getMicroService_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Functional</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MICRO_SERVICE__IS_FUNCTIONAL = eINSTANCE.getMicroService_IsFunctional();
 
 		/**
 		 * The meta object literal for the '{@link MicroservicesArchitecture.impl.ClusterImpl <em>Cluster</em>}' class.
@@ -1265,6 +1313,16 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEAM__WORK_FOR = eINSTANCE.getTeam_WorkFor();
+
+		/**
+		 * The meta object literal for the '{@link MicroservicesArchitecture.serviceType <em>service Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MicroservicesArchitecture.serviceType
+		 * @see MicroservicesArchitecture.impl.MicroservicesArchitecturePackageImpl#getserviceType()
+		 * @generated
+		 */
+		EEnum SERVICE_TYPE = eINSTANCE.getserviceType();
 
 	}
 

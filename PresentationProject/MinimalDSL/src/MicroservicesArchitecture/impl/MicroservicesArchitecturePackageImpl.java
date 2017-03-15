@@ -12,9 +12,11 @@ import MicroservicesArchitecture.MicroservicesArchitectureFactory;
 import MicroservicesArchitecture.MicroservicesArchitecturePackage;
 import MicroservicesArchitecture.Product;
 import MicroservicesArchitecture.Team;
+import MicroservicesArchitecture.serviceType;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -82,6 +84,13 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	private EClass teamEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum serviceTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -275,8 +284,8 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMicroService_IsInfrastructural() {
-		return (EAttribute)microServiceEClass.getEStructuralFeatures().get(5);
+	public EReference getMicroService_Require() {
+		return (EReference)microServiceEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -284,8 +293,17 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMicroService_Require() {
-		return (EReference)microServiceEClass.getEStructuralFeatures().get(6);
+	public EAttribute getMicroService_Type() {
+		return (EAttribute)microServiceEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMicroService_IsFunctional() {
+		return (EAttribute)microServiceEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -482,6 +500,15 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getserviceType() {
+		return serviceTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MicroservicesArchitectureFactory getMicroservicesArchitectureFactory() {
 		return (MicroservicesArchitectureFactory)getEFactoryInstance();
 	}
@@ -521,8 +548,9 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		createEReference(microServiceEClass, MICRO_SERVICE__EXPOSE);
 		createEAttribute(microServiceEClass, MICRO_SERVICE__HOST);
 		createEReference(microServiceEClass, MICRO_SERVICE__OWNED);
-		createEAttribute(microServiceEClass, MICRO_SERVICE__IS_INFRASTRUCTURAL);
 		createEReference(microServiceEClass, MICRO_SERVICE__REQUIRE);
+		createEAttribute(microServiceEClass, MICRO_SERVICE__TYPE);
+		createEAttribute(microServiceEClass, MICRO_SERVICE__IS_FUNCTIONAL);
 
 		clusterEClass = createEClass(CLUSTER);
 		createEReference(clusterEClass, CLUSTER__CONTAINS);
@@ -549,6 +577,9 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		createEReference(teamEClass, TEAM__COMPOSED_BY);
 		createEReference(teamEClass, TEAM__WORK_ON);
 		createEReference(teamEClass, TEAM__WORK_FOR);
+
+		// Create enums
+		serviceTypeEEnum = createEEnum(SERVICE_TYPE);
 	}
 
 	/**
@@ -604,8 +635,9 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		initEReference(getMicroService_Expose(), this.getInterface(), this.getInterface_ExposedBy(), "expose", null, 0, -1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMicroService_Host(), ecorePackage.getEString(), "host", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMicroService_Owned(), this.getTeam(), this.getTeam_WorkOn(), "owned", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMicroService_IsInfrastructural(), ecorePackage.getEBoolean(), "isInfrastructural", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMicroService_Require(), this.getInterface(), this.getInterface_RequiredBy(), "require", null, 0, -1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMicroService_Type(), this.getserviceType(), "type", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMicroService_IsFunctional(), ecorePackage.getEBooleanObject(), "isFunctional", "true", 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(clusterEClass, Cluster.class, "Cluster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCluster_Contains(), this.getMicroService(), this.getMicroService_BelongTo(), "contains", null, 0, -1, Cluster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -633,8 +665,179 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		initEReference(getTeam_WorkOn(), this.getMicroService(), this.getMicroService_Owned(), "workOn", null, 0, -1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTeam_WorkFor(), this.getProduct(), this.getProduct_Teams(), "workFor", null, 0, 1, Team.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		// Initialize enums and add enum literals
+		initEEnum(serviceTypeEEnum, serviceType.class, "serviceType");
+		addEEnumLiteral(serviceTypeEEnum, serviceType.GENERAL_FUNCION);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.AUTHENTICATION);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.SERVICE_DISCOVERY);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.LOAD_BALANCER);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.HEALTH_CHECK);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.MONITOR);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.API_GATEWAYS);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.SECURITY);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.MESSAGING);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.LOGGING);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.RESILIENCE);
+
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// gmf
+		createGmfAnnotations();
+		// gmf.diagram
+		createGmf_1Annotations();
+		// gmf.node
+		createGmf_2Annotations();
+		// gmf.compartment
+		createGmf_3Annotations();
+		// gmf.link
+		createGmf_4Annotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmfAnnotations() {
+		String source = "gmf";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.diagram</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_1Annotations() {
+		String source = "gmf.diagram";	
+		addAnnotation
+		  (productEClass, 
+		   source, 
+		   new String[] {
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.node</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_2Annotations() {
+		String source = "gmf.node";	
+		addAnnotation
+		  (microServiceEClass, 
+		   source, 
+		   new String[] {
+			 "label", "name",
+			 "border.style", "solid",
+			 "label.pattern", "    {0}",
+			 "label.icon", "false",
+			 "figure", "rectangle",
+			 "border.color", "0,153,153",
+			 "border.width", "4"
+		   });	
+		addAnnotation
+		  (developerEClass, 
+		   source, 
+		   new String[] {
+			 "border.width", "3",
+			 "border.color", "66,133,244",
+			 "label", "email",
+			 "border.style", "dot",
+			 "label.icon", "false",
+			 "figure", "ellipse"
+		   });	
+		addAnnotation
+		  (interfaceEClass, 
+		   source, 
+		   new String[] {
+			 "label", "endPoint",
+			 "border.style", "solid",
+			 "label.icon", "false",
+			 "figure", "rectangle"
+		   });	
+		addAnnotation
+		  (teamEClass, 
+		   source, 
+		   new String[] {
+			 "border.width", "3",
+			 "border.color", "66,133,244",
+			 "label", "name",
+			 "label.placement", "internal",
+			 "border.style", "solid",
+			 "label.icon", "false",
+			 "figure", "ellipse",
+			 "size", "150,70"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.compartment</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_3Annotations() {
+		String source = "gmf.compartment";	
+		addAnnotation
+		  (getMicroService_Expose(), 
+		   source, 
+		   new String[] {
+			 "collapsible", "true",
+			 "layout", "list"
+		   });	
+		addAnnotation
+		  (getMicroService_Require(), 
+		   source, 
+		   new String[] {
+			 "collapsible", "true",
+			 "layout", "list"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>gmf.link</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createGmf_4Annotations() {
+		String source = "gmf.link";	
+		addAnnotation
+		  (getMicroService_Owned(), 
+		   source, 
+		   new String[] {
+			 "target.decoration", "arrow",
+			 "style", "dash"
+		   });	
+		addAnnotation
+		  (linkEClass, 
+		   source, 
+		   new String[] {
+			 "color", "0,26,26",
+			 "label.icon", "false",
+			 "source", "source",
+			 "target", "target",
+			 "source.decoration", "filledrhomb",
+			 "target.decoration", "arrow"
+		   });	
+		addAnnotation
+		  (getTeam_ComposedBy(), 
+		   source, 
+		   new String[] {
+			 "color", "66,133,244",
+			 "target.decoration", "none",
+			 "style", "dash"
+		   });
 	}
 
 } //MicroservicesArchitecturePackageImpl
