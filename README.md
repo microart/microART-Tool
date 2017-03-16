@@ -129,6 +129,11 @@ Building and Start
     docker network create --driver bridge my-net
     set NETWORK=my-net && export NETWORK=my-net 
 
+Before build the Dockerfile is necessary a modification to all the Dockerfiles in the home. 
+Substituting the first row whit this row
+    
+    FROM ibmcom/ibmnode
+    
 The Dockerfile build may take a while
 
     docker-compose build
