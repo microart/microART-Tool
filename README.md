@@ -124,6 +124,7 @@ Building and Start
     cd node_modules/.bin
     npm install
     cd ..
+    
     docker network create --driver bridge my-net
     set NETWORK=my-net && export NETWORK=my-net 
 
