@@ -118,15 +118,22 @@ With datastore support of MongoDB, Cloudant, Cassandra.
 With runtime support of  Docker in order to have a  Micro-Services Architecture to Analyze
 
 Building and Start
+
     git clone https://github.com/wasperf/acmeair-nodejs.git
     cd acmeair-nodejs
     npm install
     cd node_modules/.bin
     npm install
     cd ..
+    
     docker network create --driver bridge my-net
     set NETWORK=my-net && export NETWORK=my-net 
 
+Before build the Dockerfile is necessary a modification to all the Dockerfiles in the home. 
+Substituting the first row whit this row
+    
+    FROM ibmcom/ibmnode
+    
 The Dockerfile build may take a while
 
     docker-compose build
@@ -157,11 +164,52 @@ The Application is in a Github. Clone the repository and copy inside the Eclipse
 
     git clone https://github.com/microart/microART-Tool.git
     cd microART
+To Run the recovery application:
 
-Inside Eclipse go in the Project Explorer.
+    Open eclipse Neon.
+    
+    Set a Workspace.
+    
+    One Eclipse in opened
+    
+    Inside Eclipse neon go in the Project Explorer.
+    
     Right-Click
+    
     Import 
+    
     Existing Maven Project
-    Select ~/EclipseWorkspace
+    
+    Select the proper directory
+    
+    Wait until the maven building ends.
+    
+    Right-Click on the project -> Properties
+    
+    Click on Java Build Path
+    
+    Click on Add JAR
+    
+    Add the Jar inside the project, in src/main
+    
     Finish
-Wait until the maven building ends.
+    
+    To run just click Start on the top bar of Eclipse.
+    
+To run the presentation project:
+
+    Download and start Eclipse Epsilon.
+    
+    Create a workspace
+    
+    Import, from General source all the project present in the directory PresentationProject
+    
+    Right Click on project called MinimalDSL, Run as an Eclipse Application
+    
+    Wait untile a new runtime eclipse istance is ready.
+    
+    Once the new eclipse istance started, in the workspace create before will be a runtime directory
+    
+    import from general source, the project into RunTime/runtime-EclipseApplication
+
+
