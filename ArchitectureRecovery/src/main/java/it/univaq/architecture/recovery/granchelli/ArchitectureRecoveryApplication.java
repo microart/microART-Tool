@@ -132,7 +132,7 @@ public class ArchitectureRecoveryApplication {
 		
 		logger.info("DYNAMIC ANALYSIS -  FINISHED");
 		
-		String pathToSaveModel = "/home/grankellowsky/Tesi/Codice/workspaces/runtime-EclipseApplication/it.univaq.recovery.diagram";
+		String pathToSaveModel = System.getProperty("user.home") + File.separator + "workspaces/runtime-EclipseApplication/Presentation/model";
 		String nameOfTheModel = "/acmerair.microservicesarchitecture";
 		// Save Architectural Model
 		
@@ -179,27 +179,27 @@ public class ArchitectureRecoveryApplication {
 		logger.info("Press \"ENTER\" if you finished your modifications.(Don't Forget to Save and Close)");
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-		scanner.close();
+//		scanner.close();
 	}
 
 	private static void promptEnterKey(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-		scanner.close();
+//		scanner.close();
 	}
 	private static String promptEnterGitHub(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		String repo = scanner.nextLine();
-		scanner.close();
+//		scanner.close();
 		return repo;
 	}
 	private static String promptEnterLocalRepo(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		String repo = scanner.nextLine();
-		scanner.close();
+//		scanner.close();
 		return repo;
 	}
 }
