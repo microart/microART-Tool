@@ -90,6 +90,7 @@ public class DockerParser implements Parser {
 
 	public boolean findDockerCompose() {
 		File localPath = new File(getBasDirectory());
+		logger.info("LocalPath" + localPath.toString());
 		File[] files = localPath.listFiles();
 		for (int i = 0; i < files.length; i++) {
 			File file = files[i];

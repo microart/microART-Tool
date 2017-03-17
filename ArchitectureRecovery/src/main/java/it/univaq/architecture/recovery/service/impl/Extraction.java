@@ -174,11 +174,11 @@ public class Extraction {
 			String targetIP = extractTarget(row);
 			MicroService senderService = getMicroservice(product, senderIP);
 			if (senderService == null) {
-				System.out.println("Errore - SenderService Null");
+//				System.out.println("Errore - SenderService Null");
 			}
 			MicroService targetService = getMicroservice(product, targetIP);
 			if (targetService == null) {
-				System.out.println("Errore - targetService Null");
+//				System.out.println("Errore - targetService Null");
 			}
 			if (targetService.equals(serviceDiscovery)) {
 				// Vai alla riga successiva per scoprire il vero ricevente
@@ -207,11 +207,11 @@ public class Extraction {
 			String targetIP = extractTarget(row);
 			MicroService senderService = getMicroservice(product, senderIP);
 			if (senderService == null) {
-				System.out.println("Errore - SenderService Null");
+//				System.out.println("Errore - SenderService Null");
 			}
 			MicroService targetService = getMicroservice(product, targetIP);
 			if (targetService == null) {
-				System.out.println("Errore - targetService Null");
+//				System.out.println("Errore - targetService Null");
 			}
 			// So now Sender Dependes on Target
 			// if (!checkLinkExistence(product, senderService, targetService)) {
@@ -409,26 +409,26 @@ public class Extraction {
 	}
 
 	public void showDependency(Product product) {
-		System.out.println("========================");
-		System.out.println("Lista Microservices");
+//		System.out.println("========================");
+//		System.out.println("Lista Microservices");
 		Iterator<MicroService> ms = product.getComposedBy().iterator();
 		while (ms.hasNext()) {
 			MicroService microService = (MicroService) ms.next();
 			System.out.println(microService.getName() + " Host: " + microService.getHost());
 		}
-		System.out.println("========================");
-		System.out.println("========================");
-		System.out.println("========================");
-		System.out.println("Lista Dipendenze");
+//		System.out.println("========================");
+//		System.out.println("========================");
+//		System.out.println("========================");
+//		System.out.println("Lista Dipendenze");
 		Iterator<Link> links = product.getLinks().iterator();
 		while (links.hasNext()) {
 			Link link = (Link) links.next();
-			System.out.println("*****=======================");
-			System.out.println("Source: " + link.getSource() + "\n Target: " + link.getTarget());
-			System.out.println(
-					"Rispettivamente dei Servizi: " + "\n Source ==> " + link.getSource().getRequiredBy().getName()
-							+ "\n Destination ==>  " + link.getTarget().getExposedBy().getName());
-			System.out.println("*****========================");
+//			System.out.println("*****=======================");
+//			System.out.println("Source: " + link.getSource() + "\n Target: " + link.getTarget());
+//			System.out.println(
+//					"Rispettivamente dei Servizi: " + "\n Source ==> " + link.getSource().getRequiredBy().getName()
+//							+ "\n Destination ==>  " + link.getTarget().getExposedBy().getName());
+//			System.out.println("*****========================");
 
 		}
 

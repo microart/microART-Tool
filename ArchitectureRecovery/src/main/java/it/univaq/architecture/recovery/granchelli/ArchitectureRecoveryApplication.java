@@ -2,6 +2,7 @@ package it.univaq.architecture.recovery.granchelli;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -51,12 +52,14 @@ public class ArchitectureRecoveryApplication {
 		
 		logger.info("STATIC ANALYSIS -  READY");
 		logger.info("Cloning GIT REPO: https://github.com/wasperf/acmeair-nodejs.git");
-		String repositoryGitHub = promptEnterGitHub("Insert github repository");
-		String repositoryLocal = promptEnterLocalRepo("Insert local reposity to clone the git hub repo");
-		GitHubManager test = new GitHubManager("/home/grankellowsky/Tesi/Codice/prova3",
+//		String repositoryGitHub = promptEnterGitHub("Insert github repository");
+//		String repositoryLocal = promptEnterLocalRepo("Insert local reposity to clone the git hub repo");
+		String repoo = System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
+				+ File.separator + new Date().toString().replaceAll(" ", "_");
+		GitHubManager test = new GitHubManager(repoo,
 				"https://github.com/wasperf/acmeair-nodejs.git");
 		test.init();
-		
+		test.testClone();
 		logger.info("Wait the end of the Git Repo Download");
 		logger.info("Git Repo Download Finished!");
 		logger.info("STATIC ANALYSIS -  STARTED");
@@ -69,7 +72,7 @@ public class ArchitectureRecoveryApplication {
 		logger.info("DockerParser Started");
 		
 		DockerParser dockerParser = new DockerParser(microServicesArch);
-		dockerParser.setBasDirectory("/home/grankellowsky/Tesi/Codice/dockerProject/acmeair-nodejs");
+		dockerParser.setBasDirectory(repoo);
 		dockerParser.find();
 		
 		logger.info("=========================");
