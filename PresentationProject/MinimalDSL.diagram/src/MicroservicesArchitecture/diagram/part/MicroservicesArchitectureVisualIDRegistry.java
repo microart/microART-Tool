@@ -290,8 +290,8 @@ public class MicroservicesArchitectureVisualIDRegistry {
 		switch (visualID) {
 		case MicroservicesArchitecture.diagram.edit.parts.ProductEditPart.VISUAL_ID:
 			return false;
-		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
+		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:
 			return true;

@@ -28,7 +28,7 @@ public class DeveloperItemSemanticEditPolicy
 	* @generated
 	*/
 	public DeveloperItemSemanticEditPolicy() {
-		super(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002);
+		super(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003);
 	}
 
 	/**

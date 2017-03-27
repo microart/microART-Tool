@@ -28,7 +28,7 @@ public class TeamItemSemanticEditPolicy
 	* @generated
 	*/
 	public TeamItemSemanticEditPolicy() {
-		super(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003);
+		super(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002);
 	}
 
 	/**

@@ -56,11 +56,11 @@ public class MicroservicesArchitectureElementTypes {
 	/**
 	* @generated
 	*/
-	public static final IElementType Team_2003 = getElementType("MinimalDSL.diagram.Team_2003"); //$NON-NLS-1$
+	public static final IElementType Team_2002 = getElementType("MinimalDSL.diagram.Team_2002"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
-	public static final IElementType Developer_2002 = getElementType("MinimalDSL.diagram.Developer_2002"); //$NON-NLS-1$
+	public static final IElementType Developer_2003 = getElementType("MinimalDSL.diagram.Developer_2003"); //$NON-NLS-1$
 	/**
 	* @generated
 	*/
@@ -127,9 +127,9 @@ public class MicroservicesArchitectureElementTypes {
 			elements.put(MicroService_2001,
 					MicroservicesArchitecture.MicroservicesArchitecturePackage.eINSTANCE.getMicroService());
 
-			elements.put(Team_2003, MicroservicesArchitecture.MicroservicesArchitecturePackage.eINSTANCE.getTeam());
+			elements.put(Team_2002, MicroservicesArchitecture.MicroservicesArchitecturePackage.eINSTANCE.getTeam());
 
-			elements.put(Developer_2002,
+			elements.put(Developer_2003,
 					MicroservicesArchitecture.MicroservicesArchitecturePackage.eINSTANCE.getDeveloper());
 
 			elements.put(Interface_3001,
@@ -164,8 +164,8 @@ public class MicroservicesArchitectureElementTypes {
 			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Product_1000);
 			KNOWN_ELEMENT_TYPES.add(MicroService_2001);
-			KNOWN_ELEMENT_TYPES.add(Team_2003);
-			KNOWN_ELEMENT_TYPES.add(Developer_2002);
+			KNOWN_ELEMENT_TYPES.add(Team_2002);
+			KNOWN_ELEMENT_TYPES.add(Developer_2003);
 			KNOWN_ELEMENT_TYPES.add(Interface_3001);
 			KNOWN_ELEMENT_TYPES.add(Interface_3002);
 			KNOWN_ELEMENT_TYPES.add(Link_4001);
@@ -185,9 +185,9 @@ public class MicroservicesArchitectureElementTypes {
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return MicroService_2001;
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
-			return Team_2003;
+			return Team_2002;
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return Developer_2002;
+			return Developer_2003;
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return Interface_3001;
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:

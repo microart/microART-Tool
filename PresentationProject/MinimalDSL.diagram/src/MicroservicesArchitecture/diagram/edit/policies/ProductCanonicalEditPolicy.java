@@ -285,7 +285,7 @@ public class ProductCanonicalEditPolicy extends CanonicalEditPolicy {
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(MicroservicesArchitecture.diagram.part.MicroservicesArchitectureDiagramUpdater
-						.getTeam_2003ContainedLinks(view));
+						.getTeam_2002ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;
@@ -293,7 +293,7 @@ public class ProductCanonicalEditPolicy extends CanonicalEditPolicy {
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID: {
 			if (!domain2NotationMap.containsKey(view.getElement())) {
 				result.addAll(MicroservicesArchitecture.diagram.part.MicroservicesArchitectureDiagramUpdater
-						.getDeveloper_2002ContainedLinks(view));
+						.getDeveloper_2003ContainedLinks(view));
 			}
 			domain2NotationMap.putView(view.getElement(), view);
 			break;

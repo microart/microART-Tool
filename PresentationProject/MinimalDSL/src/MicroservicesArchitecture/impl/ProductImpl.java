@@ -12,6 +12,7 @@ import MicroservicesArchitecture.Team;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -19,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -35,6 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MicroservicesArchitecture.impl.ProductImpl#getTeams <em>Teams</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.ProductImpl#getLinks <em>Links</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.ProductImpl#getDevelopers <em>Developers</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.impl.ProductImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.impl.ProductImpl#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,6 +93,46 @@ public class ProductImpl extends ElementImpl implements Product {
 	 * @ordered
 	 */
 	protected EList<Developer> developers;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String URL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUrl() <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUrl()
+	 * @generated
+	 * @ordered
+	 */
+	protected String url = URL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -174,6 +218,48 @@ public class ProductImpl extends ElementImpl implements Product {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MicroservicesArchitecturePackage.PRODUCT__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getUrl() {
+		return url;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUrl(String newUrl) {
+		String oldUrl = url;
+		url = newUrl;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MicroservicesArchitecturePackage.PRODUCT__URL, oldUrl, url));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -232,6 +318,10 @@ public class ProductImpl extends ElementImpl implements Product {
 				return getLinks();
 			case MicroservicesArchitecturePackage.PRODUCT__DEVELOPERS:
 				return getDevelopers();
+			case MicroservicesArchitecturePackage.PRODUCT__DESCRIPTION:
+				return getDescription();
+			case MicroservicesArchitecturePackage.PRODUCT__URL:
+				return getUrl();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,6 +355,12 @@ public class ProductImpl extends ElementImpl implements Product {
 				getDevelopers().clear();
 				getDevelopers().addAll((Collection<? extends Developer>)newValue);
 				return;
+			case MicroservicesArchitecturePackage.PRODUCT__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case MicroservicesArchitecturePackage.PRODUCT__URL:
+				setUrl((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -292,6 +388,12 @@ public class ProductImpl extends ElementImpl implements Product {
 			case MicroservicesArchitecturePackage.PRODUCT__DEVELOPERS:
 				getDevelopers().clear();
 				return;
+			case MicroservicesArchitecturePackage.PRODUCT__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case MicroservicesArchitecturePackage.PRODUCT__URL:
+				setUrl(URL_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -314,8 +416,30 @@ public class ProductImpl extends ElementImpl implements Product {
 				return links != null && !links.isEmpty();
 			case MicroservicesArchitecturePackage.PRODUCT__DEVELOPERS:
 				return developers != null && !developers.isEmpty();
+			case MicroservicesArchitecturePackage.PRODUCT__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case MicroservicesArchitecturePackage.PRODUCT__URL:
+				return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (description: ");
+		result.append(description);
+		result.append(", url: ");
+		result.append(url);
+		result.append(')');
+		return result.toString();
 	}
 
 } //ProductImpl

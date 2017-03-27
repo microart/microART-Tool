@@ -92,12 +92,12 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return getImage("Navigator?TopLevelNode?http://it.univaq.thesis.msa.arch?MicroService", //$NON-NLS-1$
 					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.MicroService_2001);
-		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return getImage("Navigator?TopLevelNode?http://it.univaq.thesis.msa.arch?Developer", //$NON-NLS-1$
-					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
 			return getImage("Navigator?TopLevelNode?http://it.univaq.thesis.msa.arch?Team", //$NON-NLS-1$
-					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003);
+					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002);
+		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
+			return getImage("Navigator?TopLevelNode?http://it.univaq.thesis.msa.arch?Developer", //$NON-NLS-1$
+					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003);
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return getImage("Navigator?Node?http://it.univaq.thesis.msa.arch?Interface", //$NON-NLS-1$
 					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Interface_3001);
@@ -179,10 +179,10 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 			return getProduct_1000Text(view);
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return getMicroService_2001Text(view);
-		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return getDeveloper_2002Text(view);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
-			return getTeam_2003Text(view);
+			return getTeam_2002Text(view);
+		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
+			return getDeveloper_2003Text(view);
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return getInterface_3001Text(view);
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:
@@ -233,12 +233,12 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 	/**
 	* @generated
 	*/
-	private String getDeveloper_2002Text(View view) {
+	private String getTeam_2002Text(View view) {
 		IParser parser = MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureParserProvider.getParser(
-				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002,
+				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002,
 				view.getElement() != null ? view.getElement() : view,
 				MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
-						.getType(MicroservicesArchitecture.diagram.edit.parts.DeveloperEmailEditPart.VISUAL_ID));
+						.getType(MicroservicesArchitecture.diagram.edit.parts.TeamNameEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());
@@ -252,12 +252,12 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 	/**
 	* @generated
 	*/
-	private String getTeam_2003Text(View view) {
+	private String getDeveloper_2003Text(View view) {
 		IParser parser = MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureParserProvider.getParser(
-				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003,
+				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003,
 				view.getElement() != null ? view.getElement() : view,
 				MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
-						.getType(MicroservicesArchitecture.diagram.edit.parts.TeamNameEditPart.VISUAL_ID));
+						.getType(MicroservicesArchitecture.diagram.edit.parts.DeveloperEmailEditPart.VISUAL_ID));
 		if (parser != null) {
 			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
 					ParserOptions.NONE.intValue());

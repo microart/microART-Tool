@@ -18,14 +18,14 @@
   </nodeTraces>
   <nodeTraces
       visualID="2002"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Developer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Product') and _containmentMF_.name = 'developers')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Team') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Product') and _containmentMF_.name = 'teams')">
     <nodeLabelTraces
         visualID="5004"
         queryText="true"/>
   </nodeTraces>
   <nodeTraces
       visualID="2003"
-      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Team') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Product') and _containmentMF_.name = 'teams')">
+      queryText="(let _eClass_:ecore::EClass = modelFacet.metaClass.ecoreClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Developer') and (let _containmentMF_:ecore::EStructuralFeature = modelFacet.containmentMetaFeature.ecoreFeature in (let _eClass_:ecore::EClass = _containmentMF_.eContainingClass in _eClass_.ePackage.nsURI = 'http://it.univaq.thesis.msa.arch' and _eClass_.name = 'Product') and _containmentMF_.name = 'developers')">
     <nodeLabelTraces
         visualID="5005"
         queryText="true"/>

@@ -61,7 +61,7 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2003" editPartClassName="TeamEditPart" itemSemanticEditPolicyClassName="TeamItemSemanticEditPolicy" canonicalEditPolicyClassName="TeamCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TeamGraphicalNodeEditPolicy" createCommandClassName="TeamCreateCommand">
+    <topLevelNodes visualID="2002" editPartClassName="TeamEditPart" itemSemanticEditPolicyClassName="TeamItemSemanticEditPolicy" canonicalEditPolicyClassName="TeamCanonicalEditPolicy" graphicalNodeEditPolicyClassName="TeamGraphicalNodeEditPolicy" createCommandClassName="TeamCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="TeamEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="TeamFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class TeamFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureTeamLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public TeamFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setLineWidth(3);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(150)&#xA;, getMapMode().DPtoLP(70)&#xA;));&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureTeamLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureTeamLabelFigure.setText(&quot;Team&quot;);&#xA;&#xA;this.add(fFigureTeamLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureTeamLabelFigure() {&#xA;&#x9;&#x9;return fFigureTeamLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 66, 133, 244);&#xA;&#xA;">
@@ -73,7 +73,7 @@
         <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/teams"/>
         <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/teams"/>
       </modelFacet>
-      <labels visualID="5005" editPartClassName="TeamNameEditPart" itemSemanticEditPolicyClassName="TeamNameItemSemanticEditPolicy">
+      <labels visualID="5004" editPartClassName="TeamNameEditPart" itemSemanticEditPolicyClassName="TeamNameItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureTeamLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">
@@ -81,7 +81,7 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
-    <topLevelNodes visualID="2002" editPartClassName="DeveloperEditPart" itemSemanticEditPolicyClassName="DeveloperItemSemanticEditPolicy" canonicalEditPolicyClassName="DeveloperCanonicalEditPolicy" graphicalNodeEditPolicyClassName="DeveloperGraphicalNodeEditPolicy" createCommandClassName="DeveloperCreateCommand">
+    <topLevelNodes visualID="2003" editPartClassName="DeveloperEditPart" itemSemanticEditPolicyClassName="DeveloperItemSemanticEditPolicy" canonicalEditPolicyClassName="DeveloperCanonicalEditPolicy" graphicalNodeEditPolicyClassName="DeveloperGraphicalNodeEditPolicy" createCommandClassName="DeveloperCreateCommand">
       <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType xsi:type="gmfgen:MetamodelType" editHelperClassName="DeveloperEditHelper"/>
       <viewmap xsi:type="gmfgen:InnerClassViewmap" className="DeveloperFigure" classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class DeveloperFigure extends org.eclipse.draw2d.Ellipse {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureDeveloperLabelFigure; &#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public DeveloperFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setLineWidth(3);&#xA;this.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DOT);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;, getMapMode().DPtoLP(5)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureDeveloperLabelFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;&#xA;fFigureDeveloperLabelFigure.setText(&quot;Developer&quot;);&#xA;&#xA;this.add(fFigureDeveloperLabelFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureDeveloperLabelFigure() {&#xA;&#x9;&#x9;return fFigureDeveloperLabelFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 66, 133, 244);&#xA;&#xA;">
@@ -92,7 +92,7 @@
         <containmentMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/developers"/>
         <childMetaFeature href="msa.genmodel#//MicroservicesArchitecture/Product/developers"/>
       </modelFacet>
-      <labels visualID="5004" editPartClassName="DeveloperEmailEditPart" itemSemanticEditPolicyClassName="DeveloperEmailItemSemanticEditPolicy">
+      <labels visualID="5005" editPartClassName="DeveloperEmailEditPart" itemSemanticEditPolicyClassName="DeveloperEmailItemSemanticEditPolicy">
         <diagramRunTimeClass href="platform:/plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap xsi:type="gmfgen:ParentAssignedViewmap" getterName="getFigureDeveloperLabelFigure" figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet xsi:type="gmfgen:FeatureLabelModelFacet" parser="//@labelParsers/@implementations.0">

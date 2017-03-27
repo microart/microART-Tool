@@ -351,17 +351,17 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Developer_2002_incominglinks;
+	public static String NavigatorGroupName_Team_2002_incominglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Team_2003_incominglinks;
+	public static String NavigatorGroupName_Team_2002_outgoinglinks;
 
 	/**
 	* @generated
 	*/
-	public static String NavigatorGroupName_Team_2003_outgoinglinks;
+	public static String NavigatorGroupName_Developer_2003_incominglinks;
 
 	/**
 	* @generated

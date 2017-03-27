@@ -28,6 +28,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msa.ecore#//Product/teams"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msa.ecore#//Product/links"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msa.ecore#//Product/developers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//Product/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//Product/url"/>
     </genClasses>
     <genClasses ecoreClass="msa.ecore#//MicroService">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference msa.ecore#//MicroService/compose"/>
@@ -37,7 +39,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference msa.ecore#//MicroService/owned"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference msa.ecore#//MicroService/require"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//MicroService/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//MicroService/isFunctional"/>
     </genClasses>
     <genClasses ecoreClass="msa.ecore#//Cluster">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference msa.ecore#//Cluster/contains"/>

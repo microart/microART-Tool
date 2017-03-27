@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.InvalidRemoteException;
 import org.eclipse.jgit.api.errors.TransportException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.Configuration;
 
 import MicroservicesArchitecture.Developer;
 import MicroservicesArchitecture.Product;
+import it.univaq.architecture.recovery.configuration.Config;
 import it.univaq.architecture.recovery.model.GitCommitCustom;
 import it.univaq.architecture.recovery.model.MicroserviceArch;
 import it.univaq.architecture.recovery.service.impl.Converter;
@@ -30,17 +32,23 @@ import it.univaq.architecture.recovery.service.impl.MSALoaderImpl;
 import it.univaq.architecture.recovery.service.impl.TcpDumpLoggerImpl;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "it.univaq.architecture.recovery.service.impl.*" })
+@ComponentScan(basePackages = { "it.univaq.architecture.recovery.configuration" })
 @EnableAutoConfiguration
 @Configuration
 public class ArchitectureRecoveryApplication {
 
 	final static Logger logger = Logger.getLogger(ArchitectureRecoveryApplication.class);
+	
 	public static MSALoaderImpl factory = new MSALoaderImpl();
+	
 	public static TcpDumpLoggerImpl tcpDumpLoggerImpl = new TcpDumpLoggerImpl();
+	
 	static String logFileName = System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
 			+ File.separator + "log_24feb.txt";
+	
 	public Extraction extractor = new Extraction(logFileName);
+	
+	private static Config config;
 
 	public static void main(String[] args)
 			throws IOException, InvalidRemoteException, TransportException, GitAPIException, InterruptedException {
@@ -51,13 +59,13 @@ public class ArchitectureRecoveryApplication {
 		// System.out.println("INSTANZIAZIONE MANAGER GITHUB");
 		
 		logger.info("STATIC ANALYSIS -  READY");
-		logger.info("Cloning GIT REPO: https://github.com/wasperf/acmeair-nodejs.git");
+		logger.info("Cloning GIT REPO: " + config.getGitUrl());
 //		String repositoryGitHub = promptEnterGitHub("Insert github repository");
 //		String repositoryLocal = promptEnterLocalRepo("Insert local reposity to clone the git hub repo");
 		String repoo = System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
 				+ File.separator + new Date().toString().replaceAll(" ", "_");
 		GitHubManager test = new GitHubManager(repoo,
-				"https://github.com/wasperf/acmeair-nodejs.git");
+				config.getGitUrl());
 		test.init();
 		test.testClone();
 		logger.info("Wait the end of the Git Repo Download");
@@ -132,7 +140,7 @@ public class ArchitectureRecoveryApplication {
 		
 		logger.info("DYNAMIC ANALYSIS -  FINISHED");
 		
-		String pathToSaveModel = System.getProperty("user.home") + File.separator + "workspaces/runtime-EclipseApplication/Presentation/model";
+		String pathToSaveModel = "/home/grankellowsky/Tesi/Codice/workspaces/runtime-EclipseApplication/it.univaq.recovery.diagram";
 		String nameOfTheModel = "/acmerair.microservicesarchitecture";
 		// Save Architectural Model
 		
@@ -179,27 +187,36 @@ public class ArchitectureRecoveryApplication {
 		logger.info("Press \"ENTER\" if you finished your modifications.(Don't Forget to Save and Close)");
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-//		scanner.close();
+		scanner.close();
 	}
 
 	private static void promptEnterKey(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-//		scanner.close();
+		scanner.close();
 	}
 	private static String promptEnterGitHub(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		String repo = scanner.nextLine();
-//		scanner.close();
+		scanner.close();
 		return repo;
 	}
 	private static String promptEnterLocalRepo(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		String repo = scanner.nextLine();
-//		scanner.close();
+		scanner.close();
 		return repo;
+	}
+
+	public Config getConfig() {
+		return config;
+	}
+	
+	@Autowired
+	public void setConfig(Config config) {
+		this.config = config;
 	}
 }

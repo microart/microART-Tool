@@ -9,15 +9,37 @@
   <eClassifiers xsi:type="ecore:EClass" name="Product" eSuperTypes="#//Element">
     <eAnnotations source="gmf.diagram"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="composedBy" lowerBound="1"
-        upperBound="-1" eType="#//MicroService" containment="true" eOpposite="#//MicroService/compose"/>
+        upperBound="-1" eType="#//MicroService" containment="true" eOpposite="#//MicroService/compose">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dividedIn" upperBound="-1"
-        eType="#//Cluster" containment="true" eOpposite="#//Cluster/divide"/>
+        eType="#//Cluster" containment="true" eOpposite="#//Cluster/divide">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="teams" lowerBound="1" upperBound="-1"
-        eType="#//Team" containment="true" eOpposite="#//Team/workFor"/>
+        eType="#//Team" containment="true" eOpposite="#//Team/workFor">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
-        eType="#//Link" containment="true" eOpposite="#//Link/Dependency"/>
+        eType="#//Link" containment="true" eOpposite="#//Link/dependency">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="developers" upperBound="-1"
-        eType="#//Developer" containment="true" eOpposite="#//Developer/worksFor"/>
+        eType="#//Developer" containment="true" eOpposite="#//Developer/worksFor">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MicroService" eSuperTypes="#//Element">
     <eAnnotations source="gmf.node">
@@ -27,10 +49,17 @@
       <details key="figure" value="rectangle"/>
       <details key="color" value="178,255,102"/>
     </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="compose" eType="#//Product"
         eOpposite="#//Product/composedBy"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="belongTo" eType="#//Cluster"
-        eOpposite="#//Cluster/contains"/>
+        eOpposite="#//Cluster/contains">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expose" upperBound="-1"
         eType="#//Interface" containment="true" eOpposite="#//Interface/exposedBy">
       <eAnnotations source="gmf.affixed"/>
@@ -38,10 +67,17 @@
         <details key="collapsible" value="true"/>
         <details key="layout" value="list"/>
       </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="host" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="owned" eType="#//Team"
-        eOpposite="#//Team/workOn"/>
+        eOpposite="#//Team/workOn">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="require" upperBound="-1"
         eType="#//Interface" containment="true" eOpposite="#//Interface/requiredBy">
       <eAnnotations source="gmf.affixed"/>
@@ -49,12 +85,16 @@
         <details key="collapsible" value="true"/>
         <details key="layout" value="list"/>
       </eAnnotations>
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//serviceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFunctional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
-        defaultValueLiteral="true" iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Cluster" eSuperTypes="#//Element">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contains" upperBound="-1"
         eType="#//MicroService" eOpposite="#//MicroService/belongTo"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="divide" eType="#//Product"
@@ -68,6 +108,9 @@
       <details key="label.icon" value="false"/>
       <details key="figure" value="rounded"/>
     </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="worksFor" eType="#//Product"
@@ -80,6 +123,9 @@
       <details key="border.style" value="dash"/>
       <details key="label.icon" value="false"/>
       <details key="figure" value="rectangle"/>
+    </eAnnotations>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exposedBy" eType="#//MicroService"
         eOpposite="#//MicroService/expose"/>
@@ -98,30 +144,48 @@
       <details key="source.decoration" value="filledrhomb"/>
       <details key="target.decoration" value="arrow"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Interface"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Interface"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Dependency" eType="#//Product"
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Interface">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Interface">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependency" eType="#//Product"
         eOpposite="#//Product/links"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Team" eSuperTypes="#//Element">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="composedBy" upperBound="-1"
-        eType="#//Developer"/>
+        eType="#//Developer">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="Product"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="workOn" upperBound="-1"
         eType="#//MicroService" eOpposite="#//MicroService/owned"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="workFor" eType="#//Product"
         eOpposite="#//Product/teams"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="serviceType">
-    <eLiterals name="generalFuncion"/>
-    <eLiterals name="Authentication" value="1"/>
-    <eLiterals name="serviceDiscovery" value="2"/>
-    <eLiterals name="LoadBalancer" value="3"/>
-    <eLiterals name="HealthCheck" value="4"/>
-    <eLiterals name="Monitor" value="5"/>
-    <eLiterals name="APIGateways" value="6"/>
-    <eLiterals name="Security" value="7"/>
-    <eLiterals name="Messaging" value="8"/>
-    <eLiterals name="Logging" value="9"/>
-    <eLiterals name="Resilience" value="10"/>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
+    <eLiterals name="functional" literal="functional"/>
+    <eLiterals name="monitoring" value="1"/>
+    <eLiterals name="system_level_management" value="3"/>
+    <eLiterals name="service_orchestration" value="4"/>
+    <eLiterals name="service_brokering" value="5"/>
+    <eLiterals name="security" value="6"/>
+    <eLiterals name="service_proxy" value="7"/>
+    <eLiterals name="data_storage" value="8"/>
   </eClassifiers>
 </ecore:EPackage>

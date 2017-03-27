@@ -154,9 +154,9 @@ public class MicroservicesArchitectureDiagramUpdater {
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return getMicroService_2001ContainedLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
-			return getTeam_2003ContainedLinks(view);
+			return getTeam_2002ContainedLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return getDeveloper_2002ContainedLinks(view);
+			return getDeveloper_2003ContainedLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return getInterface_3001ContainedLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:
@@ -176,9 +176,9 @@ public class MicroservicesArchitectureDiagramUpdater {
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return getMicroService_2001IncomingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
-			return getTeam_2003IncomingLinks(view);
+			return getTeam_2002IncomingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return getDeveloper_2002IncomingLinks(view);
+			return getDeveloper_2003IncomingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return getInterface_3001IncomingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:
@@ -198,9 +198,9 @@ public class MicroservicesArchitectureDiagramUpdater {
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return getMicroService_2001OutgoingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
-			return getTeam_2003OutgoingLinks(view);
+			return getTeam_2002OutgoingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return getDeveloper_2002OutgoingLinks(view);
+			return getDeveloper_2003OutgoingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return getInterface_3001OutgoingLinks(view);
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:
@@ -237,7 +237,7 @@ public class MicroservicesArchitectureDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getTeam_2003ContainedLinks(
+	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getTeam_2002ContainedLinks(
 			View view) {
 		MicroservicesArchitecture.Team modelElement = (MicroservicesArchitecture.Team) view.getElement();
 		LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> result = new LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor>();
@@ -248,7 +248,7 @@ public class MicroservicesArchitectureDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getDeveloper_2002ContainedLinks(
+	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getDeveloper_2003ContainedLinks(
 			View view) {
 		return Collections.emptyList();
 	}
@@ -288,7 +288,7 @@ public class MicroservicesArchitectureDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getTeam_2003IncomingLinks(
+	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getTeam_2002IncomingLinks(
 			View view) {
 		MicroservicesArchitecture.Team modelElement = (MicroservicesArchitecture.Team) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -301,7 +301,7 @@ public class MicroservicesArchitectureDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getDeveloper_2002IncomingLinks(
+	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getDeveloper_2003IncomingLinks(
 			View view) {
 		MicroservicesArchitecture.Developer modelElement = (MicroservicesArchitecture.Developer) view.getElement();
 		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
@@ -360,7 +360,7 @@ public class MicroservicesArchitectureDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getTeam_2003OutgoingLinks(
+	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getTeam_2002OutgoingLinks(
 			View view) {
 		MicroservicesArchitecture.Team modelElement = (MicroservicesArchitecture.Team) view.getElement();
 		LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> result = new LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor>();
@@ -371,7 +371,7 @@ public class MicroservicesArchitectureDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getDeveloper_2002OutgoingLinks(
+	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getDeveloper_2003OutgoingLinks(
 			View view) {
 		return Collections.emptyList();
 	}

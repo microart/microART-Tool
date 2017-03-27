@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EReference;
  * <ul>
  *   <li>each class,</li>
  *   <li>each feature of each class,</li>
+ *   <li>each operation of each class,</li>
  *   <li>each enum,</li>
  *   <li>and each data type</li>
  * </ul>
@@ -149,13 +150,31 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	int PRODUCT__DEVELOPERS = ELEMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__DESCRIPTION = ELEMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRODUCT__URL = ELEMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Product</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRODUCT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 5;
+	int PRODUCT_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link MicroservicesArchitecture.impl.MicroServiceImpl <em>Micro Service</em>}' class.
@@ -240,22 +259,13 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	int MICRO_SERVICE__TYPE = ELEMENT_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Is Functional</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICRO_SERVICE__IS_FUNCTIONAL = ELEMENT_FEATURE_COUNT + 7;
-
-	/**
 	 * The number of structural features of the '<em>Micro Service</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MICRO_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 8;
+	int MICRO_SERVICE_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The meta object id for the '{@link MicroservicesArchitecture.impl.ClusterImpl <em>Cluster</em>}' class.
@@ -639,6 +649,28 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	EReference getProduct_Developers();
 
 	/**
+	 * Returns the meta object for the attribute '{@link MicroservicesArchitecture.Product#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see MicroservicesArchitecture.Product#getDescription()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MicroservicesArchitecture.Product#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see MicroservicesArchitecture.Product#getUrl()
+	 * @see #getProduct()
+	 * @generated
+	 */
+	EAttribute getProduct_Url();
+
+	/**
 	 * Returns the meta object for class '{@link MicroservicesArchitecture.MicroService <em>Micro Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -724,17 +756,6 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMicroService_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link MicroservicesArchitecture.MicroService#getIsFunctional <em>Is Functional</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Functional</em>'.
-	 * @see MicroservicesArchitecture.MicroService#getIsFunctional()
-	 * @see #getMicroService()
-	 * @generated
-	 */
-	EAttribute getMicroService_IsFunctional();
 
 	/**
 	 * Returns the meta object for class '{@link MicroservicesArchitecture.Cluster <em>Cluster</em>}'.
@@ -987,6 +1008,7 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 	 * <ul>
 	 *   <li>each class,</li>
 	 *   <li>each feature of each class,</li>
+	 *   <li>each operation of each class,</li>
 	 *   <li>each enum,</li>
 	 *   <li>and each data type</li>
 	 * </ul>
@@ -1063,6 +1085,22 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 		EReference PRODUCT__DEVELOPERS = eINSTANCE.getProduct_Developers();
 
 		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__DESCRIPTION = eINSTANCE.getProduct_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRODUCT__URL = eINSTANCE.getProduct_Url();
+
+		/**
 		 * The meta object literal for the '{@link MicroservicesArchitecture.impl.MicroServiceImpl <em>Micro Service</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1127,14 +1165,6 @@ public interface MicroservicesArchitecturePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MICRO_SERVICE__TYPE = eINSTANCE.getMicroService_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Is Functional</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MICRO_SERVICE__IS_FUNCTIONAL = eINSTANCE.getMicroService_IsFunctional();
 
 		/**
 		 * The meta object literal for the '{@link MicroservicesArchitecture.impl.ClusterImpl <em>Cluster</em>}' class.

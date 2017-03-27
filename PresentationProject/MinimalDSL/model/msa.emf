@@ -1,5 +1,5 @@
-@namespace(uri="http://it.univaq.thesis.msa.arch", prefix="msa")
 @gmf
+@namespace(uri="http://it.univaq.thesis.msa.arch", prefix="msa")
 package MicroservicesArchitecture;
 
 abstract class Element {
@@ -13,21 +13,25 @@ class Product extends Element {
   val Team[+]#workFor teams;
   val Link[*]#Dependency links;
   val Developer[*]#worksFor developers;
+  attr String description;
+  attr String url;
 }
 
-@gmf.node(label="name", border.style="solid",label.pattern="    {0}", label.icon="false", figure="rectangle", border.color="0,153,153",border.width="4")
+@gmf.node(label="name", border.style="solid", label.pattern="    {0}", label.icon="false", figure="rectangle", border.color="0,153,153", border.width="4")
 class MicroService extends Element {
   ref Product#composedBy compose;
   ref Cluster#contains belongTo;
+
   @gmf.compartment(collapsible="true", layout="list")
   val Interface[*]#exposedBy expose;
   attr String host;
+
   @gmf.link(target.decoration="arrow", style="dash")
   ref Team#workOn owned;
+
   @gmf.compartment(collapsible="true", layout="list")
   val Interface[*]#requiredBy require;
   attr serviceType type;
-  id attr Boolean isFunctional = "true";
 }
 
 class Cluster extends Element {
@@ -36,14 +40,14 @@ class Cluster extends Element {
   attr String context;
 }
 
-@gmf.node(border.width="3",border.color="66,133,244", label="email", border.style="dot", label.icon="false",figure="ellipse")
+@gmf.node(border.width="3", border.color="66,133,244", label="email", border.style="dot", label.icon="false", figure="ellipse")
 class Developer extends Element {
   attr String email;
   attr String username;
   ref Product#developers worksFor;
 }
 
-@gmf.node( label="endPoint", border.style="solid", label.icon="false", figure="rectangle")
+@gmf.node(label="endPoint", border.style="solid", label.icon="false", figure="rectangle")
 class Interface extends Element {
   ref MicroService#expose exposedBy;
   attr String endPoint;
@@ -57,9 +61,11 @@ class Link extends Element {
   ref Interface target;
   ref Product#links Dependency;
 }
-@gmf.node(border.width="3",border.color="66,133,244", label="name",label.placement="internal", border.style="solid", label.icon="false", figure="ellipse",size="150,70")
+
+@gmf.node(border.width="3", border.color="66,133,244", label="name", label.placement="internal", border.style="solid", label.icon="false", figure="ellipse", size="150,70")
 class Team extends Element {
-  @gmf.link(color="66,133,244",target.decoration="none", style="dash")
+
+  @gmf.link(color="66,133,244", target.decoration="none", style="dash")
   ref Developer[*] composedBy;
   ref MicroService[*]#owned workOn;
   ref Product#teams workFor;

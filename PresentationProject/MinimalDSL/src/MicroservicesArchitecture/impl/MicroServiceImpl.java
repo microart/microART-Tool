@@ -41,7 +41,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getOwned <em>Owned</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getRequire <em>Require</em>}</li>
  *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getType <em>Type</em>}</li>
- *   <li>{@link MicroservicesArchitecture.impl.MicroServiceImpl#getIsFunctional <em>Is Functional</em>}</li>
  * </ul>
  *
  * @generated
@@ -126,26 +125,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 	 * @ordered
 	 */
 	protected serviceType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIsFunctional() <em>Is Functional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsFunctional()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final Boolean IS_FUNCTIONAL_EDEFAULT = Boolean.TRUE;
-
-	/**
-	 * The cached value of the '{@link #getIsFunctional() <em>Is Functional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIsFunctional()
-	 * @generated
-	 * @ordered
-	 */
-	protected Boolean isFunctional = IS_FUNCTIONAL_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -398,27 +377,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Boolean getIsFunctional() {
-		return isFunctional;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIsFunctional(Boolean newIsFunctional) {
-		Boolean oldIsFunctional = isFunctional;
-		isFunctional = newIsFunctional;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL, oldIsFunctional, isFunctional));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -503,8 +461,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 				return getRequire();
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
 				return getType();
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				return getIsFunctional();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -541,9 +497,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
 				setType((serviceType)newValue);
 				return;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				setIsFunctional((Boolean)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -577,9 +530,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				setIsFunctional(IS_FUNCTIONAL_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -606,8 +556,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 				return require != null && !require.isEmpty();
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
 				return type != TYPE_EDEFAULT;
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
-				return IS_FUNCTIONAL_EDEFAULT == null ? isFunctional != null : !IS_FUNCTIONAL_EDEFAULT.equals(isFunctional);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -626,8 +574,6 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 		result.append(host);
 		result.append(", type: ");
 		result.append(type);
-		result.append(", isFunctional: ");
-		result.append(isFunctional);
 		result.append(')');
 		return result.toString();
 	}

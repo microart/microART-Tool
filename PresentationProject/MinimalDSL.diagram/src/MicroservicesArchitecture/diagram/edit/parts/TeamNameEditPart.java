@@ -55,7 +55,7 @@ public class TeamNameEditPart extends CompartmentEditPart implements ITextAwareE
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5005;
+	public static final int VISUAL_ID = 5004;
 
 	/**
 	* @generated
@@ -288,7 +288,7 @@ public class TeamNameEditPart extends CompartmentEditPart implements ITextAwareE
 	public IParser getParser() {
 		if (parser == null) {
 			parser = MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureParserProvider.getParser(
-					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003,
+					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002,
 					getParserElement(), MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
 							.getType(MicroservicesArchitecture.diagram.edit.parts.TeamNameEditPart.VISUAL_ID));
 		}

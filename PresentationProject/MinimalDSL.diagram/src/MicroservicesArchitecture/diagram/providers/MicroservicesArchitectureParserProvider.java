@@ -46,39 +46,39 @@ public class MicroservicesArchitectureParserProvider extends AbstractProvider im
 	/**
 	* @generated
 	*/
-	private IParser teamName_5005Parser;
+	private IParser teamName_5004Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getTeamName_5005Parser() {
-		if (teamName_5005Parser == null) {
+	private IParser getTeamName_5004Parser() {
+		if (teamName_5004Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					MicroservicesArchitecture.MicroservicesArchitecturePackage.eINSTANCE.getElement_Name() };
 			MicroservicesArchitecture.diagram.parsers.MessageFormatParser parser = new MicroservicesArchitecture.diagram.parsers.MessageFormatParser(
 					features);
-			teamName_5005Parser = parser;
+			teamName_5004Parser = parser;
 		}
-		return teamName_5005Parser;
+		return teamName_5004Parser;
 	}
 
 	/**
 	* @generated
 	*/
-	private IParser developerEmail_5004Parser;
+	private IParser developerEmail_5005Parser;
 
 	/**
 	* @generated
 	*/
-	private IParser getDeveloperEmail_5004Parser() {
-		if (developerEmail_5004Parser == null) {
+	private IParser getDeveloperEmail_5005Parser() {
+		if (developerEmail_5005Parser == null) {
 			EAttribute[] features = new EAttribute[] {
 					MicroservicesArchitecture.MicroservicesArchitecturePackage.eINSTANCE.getDeveloper_Email() };
 			MicroservicesArchitecture.diagram.parsers.MessageFormatParser parser = new MicroservicesArchitecture.diagram.parsers.MessageFormatParser(
 					features);
-			developerEmail_5004Parser = parser;
+			developerEmail_5005Parser = parser;
 		}
-		return developerEmail_5004Parser;
+		return developerEmail_5005Parser;
 	}
 
 	/**
@@ -127,9 +127,9 @@ public class MicroservicesArchitectureParserProvider extends AbstractProvider im
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceNameEditPart.VISUAL_ID:
 			return getMicroServiceName_5003Parser();
 		case MicroservicesArchitecture.diagram.edit.parts.TeamNameEditPart.VISUAL_ID:
-			return getTeamName_5005Parser();
+			return getTeamName_5004Parser();
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEmailEditPart.VISUAL_ID:
-			return getDeveloperEmail_5004Parser();
+			return getDeveloperEmail_5005Parser();
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEndPointEditPart.VISUAL_ID:
 			return getInterfaceEndPoint_5001Parser();
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEndPoint2EditPart.VISUAL_ID:

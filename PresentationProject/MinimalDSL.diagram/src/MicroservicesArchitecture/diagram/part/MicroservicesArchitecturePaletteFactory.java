@@ -64,11 +64,11 @@ public class MicroservicesArchitecturePaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				MicroservicesArchitecture.diagram.part.Messages.Developer1CreationTool_title,
 				MicroservicesArchitecture.diagram.part.Messages.Developer1CreationTool_desc, Collections.singletonList(
-						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002));
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003));
 		entry.setId("createDeveloper1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.getImageDescriptor(
-						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002));
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -115,11 +115,11 @@ public class MicroservicesArchitecturePaletteFactory {
 		DefaultNodeToolEntry entry = new DefaultNodeToolEntry(
 				MicroservicesArchitecture.diagram.part.Messages.Team4CreationTool_title,
 				MicroservicesArchitecture.diagram.part.Messages.Team4CreationTool_desc, Collections.singletonList(
-						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003));
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002));
 		entry.setId("createTeam4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.getImageDescriptor(
-						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003));
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}

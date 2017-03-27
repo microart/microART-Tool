@@ -80,7 +80,7 @@ public class MicroservicesArchitectureModelingAssistantProviderOfTeamEditPart
 			IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.TeamComposedBy_4003) {
-			types.add(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002);
+			types.add(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003);
 		}
 		return types;
 	}

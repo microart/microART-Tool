@@ -20,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link MicroservicesArchitecture.MicroService#getOwned <em>Owned</em>}</li>
  *   <li>{@link MicroservicesArchitecture.MicroService#getRequire <em>Require</em>}</li>
  *   <li>{@link MicroservicesArchitecture.MicroService#getType <em>Type</em>}</li>
- *   <li>{@link MicroservicesArchitecture.MicroService#getIsFunctional <em>Is Functional</em>}</li>
  * </ul>
  *
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService()
@@ -205,32 +204,5 @@ public interface MicroService extends Element {
 	 * @generated
 	 */
 	void setType(serviceType value);
-
-	/**
-	 * Returns the value of the '<em><b>Is Functional</b></em>' attribute.
-	 * The default value is <code>"true"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Is Functional</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Functional</em>' attribute.
-	 * @see #setIsFunctional(Boolean)
-	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getMicroService_IsFunctional()
-	 * @model default="true" id="true"
-	 * @generated
-	 */
-	Boolean getIsFunctional();
-
-	/**
-	 * Sets the value of the '{@link MicroservicesArchitecture.MicroService#getIsFunctional <em>Is Functional</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Functional</em>' attribute.
-	 * @see #getIsFunctional()
-	 * @generated
-	 */
-	void setIsFunctional(Boolean value);
 
 } // MicroService

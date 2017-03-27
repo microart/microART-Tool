@@ -126,13 +126,13 @@ public class MSALoaderImpl implements MSALoader {
 			MicroService microService = (MicroService) it.next();
 //			System.out.println(
 //					microService.getName() + " isFunctional? " + microService.getIsFunctional() + "Type is: " + microService.getType());
-			if (!microService.getIsFunctional().booleanValue()) {
+//			if (!microService.getIsFunctional().booleanValue()) {
 //				System.out.println(microService.getType().toString());
 				if (microService.getType().equals(serviceType.SERVICE_DISCOVERY)) {
 					serviceDiscovery = microService.getHost();
 					return serviceDiscovery;
 				}
-			}
+//			}
 		}
 
 		return serviceDiscovery;

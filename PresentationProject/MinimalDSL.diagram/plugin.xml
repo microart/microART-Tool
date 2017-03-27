@@ -258,7 +258,7 @@
          </object>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="MicroservicesArchitecture"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2003,2002,3001,3002"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,3001,3002"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
       </viewProvider>
    </extension>
@@ -271,13 +271,13 @@
             <method name="getType()" value="MicroservicesArchitecture"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
-            <method name="getType()" value="2001,2003,2002,3001,3002"/>
+            <method name="getType()" value="2001,2002,2003,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
             <method name="getType()" value="4001,4002,4003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
-            <method name="getType()" value="5003,5005,5004,5001,5002"/>
+            <method name="getType()" value="5003,5004,5005,5001,5002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
             <method name="getType()" value="7001,7002"/>
@@ -301,13 +301,13 @@
       </modelingAssistantProvider>
             <modelingAssistantProvider class="MicroservicesArchitecture.diagram.providers.assistants.MicroservicesArchitectureModelingAssistantProviderOfTeamEditPart">
          <Priority name="Lowest"/>
-         <object class="MicroservicesArchitecture.diagram.edit.parts.TeamEditPart" id="Team_2003"/>
-         <context elements="Team_2003"/>
+         <object class="MicroservicesArchitecture.diagram.edit.parts.TeamEditPart" id="Team_2002"/>
+         <context elements="Team_2002"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="MicroservicesArchitecture.diagram.providers.assistants.MicroservicesArchitectureModelingAssistantProviderOfDeveloperEditPart">
          <Priority name="Lowest"/>
-         <object class="MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart" id="Developer_2002"/>
-         <context elements="Developer_2002"/>
+         <object class="MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart" id="Developer_2003"/>
+         <context elements="Developer_2003"/>
       </modelingAssistantProvider>
             <modelingAssistantProvider class="MicroservicesArchitecture.diagram.providers.assistants.MicroservicesArchitectureModelingAssistantProviderOfInterfaceEditPart">
          <Priority name="Lowest"/>
@@ -342,7 +342,7 @@
       <decoratorProvider class="MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureShortcutsDecoratorProvider">
          <Priority name="Lowest"/>
          <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
-            <method name="getType()" value="2001,2003,2002"/>
+            <method name="getType()" value="2001,2002,2003"/>
          </object>
          <context decoratorTargets="generated-top-nodes"/>
       </decoratorProvider>
@@ -372,22 +372,22 @@
       </metamodel>
       <metamodel nsURI="http://it.univaq.thesis.msa.arch">
          <metamodelType
-               id="MinimalDSL.diagram.Team_2003"
-               name="%metatype.name.Team_2003"
+               id="MinimalDSL.diagram.Team_2002"
+               name="%metatype.name.Team_2002"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Team"
                edithelper="MicroservicesArchitecture.diagram.edit.helpers.TeamEditHelper">
-            <param name="semanticHint" value="2003"/>
+            <param name="semanticHint" value="2002"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://it.univaq.thesis.msa.arch">
          <metamodelType
-               id="MinimalDSL.diagram.Developer_2002"
-               name="%metatype.name.Developer_2002"
+               id="MinimalDSL.diagram.Developer_2003"
+               name="%metatype.name.Developer_2003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
                eclass="Developer"
                edithelper="MicroservicesArchitecture.diagram.edit.helpers.DeveloperEditHelper">
-            <param name="semanticHint" value="2002"/>
+            <param name="semanticHint" value="2003"/>
          </metamodelType>
       </metamodel>
       <metamodel nsURI="http://it.univaq.thesis.msa.arch">
@@ -451,8 +451,8 @@
       <binding context="MinimalDSL.diagram.TypeContext">
          <elementType ref="MinimalDSL.diagram.Product_1000"/>
          <elementType ref="MinimalDSL.diagram.MicroService_2001"/>
-         <elementType ref="MinimalDSL.diagram.Team_2003"/>
-         <elementType ref="MinimalDSL.diagram.Developer_2002"/>
+         <elementType ref="MinimalDSL.diagram.Team_2002"/>
+         <elementType ref="MinimalDSL.diagram.Developer_2003"/>
          <elementType ref="MinimalDSL.diagram.Interface_3001"/>
          <elementType ref="MinimalDSL.diagram.Interface_3002"/>
          <elementType ref="MinimalDSL.diagram.Link_4001"/>

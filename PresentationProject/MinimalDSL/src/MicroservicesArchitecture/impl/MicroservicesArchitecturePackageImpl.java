@@ -230,6 +230,24 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getProduct_Description() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProduct_Url() {
+		return (EAttribute)productEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMicroService() {
 		return microServiceEClass;
 	}
@@ -295,15 +313,6 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 	 */
 	public EAttribute getMicroService_Type() {
 		return (EAttribute)microServiceEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMicroService_IsFunctional() {
-		return (EAttribute)microServiceEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -541,6 +550,8 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		createEReference(productEClass, PRODUCT__TEAMS);
 		createEReference(productEClass, PRODUCT__LINKS);
 		createEReference(productEClass, PRODUCT__DEVELOPERS);
+		createEAttribute(productEClass, PRODUCT__DESCRIPTION);
+		createEAttribute(productEClass, PRODUCT__URL);
 
 		microServiceEClass = createEClass(MICRO_SERVICE);
 		createEReference(microServiceEClass, MICRO_SERVICE__COMPOSE);
@@ -550,7 +561,6 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		createEReference(microServiceEClass, MICRO_SERVICE__OWNED);
 		createEReference(microServiceEClass, MICRO_SERVICE__REQUIRE);
 		createEAttribute(microServiceEClass, MICRO_SERVICE__TYPE);
-		createEAttribute(microServiceEClass, MICRO_SERVICE__IS_FUNCTIONAL);
 
 		clusterEClass = createEClass(CLUSTER);
 		createEReference(clusterEClass, CLUSTER__CONTAINS);
@@ -628,6 +638,8 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		initEReference(getProduct_Teams(), this.getTeam(), this.getTeam_WorkFor(), "teams", null, 1, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_Links(), this.getLink(), this.getLink_Dependency(), "links", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProduct_Developers(), this.getDeveloper(), this.getDeveloper_WorksFor(), "developers", null, 0, -1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_Description(), ecorePackage.getEString(), "description", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProduct_Url(), ecorePackage.getEString(), "url", null, 0, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(microServiceEClass, MicroService.class, "MicroService", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMicroService_Compose(), this.getProduct(), this.getProduct_ComposedBy(), "compose", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -637,7 +649,6 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		initEReference(getMicroService_Owned(), this.getTeam(), this.getTeam_WorkOn(), "owned", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMicroService_Require(), this.getInterface(), this.getInterface_RequiredBy(), "require", null, 0, -1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMicroService_Type(), this.getserviceType(), "type", null, 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMicroService_IsFunctional(), ecorePackage.getEBooleanObject(), "isFunctional", "true", 0, 1, MicroService.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(clusterEClass, Cluster.class, "Cluster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCluster_Contains(), this.getMicroService(), this.getMicroService_BelongTo(), "contains", null, 0, -1, Cluster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

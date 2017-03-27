@@ -52,7 +52,6 @@ public class MicroServiceItemProvider extends ElementItemProvider {
 			addHostPropertyDescriptor(object);
 			addOwnedPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
-			addIsFunctionalPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -146,28 +145,6 @@ public class MicroServiceItemProvider extends ElementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Is Functional feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIsFunctionalPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_MicroService_isFunctional_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_MicroService_isFunctional_feature", "_UI_MicroService_type"),
-				 MicroservicesArchitecturePackage.Literals.MICRO_SERVICE__IS_FUNCTIONAL,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -238,7 +215,6 @@ public class MicroServiceItemProvider extends ElementItemProvider {
 		switch (notification.getFeatureID(MicroService.class)) {
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__HOST:
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__TYPE:
-			case MicroservicesArchitecturePackage.MICRO_SERVICE__IS_FUNCTIONAL:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case MicroservicesArchitecturePackage.MICRO_SERVICE__EXPOSE:

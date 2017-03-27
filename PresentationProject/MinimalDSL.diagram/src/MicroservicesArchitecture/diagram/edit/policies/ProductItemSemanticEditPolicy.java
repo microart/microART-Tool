@@ -31,11 +31,11 @@ public class ProductItemSemanticEditPolicy
 				.getElementType()) {
 			return getGEFWrapper(new MicroservicesArchitecture.diagram.edit.commands.MicroServiceCreateCommand(req));
 		}
-		if (MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003 == req
+		if (MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002 == req
 				.getElementType()) {
 			return getGEFWrapper(new MicroservicesArchitecture.diagram.edit.commands.TeamCreateCommand(req));
 		}
-		if (MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002 == req
+		if (MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003 == req
 				.getElementType()) {
 			return getGEFWrapper(new MicroservicesArchitecture.diagram.edit.commands.DeveloperCreateCommand(req));
 		}

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:msa="http://it.univaq.thesis.msa.arch" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_FYG3oPfbEeaOobQ2kEoe-A" type="MicroservicesArchitecture" name="default.microservicesarchitecture_diagram" measurementUnit="Pixel">
-  <styles xmi:type="notation:DiagramStyle" xmi:id="_FYG3offbEeaOobQ2kEoe-A"/>
-  <element xmi:type="msa:Product" href="default.microservicesarchitecture#/"/>
-</notation:Diagram>

@@ -55,7 +55,7 @@ public class DeveloperEmailEditPart extends CompartmentEditPart implements IText
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 5004;
+	public static final int VISUAL_ID = 5005;
 
 	/**
 	* @generated
@@ -288,7 +288,7 @@ public class DeveloperEmailEditPart extends CompartmentEditPart implements IText
 	public IParser getParser() {
 		if (parser == null) {
 			parser = MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureParserProvider.getParser(
-					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2002,
+					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Developer_2003,
 					getParserElement(), MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
 							.getType(MicroservicesArchitecture.diagram.edit.parts.DeveloperEmailEditPart.VISUAL_ID));
 		}

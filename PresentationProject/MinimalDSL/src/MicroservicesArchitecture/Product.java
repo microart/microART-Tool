@@ -18,6 +18,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link MicroservicesArchitecture.Product#getTeams <em>Teams</em>}</li>
  *   <li>{@link MicroservicesArchitecture.Product#getLinks <em>Links</em>}</li>
  *   <li>{@link MicroservicesArchitecture.Product#getDevelopers <em>Developers</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.Product#getDescription <em>Description</em>}</li>
+ *   <li>{@link MicroservicesArchitecture.Product#getUrl <em>Url</em>}</li>
  * </ul>
  *
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getProduct()
@@ -114,5 +116,57 @@ public interface Product extends Element {
 	 * @generated
 	 */
 	EList<Developer> getDevelopers();
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getProduct_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link MicroservicesArchitecture.Product#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Url</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Url</em>' attribute.
+	 * @see #setUrl(String)
+	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getProduct_Url()
+	 * @model
+	 * @generated
+	 */
+	String getUrl();
+
+	/**
+	 * Sets the value of the '{@link MicroservicesArchitecture.Product#getUrl <em>Url</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Url</em>' attribute.
+	 * @see #getUrl()
+	 * @generated
+	 */
+	void setUrl(String value);
 
 } // Product

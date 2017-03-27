@@ -290,31 +290,14 @@ public class MicroservicesArchitectureNavigatorContentProvider implements ICommo
 			return result.toArray();
 		}
 
-		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID: {
-			LinkedList<MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureAbstractNavigatorItem> result = new LinkedList<MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureAbstractNavigatorItem>();
-			Node sv = (Node) view;
-			MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup incominglinks = new MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup(
-					MicroservicesArchitecture.diagram.part.Messages.NavigatorGroupName_Developer_2002_incominglinks,
-					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
-			Collection<View> connectedViews;
-			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
-					MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
-							.getType(MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID));
-			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
-			if (!incominglinks.isEmpty()) {
-				result.add(incominglinks);
-			}
-			return result.toArray();
-		}
-
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID: {
 			LinkedList<MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureAbstractNavigatorItem> result = new LinkedList<MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureAbstractNavigatorItem>();
 			Node sv = (Node) view;
 			MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup incominglinks = new MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup(
-					MicroservicesArchitecture.diagram.part.Messages.NavigatorGroupName_Team_2003_incominglinks,
+					MicroservicesArchitecture.diagram.part.Messages.NavigatorGroupName_Team_2002_incominglinks,
 					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup outgoinglinks = new MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup(
-					MicroservicesArchitecture.diagram.part.Messages.NavigatorGroupName_Team_2003_outgoinglinks,
+					MicroservicesArchitecture.diagram.part.Messages.NavigatorGroupName_Team_2002_outgoinglinks,
 					"icons/outgoingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
 			Collection<View> connectedViews;
 			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
@@ -330,6 +313,23 @@ public class MicroservicesArchitectureNavigatorContentProvider implements ICommo
 			}
 			if (!outgoinglinks.isEmpty()) {
 				result.add(outgoinglinks);
+			}
+			return result.toArray();
+		}
+
+		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID: {
+			LinkedList<MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureAbstractNavigatorItem> result = new LinkedList<MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureAbstractNavigatorItem>();
+			Node sv = (Node) view;
+			MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup incominglinks = new MicroservicesArchitecture.diagram.navigator.MicroservicesArchitectureNavigatorGroup(
+					MicroservicesArchitecture.diagram.part.Messages.NavigatorGroupName_Developer_2003_incominglinks,
+					"icons/incomingLinksNavigatorGroup.gif", parentElement); //$NON-NLS-1$
+			Collection<View> connectedViews;
+			connectedViews = getIncomingLinksByType(Collections.singleton(sv),
+					MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
+							.getType(MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID));
+			incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+			if (!incominglinks.isEmpty()) {
+				result.add(incominglinks);
 			}
 			return result.toArray();
 		}

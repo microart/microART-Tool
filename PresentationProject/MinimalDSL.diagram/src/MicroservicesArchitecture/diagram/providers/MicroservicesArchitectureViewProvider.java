@@ -212,9 +212,9 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart.VISUAL_ID:
 			return createMicroService_2001(domainElement, containerView, index, persisted, preferencesHint);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamEditPart.VISUAL_ID:
-			return createTeam_2003(domainElement, containerView, index, persisted, preferencesHint);
+			return createTeam_2002(domainElement, containerView, index, persisted, preferencesHint);
 		case MicroservicesArchitecture.diagram.edit.parts.DeveloperEditPart.VISUAL_ID:
-			return createDeveloper_2002(domainElement, containerView, index, persisted, preferencesHint);
+			return createDeveloper_2003(domainElement, containerView, index, persisted, preferencesHint);
 		case MicroservicesArchitecture.diagram.edit.parts.InterfaceEditPart.VISUAL_ID:
 			return createInterface_3001(domainElement, containerView, index, persisted, preferencesHint);
 		case MicroservicesArchitecture.diagram.edit.parts.Interface2EditPart.VISUAL_ID:
@@ -295,7 +295,7 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 	/**
 	* @generated
 	*/
-	public Node createTeam_2003(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createTeam_2002(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
@@ -324,7 +324,7 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5005 = createLabel(node,
+		Node label5004 = createLabel(node,
 				MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
 						.getType(MicroservicesArchitecture.diagram.edit.parts.TeamNameEditPart.VISUAL_ID));
 		return node;
@@ -333,7 +333,7 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 	/**
 	* @generated
 	*/
-	public Node createDeveloper_2002(EObject domainElement, View containerView, int index, boolean persisted,
+	public Node createDeveloper_2003(EObject domainElement, View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Node node = NotationFactory.eINSTANCE.createNode();
 		node.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
@@ -362,7 +362,7 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 				IPreferenceConstants.PREF_FILL_COLOR);
 		ViewUtil.setStructuralFeatureValue(node, NotationPackage.eINSTANCE.getFillStyle_FillColor(),
 				FigureUtilities.RGBToInteger(fillRGB));
-		Node label5004 = createLabel(node,
+		Node label5005 = createLabel(node,
 				MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
 						.getType(MicroservicesArchitecture.diagram.edit.parts.DeveloperEmailEditPart.VISUAL_ID));
 		return node;

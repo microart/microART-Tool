@@ -95,7 +95,7 @@ public class MicroservicesArchitectureModelingAssistantProviderOfMicroServiceEdi
 			MicroservicesArchitecture.diagram.edit.parts.MicroServiceEditPart source, IElementType relationshipType) {
 		List<IElementType> types = new ArrayList<IElementType>();
 		if (relationshipType == MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.MicroServiceOwned_4002) {
-			types.add(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2003);
+			types.add(MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Team_2002);
 		}
 		return types;
 	}

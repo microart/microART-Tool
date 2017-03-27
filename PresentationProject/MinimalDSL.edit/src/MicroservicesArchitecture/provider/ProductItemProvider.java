@@ -15,7 +15,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -46,8 +48,54 @@ public class ProductItemProvider extends ElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addDescriptionPropertyDescriptor(object);
+			addUrlPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Product_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Product_description_feature", "_UI_Product_type"),
+				 MicroservicesArchitecturePackage.Literals.PRODUCT__DESCRIPTION,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Url feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUrlPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Product_url_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Product_url_feature", "_UI_Product_type"),
+				 MicroservicesArchitecturePackage.Literals.PRODUCT__URL,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -122,6 +170,10 @@ public class ProductItemProvider extends ElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Product.class)) {
+			case MicroservicesArchitecturePackage.PRODUCT__DESCRIPTION:
+			case MicroservicesArchitecturePackage.PRODUCT__URL:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case MicroservicesArchitecturePackage.PRODUCT__COMPOSED_BY:
 			case MicroservicesArchitecturePackage.PRODUCT__DIVIDED_IN:
 			case MicroservicesArchitecturePackage.PRODUCT__TEAMS:
