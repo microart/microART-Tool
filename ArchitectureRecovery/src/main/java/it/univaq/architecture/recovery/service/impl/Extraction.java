@@ -39,9 +39,11 @@ public class Extraction {
 
 		readLog(prd, filteredLog, ClientIP);
 		cleanDependency(prd);
-		// MicroService client = getMicroservice(prd, ClientIP);
-		// eraseDependency(client, prd);
-		// prd.getComposedBy().remove(client);
+		 MicroService client = getMicroservice(prd, ClientIP);
+		 eraseDependency(client, prd);
+		 prd.getComposedBy().remove(client);
+//		EcoreUtil.delete(client);
+		
 	}
 
 	private void cleanDependency(Product prd) {
@@ -66,20 +68,22 @@ public class Extraction {
 		String[] filteredLog = filterLog(log);
 		// Ora ho product che ha tutti i servizi
 		MicroService serviceDiscovery = getMicroservice(prd, ServiceDiscovery);
-		MicroService client = getMicroservice(prd, ClientIP);
+		
 		cleanInterfaceAndLinks(prd);
 		readLogWithServiceDiscovery(prd, filteredLog, ClientIP, serviceDiscovery);
 		cleanDependency(prd);
 		// cleanDatabase(prd);
-		
+		MicroService client = getMicroservice(prd, ClientIP);
+//		System.out.println(client);
 		eraseDependency(client, prd);
 		cleanRequestedUseless(client.getName(), prd);
 		cleanRequestedUseless(serviceDiscovery.getName(), prd);
 		eraseDependency(serviceDiscovery, prd);
-//		prd.getComposedBy().remove(client);
+		prd.getComposedBy().remove(client);
 //		prd.getComposedBy().remove(serviceDiscovery);
 		EcoreUtil.delete(serviceDiscovery);
-		EcoreUtil.delete(client);
+//		EcoreUtil.delete(client);
+//		prd.getComposedBy().remove(client);
 
 		// collapseArrows();
 
@@ -141,6 +145,7 @@ public class Extraction {
 		// Get the Exposed Interface of the Services
 		EList<Interface> exposed = microService.getExpose();
 		// Check for exposed
+		
 		Iterator<Interface> itInterface = exposed.iterator();
 
 		while (itInterface.hasNext()) {
@@ -174,32 +179,39 @@ public class Extraction {
 
 	private void readLogWithServiceDiscovery(Product product, String[] log, String clientIP,
 			MicroService serviceDiscovery) {
+		MicroService client= factory.createMicroService();
+		client.setHost(clientIP);
+		client.setName("Client-User");
+		product.getComposedBy().add(client);
 		for (int i = 0; i < log.length; i++) {
 			String row = log[i];
 			String senderIP = extractSender(row);
 			String targetIP = extractTarget(row);
-			MicroService senderService = getMicroservice(product, senderIP);
-			if (senderService == null) {
-				// System.out.println("Errore - SenderService Null");
-			}
-			MicroService targetService = getMicroservice(product, targetIP);
-			if (targetService == null) {
-				// System.out.println("Errore - targetService Null");
-			}
-			if (targetService.equals(serviceDiscovery)) {
-				// Vai alla riga successiva per scoprire il vero ricevente
-				i++;
-				row = log[i];
-				targetIP = extractTarget(row);
-				targetService = getMicroservice(product, targetIP);
-			}
-			// So now Sender Dependes on Target
-			// if (!checkLinkExistence(product, senderService, targetService)) {
-			// Non esiste un Link con nessuna interfaccia di Sender Target
-			Link dependency = createLink(senderService, targetService, row);
-			dependency.setDependency(product);
+			
+				MicroService senderService = getMicroservice(product, senderIP);
+				if (senderService == null) {
+					// System.out.println("Errore - SenderService Null");
+				}
+				MicroService targetService = getMicroservice(product, targetIP);
+				if (targetService == null) {
+					// System.out.println("Errore - targetService Null");
+				}
+				if (targetService.equals(serviceDiscovery)) {
+					// Vai alla riga successiva per scoprire il vero ricevente
+					i++;
+					row = log[i];
+					targetIP = extractTarget(row);
+					targetService = getMicroservice(product, targetIP);
+				}
+				// So now Sender Dependes on Target
+				// if (!checkLinkExistence(product, senderService, targetService)) {
+				// Non esiste un Link con nessuna interfaccia di Sender Target
+				Link dependency = createLink(senderService, targetService, row);
+				dependency.setDependency(product);
 
-			// }
+				// }
+			
+			
 
 		}
 

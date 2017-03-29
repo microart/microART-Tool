@@ -133,7 +133,7 @@ public class MSALoaderImpl implements MSALoader {
 		Iterator<MicroService> it = product.getComposedBy().iterator();
 		while (it.hasNext()) {
 			MicroService microService = (MicroService) it.next();
-				if (microService.getType().equals(serviceType.SERVICE_DISCOVERY)) {
+				if (microService.getType().equals(serviceType.SERVICE_BROKERING)) {
 					serviceDiscovery = microService.getHost();
 					return serviceDiscovery;
 				}

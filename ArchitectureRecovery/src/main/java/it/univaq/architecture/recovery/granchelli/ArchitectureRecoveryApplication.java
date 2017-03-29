@@ -2,10 +2,13 @@ package it.univaq.architecture.recovery.granchelli;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
+
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.InvalidRemoteException;
 import org.eclipse.jgit.api.errors.TransportException;
@@ -17,6 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import MicroservicesArchitecture.Developer;
+import MicroservicesArchitecture.MicroService;
 import MicroservicesArchitecture.Product;
 import it.univaq.architecture.recovery.configuration.Config;
 import it.univaq.architecture.recovery.model.GitCommitCustom;
@@ -122,6 +126,7 @@ public class ArchitectureRecoveryApplication {
 		String nameOfTheModel = config.getModelName();
 		// Save Architectural Model
 //		logger.info("The architectural model has been saved in: " + pathToSaveModel + File.separator + nameOfTheModel);
+		
 		factory.saveModel(product, pathToSaveModel, nameOfTheModel);
 
 		// Messages
@@ -151,6 +156,8 @@ public class ArchitectureRecoveryApplication {
 		logger.info("Your Model is now update. Check the Eclipse-RunTime");
 		logger.info("A Refined Architecture has been generated");
 	}
+
+	
 
 	private static GitHubManager getGitHubRepo(String gitRepoName) {
 		// TODO Auto-generated method stub
