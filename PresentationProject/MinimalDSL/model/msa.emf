@@ -59,6 +59,8 @@ class Interface extends Element {
 class Link extends Element {
   ref Interface source;
   ref Interface target;
+
+  @gmf.link(target.decoration="arrow", style="dot", color="0,45,45")
   ref Product#links Dependency;
 }
 
@@ -71,17 +73,15 @@ class Team extends Element {
   ref Product#teams workFor;
 }
 
+@ExtendedMetaData(name="Product")
 enum serviceType {
-  generalFuncion = 0;
-  Authentication = 1;
-  serviceDiscovery = 2;
-  LoadBalancer = 3;
-  HealthCheck = 4;
-  Monitor = 5;
-  APIGateways = 6;
-  Security = 7;
-  Messaging = 8;
-  Logging = 9;
-  Resilience = 10;
+  functional = 0;
+  monitoring = 1;
+  system_level_management = 3;
+  service_orchestration = 4;
+  service_brokering = 5;
+  security = 6;
+  service_proxy = 7;
+  data_storage = 8;
 }
 

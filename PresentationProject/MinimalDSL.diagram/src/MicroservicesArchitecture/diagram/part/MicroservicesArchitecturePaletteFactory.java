@@ -52,8 +52,9 @@ public class MicroservicesArchitecturePaletteFactory {
 				MicroservicesArchitecture.diagram.part.Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
 		paletteContainer.add(createComposedBy1CreationTool());
-		paletteContainer.add(createLink2CreationTool());
-		paletteContainer.add(createOwned3CreationTool());
+		paletteContainer.add(createDependency2CreationTool());
+		paletteContainer.add(createLink3CreationTool());
+		paletteContainer.add(createOwned4CreationTool());
 		return paletteContainer;
 	}
 
@@ -143,12 +144,28 @@ public class MicroservicesArchitecturePaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createLink2CreationTool() {
+	private ToolEntry createDependency2CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
-				MicroservicesArchitecture.diagram.part.Messages.Link2CreationTool_title,
-				MicroservicesArchitecture.diagram.part.Messages.Link2CreationTool_desc, Collections.singletonList(
+				MicroservicesArchitecture.diagram.part.Messages.Dependency2CreationTool_title,
+				MicroservicesArchitecture.diagram.part.Messages.Dependency2CreationTool_desc, Collections.singletonList(
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.LinkDependency_4004));
+		entry.setId("createDependency2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(
+				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.getImageDescriptor(
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.LinkDependency_4004));
+		entry.setLargeIcon(entry.getSmallIcon());
+		return entry;
+	}
+
+	/**
+	* @generated
+	*/
+	private ToolEntry createLink3CreationTool() {
+		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
+				MicroservicesArchitecture.diagram.part.Messages.Link3CreationTool_title,
+				MicroservicesArchitecture.diagram.part.Messages.Link3CreationTool_desc, Collections.singletonList(
 						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Link_4001));
-		entry.setId("createLink2CreationTool"); //$NON-NLS-1$
+		entry.setId("createLink3CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.getImageDescriptor(
 						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.Link_4001));
@@ -159,12 +176,12 @@ public class MicroservicesArchitecturePaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createOwned3CreationTool() {
+	private ToolEntry createOwned4CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
-				MicroservicesArchitecture.diagram.part.Messages.Owned3CreationTool_title,
-				MicroservicesArchitecture.diagram.part.Messages.Owned3CreationTool_desc, Collections.singletonList(
+				MicroservicesArchitecture.diagram.part.Messages.Owned4CreationTool_title,
+				MicroservicesArchitecture.diagram.part.Messages.Owned4CreationTool_desc, Collections.singletonList(
 						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.MicroServiceOwned_4002));
-		entry.setId("createOwned3CreationTool"); //$NON-NLS-1$
+		entry.setId("createOwned4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(
 				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.getImageDescriptor(
 						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.MicroServiceOwned_4002));

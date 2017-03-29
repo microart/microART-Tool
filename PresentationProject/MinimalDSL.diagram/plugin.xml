@@ -259,7 +259,7 @@
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="MicroservicesArchitecture"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,3001,3002"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4004,4003"/>
       </viewProvider>
    </extension>
 
@@ -274,7 +274,7 @@
             <method name="getType()" value="2001,2002,2003,3001,3002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003"/>
+            <method name="getType()" value="4001,4002,4004,4003"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5003,5004,5005,5001,5002"/>
@@ -430,6 +430,15 @@
       </metamodel>
       <metamodel nsURI="http://it.univaq.thesis.msa.arch">
          <specializationType
+               id="MinimalDSL.diagram.LinkDependency_4004"
+               name="%metatype.name.LinkDependency_4004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4004"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="http://it.univaq.thesis.msa.arch">
+         <specializationType
                id="MinimalDSL.diagram.TeamComposedBy_4003"
                name="%metatype.name.TeamComposedBy_4003"
                kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
@@ -457,6 +466,7 @@
          <elementType ref="MinimalDSL.diagram.Interface_3002"/>
          <elementType ref="MinimalDSL.diagram.Link_4001"/>
          <elementType ref="MinimalDSL.diagram.MicroServiceOwned_4002"/>
+         <elementType ref="MinimalDSL.diagram.LinkDependency_4004"/>
          <elementType ref="MinimalDSL.diagram.TeamComposedBy_4003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>

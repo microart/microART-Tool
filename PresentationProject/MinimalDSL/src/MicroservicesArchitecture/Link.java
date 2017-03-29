@@ -88,6 +88,7 @@ public interface Link extends Element {
 	 * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getLink_Dependency()
 	 * @see MicroservicesArchitecture.Product#getLinks
 	 * @model opposite="links" transient="false"
+	 *        annotation="gmf.link target.decoration='arrow' style='dot' color='0,45,45'"
 	 * @generated
 	 */
 	Product getDependency();

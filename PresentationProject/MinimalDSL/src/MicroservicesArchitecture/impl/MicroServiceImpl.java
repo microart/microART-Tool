@@ -114,7 +114,7 @@ public class MicroServiceImpl extends ElementImpl implements MicroService {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final serviceType TYPE_EDEFAULT = serviceType.GENERAL_FUNCION;
+	protected static final serviceType TYPE_EDEFAULT = serviceType.FUNCTIONAL;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.

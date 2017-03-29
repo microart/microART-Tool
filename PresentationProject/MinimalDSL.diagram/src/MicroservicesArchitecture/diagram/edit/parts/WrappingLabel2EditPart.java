@@ -57,7 +57,7 @@ public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareE
 	/**
 	* @generated
 	*/
-	public static final int VISUAL_ID = 6002;
+	public static final int VISUAL_ID = 6003;
 
 	/**
 	* @generated
@@ -307,7 +307,7 @@ public class WrappingLabel2EditPart extends LabelEditPart implements ITextAwareE
 	public IParser getParser() {
 		if (parser == null) {
 			parser = MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureParserProvider.getParser(
-					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.TeamComposedBy_4003,
+					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.LinkDependency_4004,
 					getParserElement(), CommonParserHint.DESCRIPTION);
 		}
 		return parser;

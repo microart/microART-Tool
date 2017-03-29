@@ -62,6 +62,15 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
+          title="Dependency"
+          description="Create new Dependency">
+        <smallIcon
+            xsi:type="gmftool:DefaultImage"/>
+        <largeIcon
+            xsi:type="gmftool:DefaultImage"/>
+      </tools>
+      <tools
+          xsi:type="gmftool:CreationTool"
           title="Link"
           description="Create new Link">
         <smallIcon

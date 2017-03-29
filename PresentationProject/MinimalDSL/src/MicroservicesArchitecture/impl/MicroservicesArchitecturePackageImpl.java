@@ -678,17 +678,14 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 
 		// Initialize enums and add enum literals
 		initEEnum(serviceTypeEEnum, serviceType.class, "serviceType");
-		addEEnumLiteral(serviceTypeEEnum, serviceType.GENERAL_FUNCION);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.AUTHENTICATION);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.SERVICE_DISCOVERY);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.LOAD_BALANCER);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.HEALTH_CHECK);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.MONITOR);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.API_GATEWAYS);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.FUNCTIONAL);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.MONITORING);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.SYSTEM_LEVEL_MANAGEMENT);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.SERVICE_ORCHESTRATION);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.SERVICE_BROKERING);
 		addEEnumLiteral(serviceTypeEEnum, serviceType.SECURITY);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.MESSAGING);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.LOGGING);
-		addEEnumLiteral(serviceTypeEEnum, serviceType.RESILIENCE);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.SERVICE_PROXY);
+		addEEnumLiteral(serviceTypeEEnum, serviceType.DATA_STORAGE);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -704,6 +701,8 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 		createGmf_3Annotations();
 		// gmf.link
 		createGmf_4Annotations();
+		// http:///org/eclipse/emf/ecore/util/ExtendedMetaData
+		createExtendedMetaDataAnnotations();
 	}
 
 	/**
@@ -842,12 +841,36 @@ public class MicroservicesArchitecturePackageImpl extends EPackageImpl implement
 			 "target.decoration", "arrow"
 		   });	
 		addAnnotation
+		  (getLink_Dependency(), 
+		   source, 
+		   new String[] {
+			 "target.decoration", "arrow",
+			 "style", "dot",
+			 "color", "0,45,45"
+		   });	
+		addAnnotation
 		  (getTeam_ComposedBy(), 
 		   source, 
 		   new String[] {
 			 "color", "66,133,244",
 			 "target.decoration", "none",
 			 "style", "dash"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http:///org/eclipse/emf/ecore/util/ExtendedMetaData</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createExtendedMetaDataAnnotations() {
+		String source = "http:///org/eclipse/emf/ecore/util/ExtendedMetaData";	
+		addAnnotation
+		  (serviceTypeEEnum, 
+		   source, 
+		   new String[] {
+			 "name", "Product"
 		   });
 	}
 

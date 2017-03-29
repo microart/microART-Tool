@@ -74,11 +74,17 @@ public class MicroservicesArchitectureEditPartFactory implements EditPartFactory
 			case MicroservicesArchitecture.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
 				return new MicroservicesArchitecture.diagram.edit.parts.WrappingLabelEditPart(view);
 
-			case MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID:
-				return new MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart(view);
+			case MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart.VISUAL_ID:
+				return new MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart(view);
 
 			case MicroservicesArchitecture.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID:
 				return new MicroservicesArchitecture.diagram.edit.parts.WrappingLabel2EditPart(view);
+
+			case MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID:
+				return new MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart(view);
+
+			case MicroservicesArchitecture.diagram.edit.parts.WrappingLabel3EditPart.VISUAL_ID:
+				return new MicroservicesArchitecture.diagram.edit.parts.WrappingLabel3EditPart(view);
 
 			}
 		}

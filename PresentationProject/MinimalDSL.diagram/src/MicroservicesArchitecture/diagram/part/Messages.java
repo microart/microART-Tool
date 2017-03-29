@@ -306,22 +306,32 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String Link2CreationTool_title;
+	public static String Dependency2CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Link2CreationTool_desc;
+	public static String Dependency2CreationTool_desc;
 
 	/**
 	* @generated
 	*/
-	public static String Owned3CreationTool_title;
+	public static String Link3CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String Owned3CreationTool_desc;
+	public static String Link3CreationTool_desc;
+
+	/**
+	* @generated
+	*/
+	public static String Owned4CreationTool_title;
+
+	/**
+	* @generated
+	*/
+	public static String Owned4CreationTool_desc;
 
 	/**
 	* @generated
@@ -396,6 +406,11 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
+	public static String NavigatorGroupName_Link_4001_outgoinglinks;
+
+	/**
+	* @generated
+	*/
 	public static String NavigatorGroupName_MicroServiceOwned_4002_target;
 
 	/**
@@ -412,6 +427,11 @@ public class Messages extends NLS {
 	* @generated
 	*/
 	public static String NavigatorGroupName_TeamComposedBy_4003_source;
+
+	/**
+	* @generated
+	*/
+	public static String NavigatorGroupName_LinkDependency_4004_source;
 
 	/**
 	* @generated

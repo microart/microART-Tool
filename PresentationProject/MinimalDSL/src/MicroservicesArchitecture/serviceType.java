@@ -14,79 +14,59 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see MicroservicesArchitecture.MicroservicesArchitecturePackage#getserviceType()
- * @model
+ * @model extendedMetaData="name='Product'"
  * @generated
  */
 public enum serviceType implements Enumerator {
 	/**
-	 * The '<em><b>General Funcion</b></em>' literal object.
+	 * The '<em><b>Functional</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #GENERAL_FUNCION_VALUE
+	 * @see #FUNCTIONAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	GENERAL_FUNCION(0, "generalFuncion", "generalFuncion"),
+	FUNCTIONAL(0, "functional", "functional"),
 
 	/**
-	 * The '<em><b>Authentication</b></em>' literal object.
+	 * The '<em><b>Monitoring</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #AUTHENTICATION_VALUE
+	 * @see #MONITORING_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	AUTHENTICATION(1, "Authentication", "Authentication"),
+	MONITORING(1, "monitoring", "monitoring"),
 
 	/**
-	 * The '<em><b>Service Discovery</b></em>' literal object.
+	 * The '<em><b>System level management</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SERVICE_DISCOVERY_VALUE
+	 * @see #SYSTEM_LEVEL_MANAGEMENT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SERVICE_DISCOVERY(2, "serviceDiscovery", "serviceDiscovery"),
+	SYSTEM_LEVEL_MANAGEMENT(3, "system_level_management", "system_level_management"),
 
 	/**
-	 * The '<em><b>Load Balancer</b></em>' literal object.
+	 * The '<em><b>Service orchestration</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LOAD_BALANCER_VALUE
+	 * @see #SERVICE_ORCHESTRATION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LOAD_BALANCER(3, "LoadBalancer", "LoadBalancer"),
+	SERVICE_ORCHESTRATION(4, "service_orchestration", "service_orchestration"),
 
 	/**
-	 * The '<em><b>Health Check</b></em>' literal object.
+	 * The '<em><b>Service brokering</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #HEALTH_CHECK_VALUE
+	 * @see #SERVICE_BROKERING_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	HEALTH_CHECK(4, "HealthCheck", "HealthCheck"),
-
-	/**
-	 * The '<em><b>Monitor</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MONITOR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MONITOR(5, "Monitor", "Monitor"),
-
-	/**
-	 * The '<em><b>API Gateways</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #API_GATEWAYS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	API_GATEWAYS(6, "APIGateways", "APIGateways"),
+	SERVICE_BROKERING(5, "service_brokering", "service_brokering"),
 
 	/**
 	 * The '<em><b>Security</b></em>' literal object.
@@ -96,142 +76,102 @@ public enum serviceType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	SECURITY(7, "Security", "Security"),
+	SECURITY(6, "security", "security"),
 
 	/**
-	 * The '<em><b>Messaging</b></em>' literal object.
+	 * The '<em><b>Service proxy</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MESSAGING_VALUE
+	 * @see #SERVICE_PROXY_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MESSAGING(8, "Messaging", "Messaging"),
+	SERVICE_PROXY(7, "service_proxy", "service_proxy"),
 
 	/**
-	 * The '<em><b>Logging</b></em>' literal object.
+	 * The '<em><b>Data storage</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #LOGGING_VALUE
+	 * @see #DATA_STORAGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LOGGING(9, "Logging", "Logging"),
+	DATA_STORAGE(8, "data_storage", "data_storage");
 
 	/**
-	 * The '<em><b>Resilience</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #RESILIENCE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	RESILIENCE(10, "Resilience", "Resilience");
-
-	/**
-	 * The '<em><b>General Funcion</b></em>' literal value.
+	 * The '<em><b>Functional</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>General Funcion</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Functional</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #GENERAL_FUNCION
-	 * @model name="generalFuncion"
+	 * @see #FUNCTIONAL
+	 * @model name="functional"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int GENERAL_FUNCION_VALUE = 0;
+	public static final int FUNCTIONAL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Authentication</b></em>' literal value.
+	 * The '<em><b>Monitoring</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Authentication</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Monitoring</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #AUTHENTICATION
-	 * @model name="Authentication"
+	 * @see #MONITORING
+	 * @model name="monitoring"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AUTHENTICATION_VALUE = 1;
+	public static final int MONITORING_VALUE = 1;
 
 	/**
-	 * The '<em><b>Service Discovery</b></em>' literal value.
+	 * The '<em><b>System level management</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Service Discovery</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>System level management</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SERVICE_DISCOVERY
-	 * @model name="serviceDiscovery"
+	 * @see #SYSTEM_LEVEL_MANAGEMENT
+	 * @model name="system_level_management"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SERVICE_DISCOVERY_VALUE = 2;
+	public static final int SYSTEM_LEVEL_MANAGEMENT_VALUE = 3;
 
 	/**
-	 * The '<em><b>Load Balancer</b></em>' literal value.
+	 * The '<em><b>Service orchestration</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Load Balancer</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Service orchestration</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LOAD_BALANCER
-	 * @model name="LoadBalancer"
+	 * @see #SERVICE_ORCHESTRATION
+	 * @model name="service_orchestration"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LOAD_BALANCER_VALUE = 3;
+	public static final int SERVICE_ORCHESTRATION_VALUE = 4;
 
 	/**
-	 * The '<em><b>Health Check</b></em>' literal value.
+	 * The '<em><b>Service brokering</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Health Check</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Service brokering</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #HEALTH_CHECK
-	 * @model name="HealthCheck"
+	 * @see #SERVICE_BROKERING
+	 * @model name="service_brokering"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HEALTH_CHECK_VALUE = 4;
-
-	/**
-	 * The '<em><b>Monitor</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Monitor</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #MONITOR
-	 * @model name="Monitor"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int MONITOR_VALUE = 5;
-
-	/**
-	 * The '<em><b>API Gateways</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>API Gateways</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #API_GATEWAYS
-	 * @model name="APIGateways"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int API_GATEWAYS_VALUE = 6;
+	public static final int SERVICE_BROKERING_VALUE = 5;
 
 	/**
 	 * The '<em><b>Security</b></em>' literal value.
@@ -242,56 +182,41 @@ public enum serviceType implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SECURITY
-	 * @model name="Security"
+	 * @model name="security"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SECURITY_VALUE = 7;
+	public static final int SECURITY_VALUE = 6;
 
 	/**
-	 * The '<em><b>Messaging</b></em>' literal value.
+	 * The '<em><b>Service proxy</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Messaging</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Service proxy</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MESSAGING
-	 * @model name="Messaging"
+	 * @see #SERVICE_PROXY
+	 * @model name="service_proxy"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MESSAGING_VALUE = 8;
+	public static final int SERVICE_PROXY_VALUE = 7;
 
 	/**
-	 * The '<em><b>Logging</b></em>' literal value.
+	 * The '<em><b>Data storage</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Logging</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Data storage</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LOGGING
-	 * @model name="Logging"
+	 * @see #DATA_STORAGE
+	 * @model name="data_storage"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LOGGING_VALUE = 9;
-
-	/**
-	 * The '<em><b>Resilience</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Resilience</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #RESILIENCE
-	 * @model name="Resilience"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int RESILIENCE_VALUE = 10;
+	public static final int DATA_STORAGE_VALUE = 8;
 
 	/**
 	 * An array of all the '<em><b>service Type</b></em>' enumerators.
@@ -301,17 +226,14 @@ public enum serviceType implements Enumerator {
 	 */
 	private static final serviceType[] VALUES_ARRAY =
 		new serviceType[] {
-			GENERAL_FUNCION,
-			AUTHENTICATION,
-			SERVICE_DISCOVERY,
-			LOAD_BALANCER,
-			HEALTH_CHECK,
-			MONITOR,
-			API_GATEWAYS,
+			FUNCTIONAL,
+			MONITORING,
+			SYSTEM_LEVEL_MANAGEMENT,
+			SERVICE_ORCHESTRATION,
+			SERVICE_BROKERING,
 			SECURITY,
-			MESSAGING,
-			LOGGING,
-			RESILIENCE,
+			SERVICE_PROXY,
+			DATA_STORAGE,
 		};
 
 	/**
@@ -368,17 +290,14 @@ public enum serviceType implements Enumerator {
 	 */
 	public static serviceType get(int value) {
 		switch (value) {
-			case GENERAL_FUNCION_VALUE: return GENERAL_FUNCION;
-			case AUTHENTICATION_VALUE: return AUTHENTICATION;
-			case SERVICE_DISCOVERY_VALUE: return SERVICE_DISCOVERY;
-			case LOAD_BALANCER_VALUE: return LOAD_BALANCER;
-			case HEALTH_CHECK_VALUE: return HEALTH_CHECK;
-			case MONITOR_VALUE: return MONITOR;
-			case API_GATEWAYS_VALUE: return API_GATEWAYS;
+			case FUNCTIONAL_VALUE: return FUNCTIONAL;
+			case MONITORING_VALUE: return MONITORING;
+			case SYSTEM_LEVEL_MANAGEMENT_VALUE: return SYSTEM_LEVEL_MANAGEMENT;
+			case SERVICE_ORCHESTRATION_VALUE: return SERVICE_ORCHESTRATION;
+			case SERVICE_BROKERING_VALUE: return SERVICE_BROKERING;
 			case SECURITY_VALUE: return SECURITY;
-			case MESSAGING_VALUE: return MESSAGING;
-			case LOGGING_VALUE: return LOGGING;
-			case RESILIENCE_VALUE: return RESILIENCE;
+			case SERVICE_PROXY_VALUE: return SERVICE_PROXY;
+			case DATA_STORAGE_VALUE: return DATA_STORAGE;
 		}
 		return null;
 	}

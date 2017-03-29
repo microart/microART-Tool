@@ -107,7 +107,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Dependency" eType="#//Product"
-        eOpposite="#//Product/links"/>
+        eOpposite="#//Product/links">
+      <eAnnotations source="gmf.link">
+        <details key="target.decoration" value="arrow"/>
+        <details key="style" value="dot"/>
+        <details key="color" value="0,45,45"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Team" eSuperTypes="#//Element">
     <eAnnotations source="gmf.node">
@@ -134,16 +140,16 @@
         eOpposite="#//Product/teams"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="serviceType">
-    <eLiterals name="generalFuncion"/>
-    <eLiterals name="Authentication" value="1"/>
-    <eLiterals name="serviceDiscovery" value="2"/>
-    <eLiterals name="LoadBalancer" value="3"/>
-    <eLiterals name="HealthCheck" value="4"/>
-    <eLiterals name="Monitor" value="5"/>
-    <eLiterals name="APIGateways" value="6"/>
-    <eLiterals name="Security" value="7"/>
-    <eLiterals name="Messaging" value="8"/>
-    <eLiterals name="Logging" value="9"/>
-    <eLiterals name="Resilience" value="10"/>
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="name" value="Product"/>
+    </eAnnotations>
+    <eLiterals name="functional"/>
+    <eLiterals name="monitoring" value="1"/>
+    <eLiterals name="system_level_management" value="3"/>
+    <eLiterals name="service_orchestration" value="4"/>
+    <eLiterals name="service_brokering" value="5"/>
+    <eLiterals name="security" value="6"/>
+    <eLiterals name="service_proxy" value="7"/>
+    <eLiterals name="data_storage" value="8"/>
   </eClassifiers>
 </ecore:EPackage>

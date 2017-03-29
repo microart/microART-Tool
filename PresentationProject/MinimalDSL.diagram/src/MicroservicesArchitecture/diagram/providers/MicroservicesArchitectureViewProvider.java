@@ -74,10 +74,10 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 	*/
 	protected boolean provides(CreateViewForKindOperation op) {
 		/*
-		    if (op.getViewKind() == Node.class)
-		      return getNodeViewClass(op.getSemanticAdapter(), op.getContainerView(), op.getSemanticHint()) != null;
-		    if (op.getViewKind() == Edge.class)
-		      return getEdgeViewClass(op.getSemanticAdapter(), op.getContainerView(), op.getSemanticHint()) != null;
+				if (op.getViewKind() == Node.class)
+					return getNodeViewClass(op.getSemanticAdapter(), op.getContainerView(), op.getSemanticHint()) != null;
+				if (op.getViewKind() == Edge.class)
+					return getEdgeViewClass(op.getSemanticAdapter(), op.getContainerView(), op.getSemanticHint()) != null;
 		*/
 		return true;
 	}
@@ -238,6 +238,8 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 					preferencesHint);
 		case MicroservicesArchitecture.diagram.edit.parts.MicroServiceOwnedEditPart.VISUAL_ID:
 			return createMicroServiceOwned_4002(containerView, index, persisted, preferencesHint);
+		case MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart.VISUAL_ID:
+			return createLinkDependency_4004(containerView, index, persisted, preferencesHint);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID:
 			return createTeamComposedBy_4003(containerView, index, persisted, preferencesHint);
 		}
@@ -537,6 +539,52 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 	/**
 	* @generated
 	*/
+	public Edge createLinkDependency_4004(View containerView, int index, boolean persisted,
+			PreferencesHint preferencesHint) {
+		Edge edge = NotationFactory.eINSTANCE.createEdge();
+		edge.getStyles().add(NotationFactory.eINSTANCE.createRoutingStyle());
+		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
+		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
+		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
+		points.add(new RelativeBendpoint());
+		points.add(new RelativeBendpoint());
+		bendpoints.setPoints(points);
+		edge.setBendpoints(bendpoints);
+		ViewUtil.insertChildView(containerView, edge, index, persisted);
+		edge.setType(MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
+				.getType(MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart.VISUAL_ID));
+		edge.setElement(null);
+		// initializePreferences
+		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
+		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
+		if (edgeFontStyle != null) {
+			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
+			edgeFontStyle.setFontName(fontData.getName());
+			edgeFontStyle.setFontHeight(fontData.getHeight());
+			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
+			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
+			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
+					IPreferenceConstants.PREF_FONT_COLOR);
+			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
+		}
+		Routing routing = Routing.get(prefStore.getInt(IPreferenceConstants.PREF_LINE_STYLE));
+		if (routing != null) {
+			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
+		}
+		Node label6003 = createLabel(edge,
+				MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
+						.getType(MicroservicesArchitecture.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID));
+		label6003.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
+		label6003.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
+		Location location6003 = (Location) label6003.getLayoutConstraint();
+		location6003.setX(0);
+		location6003.setY(40);
+		return edge;
+	}
+
+	/**
+	* @generated
+	*/
 	public Edge createTeamComposedBy_4003(View containerView, int index, boolean persisted,
 			PreferencesHint preferencesHint) {
 		Edge edge = NotationFactory.eINSTANCE.createEdge();
@@ -571,7 +619,7 @@ public class MicroservicesArchitectureViewProvider extends AbstractProvider impl
 		}
 		Node label6002 = createLabel(edge,
 				MicroservicesArchitecture.diagram.part.MicroservicesArchitectureVisualIDRegistry
-						.getType(MicroservicesArchitecture.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID));
+						.getType(MicroservicesArchitecture.diagram.edit.parts.WrappingLabel3EditPart.VISUAL_ID));
 		label6002.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
 		label6002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
 		Location location6002 = (Location) label6002.getLayoutConstraint();

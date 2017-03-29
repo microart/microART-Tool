@@ -114,7 +114,7 @@
         href="msa.ecore#//Product/links"/>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="msa.gmftool#//@palette/@tools.1/@tools.1"/>
+        href="msa.gmftool#//@palette/@tools.1/@tools.2"/>
     <diagramLink
         href="msa.gmfgraph#Link"/>
     <sourceMetaFeature
@@ -133,12 +133,28 @@
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="msa.gmftool#//@palette/@tools.1/@tools.2"/>
+        href="msa.gmftool#//@palette/@tools.1/@tools.3"/>
     <diagramLink
         href="msa.gmfgraph#MicroServiceOwned"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="msa.ecore#//MicroService/owned"/>
+  </links>
+  <links>
+    <labelMappings
+        xsi:type="gmfmap:DesignLabelMapping"
+        readOnly="true">
+      <diagramLabel
+          href="msa.gmfgraph#LinkDependencyExternalLabel"/>
+    </labelMappings>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="msa.gmftool#//@palette/@tools.1/@tools.1"/>
+    <diagramLink
+        href="msa.gmfgraph#LinkDependency"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="msa.ecore#//Link/Dependency"/>
   </links>
   <links>
     <labelMappings

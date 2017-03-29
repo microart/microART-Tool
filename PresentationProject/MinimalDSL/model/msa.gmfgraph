@@ -10,6 +10,7 @@
     </figures>
     <figures xsi:type="gmfgraph:PolylineDecoration" name="LinkFigureTargetDecoration"/>
     <figures xsi:type="gmfgraph:PolylineDecoration" name="MicroServiceOwnedFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="LinkDependencyFigureTargetDecoration"/>
     <descriptors name="MicroServiceFigure">
       <actualFigure xsi:type="gmfgraph:Rectangle" name="MicroServiceFigure" lineWidth="4">
         <foregroundColor xsi:type="gmfgraph:RGBColor" green="153" blue="153"/>
@@ -67,6 +68,14 @@
     <descriptors name="MicroServiceOwnedExternalLabelFigure">
       <actualFigure xsi:type="gmfgraph:Label" name="MicroServiceOwnedExternalLabel"/>
     </descriptors>
+    <descriptors name="LinkDependencyFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LinkDependencyFigure" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.3">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" green="45" blue="45"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="LinkDependencyExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="LinkDependencyExternalLabel"/>
+    </descriptors>
     <descriptors name="TeamComposedByFigure">
       <actualFigure xsi:type="gmfgraph:PolylineConnection" name="TeamComposedByFigure" lineKind="LINE_DASH">
         <foregroundColor xsi:type="gmfgraph:RGBColor" red="66" green="133" blue="244"/>
@@ -86,6 +95,7 @@
   </nodes>
   <connections name="Link" figure="LinkFigure"/>
   <connections name="MicroServiceOwned" figure="MicroServiceOwnedFigure"/>
+  <connections name="LinkDependency" figure="LinkDependencyFigure"/>
   <connections name="TeamComposedBy" figure="TeamComposedByFigure"/>
   <compartments name="MicroServiceExposeCompartment" figure="MicroServiceFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
   <compartments name="MicroServiceRequireCompartment" figure="MicroServiceFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.2"/>
@@ -94,5 +104,6 @@
   <labels name="InterfaceLabel" figure="InterfaceFigure" elementIcon="false" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
   <labels name="TeamLabel" figure="TeamFigure" elementIcon="false" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
   <labels name="MicroServiceOwnedExternalLabel" figure="MicroServiceOwnedExternalLabelFigure" elementIcon="false"/>
+  <labels name="LinkDependencyExternalLabel" figure="LinkDependencyExternalLabelFigure" elementIcon="false"/>
   <labels name="TeamComposedByExternalLabel" figure="TeamComposedByExternalLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

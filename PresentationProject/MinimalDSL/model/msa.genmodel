@@ -7,17 +7,14 @@
   <genPackages prefix="MicroservicesArchitecture" disposableProviderFactory="true"
       ecorePackage="msa.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="msa.ecore#//serviceType">
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/generalFuncion"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Authentication"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/serviceDiscovery"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/LoadBalancer"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/HealthCheck"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Monitor"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/APIGateways"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Security"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Messaging"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Logging"/>
-      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/Resilience"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/functional"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/monitoring"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/system_level_management"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/service_orchestration"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/service_brokering"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/security"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/service_proxy"/>
+      <genEnumLiterals ecoreEnumLiteral="msa.ecore#//serviceType/data_storage"/>
     </genEnums>
     <genClasses image="false" ecoreClass="msa.ecore#//Element">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute msa.ecore#//Element/name"/>

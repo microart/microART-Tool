@@ -274,7 +274,10 @@ public class MicroservicesArchitectureDiagramUpdater {
 	 */
 	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getLink_4001ContainedLinks(
 			View view) {
-		return Collections.emptyList();
+		MicroservicesArchitecture.Link modelElement = (MicroservicesArchitecture.Link) view.getElement();
+		LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> result = new LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Link_Dependency_4004(modelElement));
+		return result;
 	}
 
 	/**
@@ -403,7 +406,10 @@ public class MicroservicesArchitectureDiagramUpdater {
 	 */
 	public static List<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getLink_4001OutgoingLinks(
 			View view) {
-		return Collections.emptyList();
+		MicroservicesArchitecture.Link modelElement = (MicroservicesArchitecture.Link) view.getElement();
+		LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> result = new LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor>();
+		result.addAll(getOutgoingFeatureModelFacetLinks_Link_Dependency_4004(modelElement));
+		return result;
 	}
 
 	/**
@@ -551,6 +557,23 @@ public class MicroservicesArchitectureDiagramUpdater {
 				new MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor(source, destination,
 						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.MicroServiceOwned_4002,
 						MicroservicesArchitecture.diagram.edit.parts.MicroServiceOwnedEditPart.VISUAL_ID));
+		return result;
+	}
+
+	/**
+	* @generated
+	*/
+	private static Collection<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> getOutgoingFeatureModelFacetLinks_Link_Dependency_4004(
+			MicroservicesArchitecture.Link source) {
+		LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor> result = new LinkedList<MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor>();
+		MicroservicesArchitecture.Product destination = source.getDependency();
+		if (destination == null) {
+			return result;
+		}
+		result.add(
+				new MicroservicesArchitecture.diagram.part.MicroservicesArchitectureLinkDescriptor(source, destination,
+						MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.LinkDependency_4004,
+						MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart.VISUAL_ID));
 		return result;
 	}
 

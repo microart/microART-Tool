@@ -113,6 +113,9 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 		case MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?http://it.univaq.thesis.msa.arch?Team?composedBy", //$NON-NLS-1$
 					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.TeamComposedBy_4003);
+		case MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart.VISUAL_ID:
+			return getImage("Navigator?Link?http://it.univaq.thesis.msa.arch?Link?Dependency", //$NON-NLS-1$
+					MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.LinkDependency_4004);
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -193,6 +196,8 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 			return getMicroServiceOwned_4002Text(view);
 		case MicroservicesArchitecture.diagram.edit.parts.TeamComposedByEditPart.VISUAL_ID:
 			return getTeamComposedBy_4003Text(view);
+		case MicroservicesArchitecture.diagram.edit.parts.LinkDependencyEditPart.VISUAL_ID:
+			return getLinkDependency_4004Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -350,6 +355,23 @@ public class MicroservicesArchitectureNavigatorLabelProvider extends LabelProvid
 		} else {
 			MicroservicesArchitecture.diagram.part.MicroservicesArchitectureDiagramEditorPlugin.getInstance()
 					.logError("Parser was not found for label " + 6002); //$NON-NLS-1$
+			return ""; //$NON-NLS-1$
+		}
+	}
+
+	/**
+	* @generated
+	*/
+	private String getLinkDependency_4004Text(View view) {
+		IParser parser = MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureParserProvider.getParser(
+				MicroservicesArchitecture.diagram.providers.MicroservicesArchitectureElementTypes.LinkDependency_4004,
+				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
+		if (parser != null) {
+			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
+					ParserOptions.NONE.intValue());
+		} else {
+			MicroservicesArchitecture.diagram.part.MicroservicesArchitectureDiagramEditorPlugin.getInstance()
+					.logError("Parser was not found for label " + 6003); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}
