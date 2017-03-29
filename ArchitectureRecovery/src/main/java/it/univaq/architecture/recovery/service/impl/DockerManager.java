@@ -3,38 +3,40 @@ package it.univaq.architecture.recovery.service.impl;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import it.univaq.architecture.recovery.configuration.Config;
 import it.univaq.architecture.recovery.model.PseudoMicroService;
 
+@ComponentScan(basePackages = { "it.univaq.architecture.recovery.configuration" })
 public class DockerManager {
+
+	private Config config;
 
 	public List<PseudoMicroService> getNetwork(List<PseudoMicroService> services) {
 		List<PseudoMicroService> richServices = services;
 		Iterator<PseudoMicroService> it = richServices.iterator();
-		
+
 		while (it.hasNext()) {
 			PseudoMicroService service = (PseudoMicroService) it.next();
 			String s = null;
 			Process p;
 			try {
-				p = Runtime.getRuntime().exec("docker inspect " + service.getContainerID());
-//				System.out.println("docker inspect " + service.getContainerID() + " | grep Network");
+				p = Runtime.getRuntime().exec(config.getDockerPath() + " inspect " + service.getContainerID());
 				BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
 				while ((s = br.readLine()) != null) {
 					if (s.contains("NetworkMode")) {
 						service.setNetwork(s.substring(s.indexOf(":") + 3, s.length() - 2));
-					}else if(s.contains("IPAddress")){
+					} else if (s.contains("IPAddress")) {
 						service.setIp((s.substring(s.indexOf(":") + 3, s.length() - 2)));
 					}
-					
 
 				}
-//				System.out.println(service.getName() + "IP: " + service.getIp() + " network: " + service.getNetwork());
+
 				p.waitFor();
 				p.destroy();
 			} catch (Exception e) {
@@ -42,23 +44,23 @@ public class DockerManager {
 			}
 
 		}
-		
+
 		return richServices;
 	}
 
-	public String getClientIP(String network){
+	public String getClientIP(String network) {
 		String clientIP = null;
 		Process p;
 		String s = null;
 		try {
-//			System.out.println("docker network inspect " + network);
-			p = Runtime.getRuntime().exec("docker network inspect " + network);
+
+			p = Runtime.getRuntime().exec(config.getDockerPath() + " network inspect " + network);
 			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
 			while ((s = br.readLine()) != null) {
-//				System.out.println(s);
+
 				if (s.contains("Gateway")) {
-					clientIP = s.substring(s.indexOf(":")+3, s.lastIndexOf('"'));
+					clientIP = s.substring(s.indexOf(":") + 3, s.lastIndexOf('"'));
 					if (clientIP.contains("\"")) {
 						clientIP = clientIP.substring(clientIP.indexOf("\""));
 					}
@@ -83,7 +85,8 @@ public class DockerManager {
 			String s = null;
 			Process p;
 			try {
-				p = Runtime.getRuntime().exec("docker ps");
+				String exec = config.getDockerPath().concat(" ps");
+				p = Runtime.getRuntime().exec(exec);
 				BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
 				while ((s = br.readLine()) != null) {
@@ -104,20 +107,27 @@ public class DockerManager {
 		return richServices;
 
 	}
-	public List<String> checkIfContainerHasTheSameNetwork(List<PseudoMicroService> containers){
+
+	public List<String> checkIfContainerHasTheSameNetwork(List<PseudoMicroService> containers) {
 		List<String> networks = new ArrayList<String>();
-		
-		
+
 		Iterator<PseudoMicroService> it = containers.iterator();
 		while (it.hasNext()) {
 			PseudoMicroService microService = (PseudoMicroService) it.next();
-			if(!networks.contains(microService.getNetwork())){
+			if (!networks.contains(microService.getNetwork())) {
 				networks.add(microService.getNetwork());
 			}
 		}
-		
-		
+
 		return networks;
 	}
 
+	public Config getConfig() {
+		return config;
+	}
+
+	@Autowired
+	public void setConfig(Config config) {
+		this.config = config;
+	}
 }

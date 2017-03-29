@@ -31,6 +31,7 @@ import org.springframework.stereotype.Service;
 import MicroservicesArchitecture.Developer;
 import MicroservicesArchitecture.MicroService;
 import MicroservicesArchitecture.Product;
+import it.univaq.architecture.recovery.configuration.Config;
 import it.univaq.architecture.recovery.model.GitCommitCustom;
 import it.univaq.architecture.recovery.model.MicroserviceArch;
 import it.univaq.architecture.recovery.service.RepositoryManager;
@@ -42,7 +43,7 @@ public class GitHubManager implements RepositoryManager {
 	private Repository localRepo;
 	private Git git;
 	private MSALoaderImpl factory = new MSALoaderImpl();
-
+	private Config config;
 	public GitHubManager() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -128,7 +129,7 @@ public class GitHubManager implements RepositoryManager {
 		Process p;
 		String s = null;
 		String[] logs = new String[100000];
-		String command = "git log --numstat";
+		String command = config.getGitPath() + " log --numstat";
 		// System.out.println(command);
 		p = Runtime.getRuntime().exec(command, new String[0], new File(localPath));
 		BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -162,24 +163,18 @@ public class GitHubManager implements RepositoryManager {
 		for (int i = 0; i < logs.length; i++) {
 			GitCommitCustom customsCommit = new GitCommitCustom();
 			if (logs[i].contains("commit")) {
-				// System.out.println("commit: " + logs[i]);
 				customsCommit.setCommitId(logs[i].substring(7).toString().trim());
 				i++;
 			}
 			if (logs[i].contains("Author")) {
-				// System.out.println("Author: " + logs[i]);
 				customsCommit.setAuthor(logs[i].substring(8, logs[i].indexOf("<")).toString().trim());
 				customsCommit.setEmail(logs[i].substring(logs[i].indexOf("<") + 1, logs[i].indexOf(">")));
 				i++;
 			}
 			if (logs[i].contains("Date:")) {
-				// System.out.println("Date: " + logs[i]);
 				customsCommit.setDate(logs[i].substring(5).toString().trim());
 				i++;
 			}
-			// while (logs[i].isEmpty())
-			// i++;
-			 System.out.println(logs[i] + "Char at 0 : " + logs[i].charAt(0));
 			 while (!Character.isDigit(logs[i].charAt(0))) {
 				if (customsCommit.getMessage() != null) {
 					customsCommit.setMessage(customsCommit.getMessage().concat(logs[i]));
@@ -193,16 +188,15 @@ public class GitHubManager implements RepositoryManager {
 			while (i < logs.length && !logs[i].contains("commit")) {
 				String temp = logs[i];
 				if (temp.equals(null)) {
-					// System.out.println(" nullo");
+					
 				} else {
-					// System.out.println(temp);
 					String extractedFilePathName = extractioFilePathName(temp);
 					customsCommit.addFiles(extractedFilePathName);
 					i++;
 				}
 			}
 
-			// System.out.println("\n");
+
 
 			commits.add(customsCommit);
 			if (i < logs.length && logs[i].contains("commit")) {
@@ -235,7 +229,6 @@ public class GitHubManager implements RepositoryManager {
 		for (int i = 0; i < size; i++) {
 			if (Character.isLetter(temp.charAt(i))) {
 				String result = temp.substring(i);
-				System.out.println("Extracted Path : " + result);
 				return result;
 			}
 		}
@@ -249,14 +242,14 @@ public class GitHubManager implements RepositoryManager {
 		Pattern pattern = Pattern.compile(regex);
 		Scanner in = new Scanner(regex).useDelimiter("\\d+\\s*\\d+ +.*");
 		Matcher matcher = pattern.matcher(input);
-		System.out.println("Input: " + input);
+		
 		MatchResult match = in.match();
-		System.out.println("Group: " + match.group());
+		
 		if (matcher.matches()){
-			System.out.println("match");
+			
 			return true;
 		}else{
-			System.out.println("does not match");
+			
 			return false;
 		}
 	}
@@ -266,7 +259,7 @@ public class GitHubManager implements RepositoryManager {
 		Iterator<Developer> it = devs.iterator();
 		while (it.hasNext()) {
 			Developer temp = (Developer) it.next();
-			if (temp.getName().equals(dev.getName())) {
+			if (temp.getEmail().substring(0,temp.getEmail().indexOf("@")).contains(dev.getEmail().substring(0, dev.getEmail().indexOf("@")))) {
 				return true;
 			}
 
@@ -346,6 +339,7 @@ public class GitHubManager implements RepositoryManager {
 				compareString = microService.getName().substring(0, microService.getName().indexOf("_"));
 			}
 			if (string.contains(compareString)) {
+				
 				eList.add(tempDev);
 			}
 		}
@@ -361,17 +355,27 @@ public class GitHubManager implements RepositoryManager {
 		while (it.hasNext()) {
 			Developer developer = (Developer) it.next();
 			if (gitCommitCustom.getEmail() != null) {
-				if (developer.getEmail().contains(gitCommitCustom.getEmail())) {
+				if (developer.getEmail().substring(0,developer.getEmail().indexOf("@") ).contains(gitCommitCustom.getEmail().substring(0,gitCommitCustom.getEmail().indexOf("@"))) ) {
+//					System.out.println(developer.getEmail().substring(0,developer.getEmail().indexOf("@") ) +" compared to " + (gitCommitCustom.getEmail().substring(0,gitCommitCustom.getEmail().indexOf("@"))));
 					return developer;
 				}
 			}
 
 		}
+//		System.out.println("dev not found " + gitCommitCustom.getEmail() + " " +gitCommitCustom.getAuthor());
 		Developer tempDev = factory.createDeveloper();
 		tempDev.setEmail(gitCommitCustom.getEmail());
 		tempDev.setName(gitCommitCustom.getAuthor());
 		// tempDev.setUsername(gitCommitCustom.get);
 		return tempDev;
+	}
+
+	public Config getConfig() {
+		return config;
+	}
+
+	public void setConfig(Config config) {
+		this.config = config;
 	}
 
 }

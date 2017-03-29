@@ -2,10 +2,8 @@ package it.univaq.architecture.recovery.granchelli;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
-
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -38,57 +36,41 @@ import it.univaq.architecture.recovery.service.impl.TcpDumpLoggerImpl;
 public class ArchitectureRecoveryApplication {
 
 	final static Logger logger = Logger.getLogger(ArchitectureRecoveryApplication.class);
-	
 	public static MSALoaderImpl factory = new MSALoaderImpl();
-	
 	public static TcpDumpLoggerImpl tcpDumpLoggerImpl = new TcpDumpLoggerImpl();
-	
-	static String logFileName = System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
-			+ File.separator + "log_24feb.txt";
-	
-	public Extraction extractor = new Extraction(logFileName);
-	
 	private static Config config;
 
 	public static void main(String[] args)
 			throws IOException, InvalidRemoteException, TransportException, GitAPIException, InterruptedException {
 		SpringApplication.run(ArchitectureRecoveryApplication.class, args);
-		
-		// this.repoManager.setLocalPath("/home/grankellowsky/Tesi/Codice/prova2");
-		// this.repoManager.setRemotePath("https://github.com/yanglei99/acmeair-nodejs.git");
-		// System.out.println("INSTANZIAZIONE MANAGER GITHUB");
-		
+
+		String logFileName = config.getLogDirectory() + config.getLogFilename();
 		logger.info("STATIC ANALYSIS -  READY");
 		logger.info("Cloning GIT REPO: " + config.getGitUrl());
-//		String repositoryGitHub = promptEnterGitHub("Insert github repository");
-//		String repositoryLocal = promptEnterLocalRepo("Insert local reposity to clone the git hub repo");
-		String repoo = System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
-				+ File.separator + new Date().toString().replaceAll(" ", "_");
-		GitHubManager test = new GitHubManager(repoo,
-				config.getGitUrl());
-		test.init();
-		test.testClone();
+
+		GitHubManager test = getGitHubRepo(config.getGitRepoName());
+		test.setConfig(config);
+		String repoo = config.getGitRepoName();
 		logger.info("Wait the end of the Git Repo Download");
 		logger.info("Git Repo Download Finished!");
 		logger.info("STATIC ANALYSIS -  STARTED");
-		
+
 		EList<Developer> devs = test.getCommits();
-		
 		logger.info("microServicesArch Element Created");
-		
 		MicroserviceArch microServicesArch = new MicroserviceArch();
 		logger.info("DockerParser Started");
-		
 		DockerParser dockerParser = new DockerParser(microServicesArch);
 		dockerParser.setBasDirectory(repoo);
 		dockerParser.find();
-		
+
 		logger.info("=========================");
 		logger.info("Docker Reader Starting:");
+
 		
 		dockerParser.dockerFilereader();
-
+		
 		DockerManager manager = new DockerManager();
+		manager.setConfig(config);
 		manager.getContainerId(microServicesArch.getServices());
 		manager.getNetwork(microServicesArch.getServices());
 		microServicesArch.setNetworkName(manager.checkIfContainerHasTheSameNetwork(microServicesArch.getServices()));
@@ -97,55 +79,51 @@ public class ArchitectureRecoveryApplication {
 		// Da Gli pseudo Microservice Ottenuti da Docker, Creo un istanza di
 		// Product
 		// Questo sarà il primo passo iterativo
-		
+
 		logger.info("Docker Extraction Finished.");
 		logger.info("Remeber to Run your MicroService Architecture");
-		logger.info("");
-		
-		Product product = Converter.createProduct(microServicesArch.getServices(), microServicesArch.getClientIp());
+		Converter converter = new Converter();
+		Product product = converter.createProduct(microServicesArch.getServices(), microServicesArch.getClientIp());
 		product.getDevelopers().addAll(devs);
 		List<GitCommitCustom> commits = test.assignDevToTeam(product);
-		test.crossedCheckCommitsDevs(microServicesArch,product, commits);
 		
+		test.crossedCheckCommitsDevs(microServicesArch, product, commits);
 		logger.info("STATIC ANALYSIS -  FINISHED");
+		
 		logger.info("DYNAMIC ANALYSIS -  READY");
 		
 		Extraction extract = new Extraction(logFileName);
-		
-		// Attivazione TCPDUMMP
-		logger.info("A .sh Script has been generated in: " + System.getProperty("user.home") + File.separator
-				+ "ArchitectureRecovery");
-		logger.info("The Scipt name is:" + System.getProperty("user.home") + File.separator + "ArchitectureRecovery"
-				+ File.separator + "runScript.sh");
-		logger.info("Don't Forget to make it runnable:");
-		logger.info("- typing on the bash chmod +x runScript.sh");
-		logger.info("- Or with Right Click -> Permissions -> is Executable");
-		
-		tcpDumpLoggerImpl.setLoggerFilename(logFileName);
-		tcpDumpLoggerImpl.startLogger(microServicesArch.getClientIp());
-		
 		logger.info("DYNAMIC ANALYSIS -  STARTED");
-		
-		Thread.sleep(1000);
-		promptEnterKey("Press Enter if you finished your Log Analysis");
-
-		logger.info("Analysis Finished");
-		logger.info("Log File: " + logFileName);
-		
+		if (config.isExistingLog()) {
+			logger.info("You selected to read a pre-existent log ");
+			logger.info("Log File: " + logFileName);
+		}else{
+			// Creation of TCPDUMMP script
+			logger.info("A .sh Script has been generated in: " + config.getBuildPath());
+			logger.info("The Scipt name is:" + config.getBuildPath() + File.separator + "loggingRun.sh");
+			logger.info("Don't Forget to make it runnable:");
+			logger.info("-> typing on the bash chmod +x runScript.sh");
+			logger.info("-> Or with Right Click -> Permissions -> is Executable");
+			tcpDumpLoggerImpl.setConfig(config);
+			tcpDumpLoggerImpl.setLoggerFilename(logFileName);
+			tcpDumpLoggerImpl.startLogger(microServicesArch.getClientIp());
+			Thread.sleep(1000);
+			promptEnterKey("Press Enter if you finished your Log Analysis");
+		}
+		logger.info("A Log File: " + logFileName + " Has been read");
 		// Fine TCPDUMP
 		extract.dynamicAnalysis(product, microServicesArch.getClientIp());
 		
 		// extract.showDependency(product);
 		// Where to Save and Retrive model
-		
 		logger.info("DYNAMIC ANALYSIS -  FINISHED");
-		
-		String pathToSaveModel = "/home/grankellowsky/Tesi/Codice/workspaces/runtime-EclipseApplication/it.univaq.recovery.diagram";
-		String nameOfTheModel = "/acmerair.microservicesarchitecture";
+
+		String pathToSaveModel = config.getRuntimeEclipsePath();
+		String nameOfTheModel = config.getModelName();
 		// Save Architectural Model
-		
+//		logger.info("The architectural model has been saved in: " + pathToSaveModel + File.separator + nameOfTheModel);
 		factory.saveModel(product, pathToSaveModel, nameOfTheModel);
-		
+
 		// Messages
 		logger.info("REFINEMENT PHASE -  READY - WAITING FOR ARCHITECT INTERACTION");
 		logger.info("The model as been saved in the runtime Eclipse project ");
@@ -159,7 +137,7 @@ public class ArchitectureRecoveryApplication {
 		Thread.sleep(1500);
 		Product filteredProduct = factory.getModel(pathToSaveModel, nameOfTheModel);
 		String serviceDiscovery = factory.getServiceDiscovery(filteredProduct);
-		
+
 		while (CheckServiceDiscovery(serviceDiscovery)) {
 			promptEnterKey();
 			filteredProduct = factory.getModel(pathToSaveModel, nameOfTheModel);
@@ -171,7 +149,29 @@ public class ArchitectureRecoveryApplication {
 		// extract.showDependency(filteredProduct);
 		factory.saveModel(filteredProduct, pathToSaveModel, nameOfTheModel);
 		logger.info("Your Model is now update. Check the Eclipse-RunTime");
-		logger.info("A Logical Architecture has been generated");
+		logger.info("A Refined Architecture has been generated");
+	}
+
+	private static GitHubManager getGitHubRepo(String gitRepoName) {
+		// TODO Auto-generated method stub
+		String repoo = config.getGitRepoName();
+		GitHubManager test = new GitHubManager(repoo,config.getGitUrl());
+		File cloneOrNot = new File(repoo);
+		try {
+			test.init();
+		if (!cloneOrNot.exists()) {
+			
+			test.testClone();
+		}
+		} catch (IOException | GitAPIException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return test;
 	}
 
 	private static boolean CheckServiceDiscovery(String serviceDiscovery) {
@@ -187,34 +187,36 @@ public class ArchitectureRecoveryApplication {
 		logger.info("Press \"ENTER\" if you finished your modifications.(Don't Forget to Save and Close)");
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-		scanner.close();
+		
 	}
 
 	private static void promptEnterKey(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		scanner.nextLine();
-		scanner.close();
+		
 	}
+
 	private static String promptEnterGitHub(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		String repo = scanner.nextLine();
-		scanner.close();
+		
 		return repo;
 	}
+
 	private static String promptEnterLocalRepo(String message) {
 		logger.info(message);
 		Scanner scanner = new Scanner(System.in);
 		String repo = scanner.nextLine();
-		scanner.close();
+		
 		return repo;
 	}
 
 	public Config getConfig() {
 		return config;
 	}
-	
+
 	@Autowired
 	public void setConfig(Config config) {
 		this.config = config;

@@ -20,8 +20,9 @@ public class Converter {
 		factory = new MSALoaderImpl();
 	}
 
-	public static Product createProduct(List<PseudoMicroService> services, String Client) {
+	public Product createProduct(List<PseudoMicroService> services, String Client) {
 		
+		System.out.println("Factory " + factory);
 		Product product = factory.createProduct();
 		Iterator<PseudoMicroService> it = services.iterator();
 		EList<MicroService> tempList = new BasicEList<MicroService>();

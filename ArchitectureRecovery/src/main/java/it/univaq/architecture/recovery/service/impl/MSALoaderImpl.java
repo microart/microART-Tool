@@ -81,7 +81,9 @@ public class MSALoaderImpl implements MSALoader {
 		
 		ResourceSet resSet = new ResourceSetImpl();
 		Resource resource = resSet.createResource(URI.createURI(url + modelName));
+		printProduct(product);
 		resource.getContents().add(product);
+		
 		// now save the content.
 		try {
 			resource.save(m);
@@ -89,6 +91,13 @@ public class MSALoaderImpl implements MSALoader {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	private void printProduct(Product product) {
+		
+		System.out.println(product.toString());
+		System.out.println(product.getComposedBy().toString());
+		
 	}
 
 	public Product getModel(String pathToSaveModel, String nameOfTheModel) throws IOException {
@@ -124,15 +133,10 @@ public class MSALoaderImpl implements MSALoader {
 		Iterator<MicroService> it = product.getComposedBy().iterator();
 		while (it.hasNext()) {
 			MicroService microService = (MicroService) it.next();
-//			System.out.println(
-//					microService.getName() + " isFunctional? " + microService.getIsFunctional() + "Type is: " + microService.getType());
-//			if (!microService.getIsFunctional().booleanValue()) {
-//				System.out.println(microService.getType().toString());
 				if (microService.getType().equals(serviceType.SERVICE_DISCOVERY)) {
 					serviceDiscovery = microService.getHost();
 					return serviceDiscovery;
 				}
-//			}
 		}
 
 		return serviceDiscovery;

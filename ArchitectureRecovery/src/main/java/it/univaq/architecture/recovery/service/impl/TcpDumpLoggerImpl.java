@@ -10,13 +10,21 @@ import java.io.OutputStreamWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import it.univaq.architecture.recovery.configuration.Config;
 import it.univaq.architecture.recovery.service.Logger;
 
+@ComponentScan(basePackages = { "it.univaq.architecture.recovery.configuration" })
+@Configuration
 public class TcpDumpLoggerImpl implements Logger {
 
 	String loggerFilename;
 	File loggerFile;
-
+	private Config config;
+	
 	public String getNetworkInterface(String clientIp) {
 		Process p;
 		String s = null;
@@ -57,18 +65,21 @@ public class TcpDumpLoggerImpl implements Logger {
 
 		String networkName = getNetworkInterface(clientIp);
 		// Creation of a bash shell file to execute tcpdump
-		File fout = new File(System.getProperty("user.home") + File.separator + "ArchitectureRecovery" + File.separator
-				+ "loggingRun.sh");
+		File fout = new File(config.getLogDirectory() + File.separator + "loggingRun.sh");
 		FileOutputStream fos = null;
 		try {
 			fos = new FileOutputStream(fout);
 
 			BufferedWriter osw = new BufferedWriter(new OutputStreamWriter(fos));
-			osw.write("#!/bin/sh");
+			if (config.getoS().equals("Mac")) {
+				osw.write("#!/bin/bash");
+			}else{
+				osw.write("#!/bin/sh");
+			}
 			osw.newLine();
 			osw.write("echo 'Logging Ready - Root user needed'");
 			osw.newLine();
-			osw.write("sudo tcpdump -i " + networkName + " > " + loggerFilename);
+			osw.write("sudo "+ config.getTcpdumpPath() + " -i " + networkName + " > " + loggerFilename);
 			osw.newLine();
 			osw.write("echo 'Logging Finished'");
 			osw.close();
@@ -122,5 +133,12 @@ public class TcpDumpLoggerImpl implements Logger {
 		// TODO Auto-generated method stub
 
 	}
+	public Config getConfig() {
+		return config;
+	}
 
+	@Autowired
+	public void setConfig(Config config) {
+		this.config = config;
+	}
 }
