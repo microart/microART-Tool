@@ -46,7 +46,7 @@ The prototype has been tested in the following conditions.
 
 ### Virtual Box version 5.0.32
 
-## Development environment
+### Development environment
 ```
 Eclipse Neon .2 release 4.6.2
 Apache Maven 3.3.9
@@ -55,16 +55,11 @@ NPM 3.5.2
 Openjdk 1.8.0_121
 ```
 
+# Usage
 
+##Docker Installation:
 
-
-
-==GUIDE
-
-Docker
-
-Docker Instalation:
-
+```
     sudo apt-get update
     sudo apt-get install curl linux-image-extra-$(uname -r) linux-image-extra-virtual
     sudo apt-get install apt-transport-https ca-certificates
@@ -78,56 +73,56 @@ Docker Instalation:
     sudo apt-get update
     sudo apt-get -y install docker-engine
     apt-cache madison docker-engine
+```
 
-Choose a specific version to install. The second column is the <version_string>
-
-In this project i used 1.13.0-0
-
-    sudo apt-get -y install docker-engine=<VERSION_STRING>
-
+In this project we have used Docker version 1.13.0-0
+```
+    sudo apt-get -y install docker-engine=<1.13.0-0>
+```
 
 Manage Docker as a non-root user
-
+```
     sudo groupadd docker
     sudo usermod -aG docker $USER
-
-May need a Log Off
-
+```
+A session logout may be needed.
 
 
 Configure Docker to start on boot
-
+```
     sudo systemctl enable docker
+```
 
 Docker-Machine
-
+```
     curl -L https://github.com/docker/machine/releases/download/v0.9.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
     chmod +x /tmp/docker-machine &&
     sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
     docker-machine version
-    
-These two operations are not foundamental, execute these operation if a the end of the guide it doesn't
+``` 
 
-    docker-machine create --driver virtualbox default
-    eval "$(docker-machine env default)"
+
 
 Docker-compose
-
+```
     curl -L "https://github.com/docker/compose/releases/download/1.10.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
+```
 
-To check
-
+To check the docker version you can run
+```
     docker-compose --version
+```
 
-AcmeAIR
+## AcmeAIR Benchmark
 
-Our Case study will be AcmeAir a Node.js implementation of the Acme Air Sample Application. 
-With datastore support of MongoDB, Cloudant, Cassandra. 
-With runtime support of  Docker in order to have a  Micro-Services Architecture to Analyze
+We have used [AcmeAir](https://github.com/acmeair/acmeair-nodejs) as public benchmark for our prototype.
+AcmeAir uses Docker and is a simple microservice-based application.
 
-Building and Start
 
+
+### Setup AcmeAir
+```
     git clone https://github.com/wasperf/acmeair-nodejs.git
     cd acmeair-nodejs
     npm install
@@ -137,88 +132,84 @@ Building and Start
     
     docker network create --driver bridge my-net
     set NETWORK=my-net && export NETWORK=my-net 
+```
 
-Before build the Dockerfile is necessary a modification to all the Dockerfiles in the home. 
-Substituting the first row whit this row
-    
+
+### Customization
+
+Before being able to build the DockerFiles, it is necessary to modify each Dockerfile in the root by *replacing the first row* with the following. 
+```
     FROM ibmcom/ibmnode
-    
+``` 
+
+### Build 
 The Dockerfile build may take a while
-
+``` 
     docker-compose build
-
-The “up” command start the service in only one windows, in the terminal you will see some log of the startup of the application and some logs of communications
-
     docker-compose up
+``` 
 
-After 1~2 min all the services should be ready (the first startup take longer)
+The *up* command starts the services in only one window, and in the terminal you can look at the application logs and communication logs.
 
-    Go to http:://127.0.0.1:80/main/acmeair
+Can take up to one or two minute for all  services to be ready to run. You can visit the localhost page of the system at:
+``` 
+     http:://127.0.0.1:80/main/acmeair
+``` 
 
-If this page doesn’t appear wait a bit more or come back to Docker-machine guide e type the two missing commands.
+If the page is not ready, the system might require more time or try the following Docker-machine commands:
+```
+    docker-machine create --driver virtualbox default
+    eval "$(docker-machine env default)"
+```
+
+Now AcmeAir is ready to be used, but note that the *Support* service is not working.
 
 
-Now you can use the system, the Support Service is not working.
+
+## Running MicroART 
 
 
-Eclipse and run app
+### Run MicroART Recovery process
 
-Download Eclipse.
+[Download and run Eclipse](http://www.eclipse.org/neon/).
+Clone this repository and copy it inside the given Eclipse workspace.
 
-Define a workspace in this example in ~/EclipseWorkspace
-
-Run it. 
-
-The Application is in a Github. Clone the repository and copy inside the Eclipse workspace
-
+```
     git clone https://github.com/microart/microART-Tool.git
     cd microART
-To Run the recovery application:
 
-    Open eclipse Neon.
+    Open eclipse Neon.    
+    Set a Workspace.    
+    Go to *Project Explorer*, Right-Click and choose *Import*.Select *Existing Maven Project*
+
+    Select the proper directory and wait until the maven build is completed.
     
-    Set a Workspace.
+    Right-Click on project -> *Properties*
     
-    One Eclipse in opened
+    Click on *Java Build Path*
     
-    Inside Eclipse neon go in the Project Explorer.
+    Click on *Add JAR*
     
-    Right-Click
+    Add the JAR inside the project, in src/main
     
-    Import 
-    
-    Existing Maven Project
-    
-    Select the proper directory
-    
-    Wait until the maven building ends.
-    
-    Right-Click on the project -> Properties
-    
-    Click on Java Build Path
-    
-    Click on Add JAR
-    
-    Add the Jar inside the project, in src/main
-    
-    Finish
-    
+  ```
     To run just click Start on the top bar of Eclipse.
     
-To run the presentation project:
+### Run MicroART Presentation process   
 
-    Download and start Eclipse Epsilon.
+```
+    [Download and run Eclipse Epsilon](http://www.eclipse.org/epsilon/).
     
     Create a workspace
     
-    Import, from General source all the project present in the directory PresentationProject
+    Import, from *General* source all the project present in the directory PresentationProject
     
     Right Click on project called MinimalDSL, Run as an Eclipse Application
     
-    Wait untile a new runtime eclipse istance is ready.
+    Wait until a new runtime eclipse istance is ready.
     
     Once the new eclipse istance started, in the workspace create before will be a runtime directory
     
     import from general source, the project into RunTime/runtime-EclipseApplication
 
-
+```
