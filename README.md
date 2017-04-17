@@ -57,7 +57,7 @@ Openjdk 1.8.0_121
 
 # Usage
 
-##Docker Installation:
+## Docker Installation
 
 ```
     sudo apt-get update
@@ -197,19 +197,14 @@ Clone this repository and copy it inside the given Eclipse workspace.
     
 ### Run MicroART Presentation process   
 
-```
-    [Download and run Eclipse Epsilon](http://www.eclipse.org/epsilon/).
-    
-    Create a workspace
-    
-    Import, from *General* source all the project present in the directory PresentationProject
-    
+[Download and run Eclipse Epsilon](http://www.eclipse.org/epsilon/).
+
+```    
+    Create a workspace 
+    Import, from *General source* all the project present in the directory PresentationProject
     Right Click on project called MinimalDSL, Run as an Eclipse Application
-    
     Wait until a new runtime eclipse istance is ready.
     
-    Once the new eclipse istance started, in the workspace create before will be a runtime directory
-    
-    import from general source, the project into RunTime/runtime-EclipseApplication
+    Once the new eclipse istance is started, create a runtime directory in the workspace and import from *General source*, the project into RunTime/runtime-EclipseApplication
 
 ```
