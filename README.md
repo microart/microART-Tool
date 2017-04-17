@@ -47,18 +47,17 @@ The prototype has been tested in the following conditions.
 ### Virtual Box version 5.0.32
 
 ## Development environment
+```
+Eclipse Neon .2 release 4.6.2
+Apache Maven 3.3.9
+Nodejs  4.2.6
+NPM 3.5.2
+Openjdk 1.8.0_121
+```
 
-### Eclipse version Neon .2 release 4.6.2
 
-### Maven  Apache Maven 3.3.9
 
-### Git version 2.7.4
 
-### Nodejs version  4.2.6
-
-### NPM version 3.5.2
-
-### Java version  openjdk 1.8.0_121
 
 ==GUIDE
 
