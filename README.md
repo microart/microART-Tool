@@ -1,18 +1,35 @@
-﻿Environment
+﻿# MicroART
+**MicroART-Tool** is the first prototype implementation of a more generic approach named **MicroART**.
+
+The overall approach is presented in the [Towards Recovering the Software Architecture of Microservice-based Systems](http://www.ivanomalavolta.com/files/papers/AMS_2017.pdf) published at [1st International Workshop on Architecting with MicroServices, 2017](https://ams2017.github.io/). The [slides](https://www.slideshare.net/paolodifrancesco/towards-recovering-the-software-architecture-of-microservicebased-systems) of the approach are also available.
+
+The details on the tools are presented in [MicroART: A Software Architecture Recovery Tool for Maintaining Microservice-based Systems](http://www.ivanomalavolta.com/files/papers/ICSA_2017_tool.pdf) published at [1st International Conference on Software Architecture (ICSA), Tool Papers,2017]. The [slides](https://www.slideshare.net/paolodifrancesco/microart-a-software-architecture-recovery-tool-for-maintaining-microservicebased-systems) of the tool are also available.
+
+
+## Disclaimer 
+**This software is published for academic and non-commercial use only.**
+
+## Setup
+The prototype has been tested in the following conditions.
+
+### Environment
 
     Operative System Host Machine
     Linux Kubuntu 16.04
     Linux kernel version 4.4.0-31-generic
     Docker Client/ Server
 
-Client:
+### Client
+
     Version:      1.13.0
     API version:  1.25
     Go version:   go1.7.3
     Git commit:   49bf474
     Built:        Tue Jan 17 09:58:26 2017
     OS/Arch:      linux/amd64
-Server:
+
+### Server
+
     Version:      1.13.0
     API version:  1.25 (minimum version 1.12)
     Go version:   go1.7.3
@@ -21,34 +38,27 @@ Server:
     OS/Arch:      linux/amd64
     Experimental: false
 
-Docker Machine : 
+### Docker Machine
     docker-machine version 0.9.0, build 15fd4c7
 
-Docker Compose:
+### Docker Compose
     docker-compose version 1.10.0, build 4bd6f1
 
-Virtual Box:
-    5.0.32
+### Virtual Box version 5.0.32
 
-Sviluppo
+## Development environment
 
-Eclipse version: 
-    Neon.2 Release (4.6.2)
+### Eclipse version Neon .2 release 4.6.2
 
-Maven: 
-    Apache Maven 3.3.9
+### Maven  Apache Maven 3.3.9
 
-Git version:
-    2.7.4
+### Git version 2.7.4
 
-Nodejs version: 
-    4.2.6
+### Nodejs version  4.2.6
 
-NPM version: 
-    3.5.2
+### NPM version 3.5.2
 
-Java version:
-    openjdk 1.8.0_121
+### Java version  openjdk 1.8.0_121
 
 ==GUIDE
 
